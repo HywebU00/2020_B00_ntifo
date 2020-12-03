@@ -438,8 +438,7 @@
     position: relative;
     overflow: hidden;
     @include screen('xs_mobile') {
-        background: url(../images/social_bg.jpg) center center no-repeat static;
-        background-size: cover;
+        background: #696564;
     }
     &:after {
         content: "";
