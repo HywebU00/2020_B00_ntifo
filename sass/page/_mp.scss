@@ -437,6 +437,10 @@
     min-height: 500px;
     position: relative;
     overflow: hidden;
+    @include screen('xs_mobile') {
+        background: url(../images/social_bg.jpg) center center no-repeat static;
+        background-size: cover;
+    }
     &:after {
         content: "";
         position: absolute;
@@ -898,7 +902,7 @@
             float: none;
         }
         @include screen('xs_mobile') {
-            left:0;
+            left: 0;
         }
     }
     .photoContent {
