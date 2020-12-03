@@ -1,0 +1,163 @@
+.fatfooter {
+    // @include make-fatfooter($fatfooter-length, 100%);
+    @extend %clearfix;
+    overflow: hidden;
+    padding-bottom: 1em;
+    margin: 0 auto;
+    background:lighten($color-gray,0);
+    border-top: 1px solid #AAA;
+    // background: $fatfooterBgColor;
+    //   @include screen('mobile') {
+    //     display: none;
+    // }
+    .container {
+        overflow: hidden;
+        @include box-sizing;
+        @include gutter;
+    }
+    // 按鈕
+    .btn-fatfooter {
+        font-size: .813em;
+        display: block;
+        min-width: 10em;
+        color: #FFF;
+        border: none;
+        position: absolute;
+        left: 50%;
+        margin-left: -5em;
+        z-index: 90;
+        text-indent: -9999px;
+        border-radius: 0px;
+        margin-top: 0;
+        background: $primaryColor;
+        &:before {
+            content: "";
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            border: 2px solid #FFF;
+            border-left: none;
+            border-bottom: none;
+            transform: rotate(135deg);
+            left: 50%;
+            top: 5px;
+            margin-left: -6px;
+        }
+        &:hover,
+        &:focus {
+            background: $color-orange;
+            color: #fff;
+            text-decoration: none;
+            cursor: pointer;
+            border: $color-orange 1px solid  !important;
+            box-shadow: none;
+            outline: none;
+            cursor: pointer;
+            margin-top: -1px;
+        }
+        &:focus {
+            &:before {
+                border: 2px solid #FFF;
+                border-left: none;
+                border-bottom: none;
+            }
+        }
+        &.close {
+            &:before {
+                transform: rotate(-45deg) !important;
+                top: 12px;
+            }
+            &:focus {
+                &:before {
+                    transform: rotate(-45deg) !important;
+                    top: 12px;
+                    border: 2px solid #FFF;
+                    border-left: none;
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+    nav {
+        overflow: hidden;
+        display: block;
+        position: relative;
+        padding: 3em 0 0 2em;
+        @include box-sizing;
+        @include screen('mobile') {
+            padding: 1em 0;
+        }
+        ul {
+            @include li-reset;
+            display: flex;
+            flex-flow: row wrap;
+            @include screen('mobile') {
+                width: 100%;
+                display: block;
+                margin: 0px auto;
+            }
+            li {
+                flex: 1 1 calc(12.5% - 1em);
+                display: inline-block;
+                text-align: left;
+                vertical-align: top;
+                margin: 0 .5em .5em;
+                @include box-sizing;
+                @include screen('mobile') {
+                    display: block;
+                    margin: 0 0 .4em
+                }
+                a {
+                    line-height: 1.5;
+                    display: block;
+                    font-weight: bold;
+                    padding: .5em 0px;
+                    color:#333;
+                    @include box-sizing;
+                    &:hover {
+                        box-shadow: none;
+                        color:$lightColor;
+                    }
+                }
+                ul {
+                    margin-top: 5px;
+                    display: flex;
+                    display: none;
+                    @include screen('mobile') {
+                        width: auto;
+                    }
+                    li {
+                        flex: 1 1 100%;
+                        display: block;
+                        margin: 0;
+                        border: none;
+                        background: none;
+                        width: 100%;
+                        @include screen('mobile') {
+                            display: inline-block;
+                            width: auto;
+                            flex: 0 1 auto;
+                        }
+                        a {
+                            display: block;
+                            color:#111;
+                            font-weight: normal;
+                            text-align: left;
+                            font-size: .938em;
+                            line-height: 1.5em;
+                            padding: .2em;
+                            background: none;
+                            @include screen('mobile') {
+                                padding: .3em .2em;
+                            }
+                        }
+                    }
+                    //第三層關閉
+                    ul {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

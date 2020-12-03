@@ -1,0 +1,1159 @@
+@keyframes balloon_ani {
+    0% {
+        bottom: 50px;
+    }
+    50% {
+        bottom: 80px;
+    }
+    100% {
+        bottom: 50px;
+    }
+}
+.search_result{
+    min-height: 500px;
+    margin-bottom: 1em;
+}
+.lp{
+    min-height:500px;
+}
+.for_secret {
+    background: rgba(76, 78, 82, 1);
+    padding-top: 12em;
+    @include screen('tablet') {
+        padding-top: 80px;
+    }
+    &:before {
+        background: url(../images/secretlist_bg.jpg) no-repeat center top;
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 800px;
+        content: "";
+        z-index: 0;
+    }
+    &:after {
+        background: rgb(76, 78, 82);
+        background: linear-gradient(180deg, rgba(76, 78, 82, 0) 0%, rgba(76, 78, 82, 1) 80%);
+        position: absolute;
+        top: 300px;
+        left: 0;
+        width: 100%;
+        height: 500px;
+        content: "";
+        z-index: 0;
+    }
+    &>* {
+        z-index: 2;
+    }
+    h2.title {
+        color: #FFF;
+        text-shadow:0px 0px 5px rgba(0,0,0,.75),0px 2px 15px rgba(0,0,0,.75);
+        small{
+            color:#FFF;
+        }
+    }
+    .lp {
+        .pagination {
+            color: #FFF;
+        }
+        .taiwan_map {
+            .map {
+                width: 35%;
+                min-width: 420px;
+                a {
+                    filter: grayscale(100%);
+                    transition: none;
+                    &:hover, &:focus {
+                        filter: grayscale(0%);
+                        z-index:99999;
+                    }
+                    &.lienchian {
+                        border: 1px solid rgba(0, 0, 0, .65);
+                        background: url(../images/map_lienchian.png) no-repeat center center rgba(0, 0, 0, .65);
+                        background-size: contain;
+                        &:hover, &:focus {
+                            border: 1px solid rgba(0, 0, 0, .85);
+                            background: url(../images/map_lienchian_hover.png) no-repeat center center rgba(0, 0, 0, .85);
+                            background-size: contain;
+                        }
+                    }
+                    &.kinmen {
+                        border: 1px solid rgba(0, 0, 0, .65);
+                        background: url(../images/map_kinmen.png) no-repeat center center rgba(0, 0, 0, .65);
+                        background-size: contain;
+                        &:hover, &:focus {
+                            border: 1px solid rgba(0, 0, 0, .85);
+                            background: url(../images/map_kinmen_hover.png) no-repeat center center rgba(0, 0, 0, .85);
+                            background-size: contain;
+                        }
+                    }
+                    &.penghu {
+                        border: 1px solid rgba(0, 0, 0, .65);
+                        background: url(../images/map_penghu.png) no-repeat center center rgba(0, 0, 0, .65);
+                        background-size: contain;
+                        &:hover, &:focus {
+                            border: 1px solid rgba(0, 0, 0, .85);
+                            background: url(../images/map_penghu_hover.png) no-repeat center center rgba(0, 0, 0, .85);
+                            background-size: contain;
+                        }
+                    }
+                }
+                &:before {
+                    display: none;
+                }
+                &:after {
+                    display: none;
+                }
+            }
+            .road_list {
+                .road_search {
+                    background: rgba(0, 0, 0, .25);
+                }
+                .category {
+                    ul {
+                        li {
+                            a {
+                                background: rgba(0, 0, 0, .75);
+                                color: #EEE;
+                                &:hover, &:focus, &.active {
+                                    background: $aHover;
+                                    color: #FFF;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.lp {
+    .road_search {
+        padding: .5em 0;
+        text-align: center;
+        background: #EAEAEA;
+        border-radius: .5em;
+        padding: 1em;
+        padding-right: 250px;
+        position: relative;
+        margin-bottom: 3em;
+        @include screen('tablet') {
+            padding-right: 1em;
+            margin-bottom: 1em;
+        }
+        .category {
+            position: relative;
+            z-index: 2;
+        }
+        &:before {
+            content: "";
+            width: 300px;
+            height: 207px;
+            position: absolute;
+            right: 1em;
+            bottom: -2em;
+            background: url(../images/road_taiwan.png) no-repeat center center;
+            z-index: 1;
+            @include screen('tablet') {
+                display: none;
+            }
+        }
+        form {
+            display: block;
+            margin: 0 auto;
+            select {
+                min-width: 200px;
+            }
+        }
+    }
+    .secret_map {
+        overflow: hidden;
+        display: flex;
+        flex-flow: row wrap;
+        @media screen and (max-width: 600px) {
+            flex-flow: row wrap;
+        }
+        p {
+            flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: 100%;
+            min-width: 100%;
+            margin: 0 0 1em;
+            text-align: center;
+        }
+        .google_map {
+            flex-grow: 0;
+            flex-shrink: 1;
+            flex-basis: 450px;
+            min-width: 450px;
+            height: 600px;
+            margin: 0 0em 1em 0;
+            position: relative;
+            @include screen('notebook') {
+                flex-basis: 300px;
+                min-width: 300px;
+            }
+            @include screen('tablet') {
+                min-width: 300px;
+            }
+            @media screen and (max-width:600px) {
+                flex-grow: 1;
+                flex-shrink: 1;
+                flex-basis: 450px;
+                min-width: 450px;
+            }
+        }
+        .secret_list {
+            flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: calc(100% - 450px);
+            min-width: calc(100% - 450px);
+            @media screen and (max-width: 600px) {
+                flex-basis: 100%;
+            }
+            ul {
+                @include li-reset;
+                display: flex;
+                flex-flow: row wrap;
+                li {
+                    flex-grow: 1;
+                    flex-shrink: 1;
+                    flex-basis: 25%;
+                    height: 600px;
+                    float: left;
+                    @include screen('tablet') {
+                        flex-basis: 50%;
+                        height: 300px;
+                    }
+                    a {
+                        display: block;
+                        background: #000;
+                        position: relative;
+                        overflow: hidden;
+                        height: 600px;
+                        transition: .3s ease-out;
+                        &:hover, &:focus {
+                            h3 {
+                                color: #FFF;
+                            }
+                            span {
+                                color: #FFF;
+                            }
+                        }
+                        @include screen('tablet') {
+                            height: 300px;
+                        }
+                        h3 {
+                            margin: 0;
+                            position: absolute;
+                            color: #FFF;
+                            font-weight: 600;
+                            font-size: 3.5rem;
+                            bottom: 40%;
+                            left: 10%;
+                            @include screen('tablet') {
+                                bottom: 60%;
+                            }
+                        }
+                        &.north {
+                            background: url(../images/s_north.jpg) no-repeat center center;
+                            background-size: cover;
+                        }
+                        &.middle {
+                            background: url(../images/s_middle.jpg) no-repeat center center;
+                            background-size: cover;
+                        }
+                        &.south {
+                            background: url(../images/s_south.jpg) no-repeat center center;
+                            background-size: cover;
+                        }
+                        &.east {
+                            background: url(../images/s_east.jpg) no-repeat center center;
+                            background-size: cover;
+                        }
+                        span {
+                            display: block;
+                            position: absolute;
+                            margin: 0 5%;
+                            width: 90%;
+                            font-size: .938rem;
+                            color: #EEE;
+                            bottom: 10%;
+                            top: auto;
+                            @include screen('tablet') {
+                                font-size: .938rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .secretContent {
+        width: auto;
+        overflow: hidden;
+        padding: 1.5em 4em 3em;
+        transition: .3s ease-out;
+        border-bottom: 1px solid #DDD;
+        &:last-child {
+            border-bottom: none;
+        }
+        h3 {
+            text-align: left;
+            font-size: 1.5rem;
+            @include screen('mobile') {
+                text-align: center;
+            }
+            small {
+                color: #555;
+                margin-left: 4em;
+                @include screen('mobile') {
+                    display: block;
+                    margin: 1em auto 0;
+                }
+            }
+            img {
+                width: 1em;
+                height: 1em;
+                display: inline-block;
+            }
+        }
+        @include screen('mobile') {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 1.5em 2em 4em;
+        }
+        .slick-prev {
+            left: -40px;
+            background: url(../vendor/slick/icon_arrow_left_inverse.png) center center no-repeat;
+            background-size: 80%;
+            @include screen('mobile') {
+                left: -30px;
+            }
+        }
+        .slick-next {
+            right: -40px;
+            background: url(../vendor/slick/icon_arrow_right_inverse.png) center center no-repeat;
+            background-size: 80%;
+            @include screen('mobile') {
+                right: -30px;
+            }
+        }
+        .item {
+            margin: 0 1em 2em;
+            background: rgba(255, 255, 255, 1);
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, .25);
+            position: relative;
+            &:focus {
+                box-shadow: 0px 5px 10px rgba(0, 0, 0, 1);
+                outline: none;
+            }
+            a {
+                display: block;
+                color: #000;
+                &:hover, &:focus {
+                    color: $aHover;
+                    .img-container {
+                        img {
+                            opacity: 1;
+                            transform: scale(1.1);
+                        }
+                    }
+                    .description {
+                        &:after {
+                            background: $primaryColor;
+                        }
+                    }
+                }
+            }
+            .img-container {
+                margin-bottom: 0;
+                background: #000;
+                img {
+                    opacity: .75;
+                    transition: .3s ease-out;
+                    object-fit: cover;
+                }
+            }
+            .description {
+                position: relative;
+                height: 10rem;
+                padding-top: 1em;
+                h3 {
+                    height: 3em;
+                    overflow: hidden;
+                    display: block;
+                    font-size: 1.5rem;
+                    text-align: left;
+                    font-weight: 600;
+                    line-height: 1.5em;
+                    margin: 1.15rem 1rem 2rem;
+                }
+                &:after {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 2rem;
+                    background: #F1F1F1;
+                    content: "";
+                    transition: .3s ease-out;
+                }
+                .collect {
+                    position: absolute;
+                    top: 4px;
+                    right: 8px;
+                    width: 20px;
+                    height: 20px;
+                    background: url(../images/icon_collect.svg) no-repeat center center;
+                    background-size: contain;
+                    font-size: 0;
+                    display: block;
+                    &.active {
+                        background: url(../images/icon_collect_active.svg) no-repeat center center;
+                        background-size: contain;
+                    }
+                }
+                .road {
+                    display: block;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    font-size: .938rem;
+                    text-align: center;
+                    padding: 0rem 1em;
+                    height: 2rem;
+                    line-height: 2rem;
+                    z-index: 2;
+                    color: #333;
+                    background: #DADADA;
+                }
+                .county {
+                    position: absolute;
+                    left: 0em;
+                    top: 0em;
+                    font-size: .938rem;
+                    width: 5em;
+                    height: 2em;
+                    padding: .25em 1em;
+                    text-align: center;
+                    background: $color-orange;
+                    color: #FFF;
+                }
+                .dot {
+                    position: absolute;
+                    border-radius: .2em;
+                    background: #EEE;
+                    text-align: center;
+                    min-width: 2em;
+                    height: 1.4em;
+                    line-height: 1.4em;
+                    right: .5em;
+                    bottom: .3em;
+                    color: #444;
+                    z-index: 2;
+                    background: #FFF;
+                    border-radius: .2em;
+                    &:before {
+                        position: absolute;
+                        width: 1em;
+                        height: 1em;
+                        background: url(../images/icon_reddot.svg) no-repeat center center;
+                        background-size: contain;
+                        content: "";
+                        left: -1.2em;
+                        top: .2em;
+                    }
+                }
+            }
+        }
+    }
+    .taiwan_map {
+        .map {
+            float: left;
+            width: 30%;
+            min-width: 380px;
+            height: 600px;
+            margin: 0 1em 1em 0;
+            position: relative;
+            &:before {
+                content: "";
+                position: absolute;
+                width: 97px;
+                height: 125px;
+                background: url(../images/balloon.png) no-repeat center center;
+                background-size: cover;
+                left: 0;
+                bottom: 50px;
+                animation: balloon_ani 3s linear infinite alternate;
+                z-index: -1;
+            }
+            &:after {
+                content: "";
+                width: 500px;
+                height: 364px;
+                background: url(../images/taiwan_bottom.png) no-repeat center center;
+                position: absolute;
+                bottom: -270px;
+                right: -100px;
+                z-index: -1;
+            }
+            @include screen('mobile') {
+                display: none;
+            }
+            .el {
+                position: absolute;
+                transition: .3s ease-out;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    display: none;
+                }
+                &.active {
+                    transform: translate(-10px, -10px);
+                    z-index: 2;
+                }
+                &:after {
+                    content: "";
+                    position: absolute;
+                    background: rgba(0, 0, 0, .75);
+                    text-align: center;
+                    width: 6em;
+                    padding: .25em;
+                    display: none;
+                    border-radius: .2em;
+                    left: 50%;
+                    margin-left: -3em;
+                    top: -3em;
+                    color: #FFF;
+                    z-index: 9;
+                    font-size: .938rem;
+                }
+                &:hover, &:focus {
+                    &:after {
+                        display: block;
+                    }
+                }
+            }
+            .taipei {
+                width: 30px;
+                height: 38px;
+                top: 27px;
+                right: 61px;
+                z-index: 1;
+                background: url(../images/map_taipei.svg) no-repeat center center;
+                background-size: contain;
+                &:after {
+                    content: "臺北市";
+                }
+                &:hover, &:focus {
+                    background: url(../images/map_taipei_hover.svg) no-repeat center center;
+                    background-size: contain;
+                }
+            }
+            .taipeicounty {
+                width: 119px;
+                height: 110px;
+                top: 0px;
+                right: 6px;
+                background: url(../images/map_taipeicounty.svg) no-repeat center center;
+                background-size: contain;
+                &:after {
+                    content: "新北市";
+                }
+                &:hover, &:focus {
+                    background: url(../images/map_taipeicounty_hover.svg) no-repeat center center;
+                    background-size: contain;
+                }
+            }
+            .taoyuan {
+                width: 78px;
+                height: 93px;
+                top: 33px;
+                right: 91px;
+                background: url(../images/map_taoyuan.svg) no-repeat center center;
+                background-size: contain;
+                &:after {
+                    content: "桃園市";
+                }
+                &:hover, &:focus {
+                    background: url(../images/map_taoyuan_hover.svg) no-repeat center center;
+                    background-size: contain;
+                }
+            }
+            .hsinchucounty {
+                width: 79px;
+                height: 91px;
+                top: 64px;
+                right: 101px;
+                background: url(../images/map_hsinchucounty.svg) no-repeat center center;
+                background-size: contain;
+                &:after {
+                    content: "新竹縣";
+                }
+                &:hover, &:focus {
+                    background: url(../images/map_hsinchucounty_hover.svg) no-repeat center center;
+                    background-size: contain;
+                }
+            }
+            .hsinchusi {
+                width: 19px;
+                height: 24px;
+                top: 81px;
+                right: 165px;
+                z-index: 1;
+                background: url(../images/map_hsinchusi.svg) no-repeat center center;
+                background-size: contain;
+                &:after {
+                    content: "新竹市";
+                }
+                &:hover, &:focus {
+                    background: url(../images/map_hsinchusi_hover.svg) no-repeat center center;
+                    background-size: contain;
+                }
+            }
+            .miaoli {
+                width: 103px;
+                height: 79px;
+                top: 101px;
+                right: 122px;
+                background: url(../images/map_miaoli.svg) no-repeat center center;
+                background-size: contain;
+                &:after {
+                    content: "苗栗縣";
+                }
+                &:hover, &:focus {
+                    background: url(../images/map_miaoli_hover.svg) no-repeat center center;
+                    background-size: contain;
+                }
+            }
+            .taichung {
+                width: 154px;
+                height: 87px;
+                top: 143px;
+                right: 90px;
+                background: url(../images/map_taichung.svg) no-repeat center center;
+                background-size: contain;
+                &:after {
+                    content: "臺中市";
+                }
+                &:hover, &:focus {
+                    background: url(../images/map_taichung_hover.svg) no-repeat center center;
+                    background-size: contain;
+                }
+            }
+            .changhwa {
+                width: 66px;
+                height: 72px;
+                top: 192px;
+                right: 214px;
+                background: url(../images/map_changhwa.svg) no-repeat center center;
+                background-size: contain;
+                &:after {
+                    content: "彰化縣";
+                }
+                &:hover, &:focus {
+                    background: url(../images/map_changhwa_hover.svg) no-repeat center center;
+                    background-size: contain;
+                }
+            }
+            .nantuo {
+                width: 121px;
+                height: 142px;
+                top: 182px;
+                right: 104px;
+                background: url(../images/map_nantuo.svg) no-repeat center center;
+                background-size: contain;
+                &:after {
+                    content: "南投縣";
+                }
+                &:hover, &:focus {
+                    background: url(../images/map_nantuo_hover.svg) no-repeat center center;
+                    background-size: contain;
+                }
+            }
+            .yunlin {
+                width: 99px;
+                height: 59px;
+                top: 253px;
+                right: 204px;
+                background: url(../images/map_yunlin.svg) no-repeat center center;
+                background-size: contain;
+                &:after {
+                    content: "雲林縣";
+                }
+                &:hover, &:focus {
+                    background: url(../images/map_yunlin_hover.svg) no-repeat center center;
+                    background-size: contain;
+                }
+            }
+            .chiayicounty {
+                width: 134px;
+                height: 73px;
+                top: 290px;
+                right: 170px;
+                background: url(../images/map_chiayicounty.svg) no-repeat center center;
+                background-size: contain;
+                &:after {
+                    content: "嘉義縣";
+                }
+                &:hover, &:focus {
+                    background: url(../images/map_chiayicounty_hover.svg) no-repeat center center;
+                    background-size: contain;
+                }
+            }
+            .chiayisi {
+                width: 24px;
+                height: 14px;
+                top: 308px;
+                right: 235px;
+                background: url(../images/map_chiayisi.svg) no-repeat center center;
+                background-size: contain;
+                &:after {
+                    content: "嘉義市";
+                }
+                &:hover, &:focus {
+                    background: url(../images/map_chiayisi_hover.svg) no-repeat center center;
+                    background-size: contain;
+                }
+            }
+            .tainan {
+                width: 105px;
+                height: 95px;
+                top: 328px;
+                right: 214px;
+                background: url(../images/map_tainan.svg) no-repeat center center;
+                background-size: contain;
+                &:after {
+                    content: "台南市";
+                }
+                &:hover, &:focus {
+                    background: url(../images/map_tainan_hover.svg) no-repeat center center;
+                    background-size: contain;
+                }
+            }
+            .kaoshiung {
+                width: 143px;
+                height: 177px;
+                top: 319px;
+                right: 156px;
+                background: url(../images/map_kaoshiung.svg) no-repeat center center;
+                background-size: contain;
+                &:after {
+                    content: "高雄市";
+                }
+                &:hover, &:focus {
+                    background: url(../images/map_kaoshiung_hover.svg) no-repeat center center;
+                    background-size: contain;
+                }
+            }
+            .pingtung {
+                width: 83px;
+                height: 174px;
+                top: 422px;
+                right: 177px;
+                background: url(../images/map_pingtung.svg) no-repeat center center;
+                background-size: contain;
+                &:after {
+                    content: "屏東縣";
+                }
+                &:hover, &:focus {
+                    background: url(../images/map_pingtung_hover.svg) no-repeat center center;
+                    background-size: contain;
+                }
+            }
+            .keelung {
+                width: 23px;
+                height: 21px;
+                top: 20px;
+                right: 46px;
+                z-index: 1;
+                background: url(../images/map_keelung.svg) no-repeat center center;
+                background-size: contain;
+                &:after {
+                    content: "基隆市";
+                }
+                &:hover, &:focus {
+                    background: url(../images/map_keelung_hover.svg) no-repeat center center;
+                    background-size: contain;
+                }
+            }
+            .yilan {
+                width: 103px;
+                height: 120px;
+                top: 50px;
+                right: 12px;
+                z-index: 1;
+                background: url(../images/map_yilan.svg) no-repeat center center;
+                background-size: contain;
+                &:after {
+                    content: "宜蘭縣";
+                }
+                &:hover, &:focus {
+                    background: url(../images/map_yilan_hover.svg) no-repeat center center;
+                    background-size: contain;
+                }
+            }
+            .hwalien {
+                width: 126px;
+                height: 224px;
+                top: 159px;
+                right: 41px;
+                background: url(../images/map_hwalien.svg) no-repeat center center;
+                background-size: contain;
+                &:after {
+                    content: "花蓮縣";
+                }
+                &:hover, &:focus {
+                    background: url(../images/map_hwalien_hover.svg) no-repeat center center;
+                    background-size: contain;
+                }
+            }
+            .taitung {
+                width: 123px;
+                height: 215px;
+                top: 322px;
+                right: 85px;
+                background: url(../images/map_taitung.svg) no-repeat center center;
+                background-size: contain;
+                &:after {
+                    content: "臺東縣";
+                }
+                &:hover, &:focus {
+                    background: url(../images/map_taitung_hover.svg) no-repeat center center;
+                    background-size: contain;
+                }
+            }
+            .lienchian {
+                width: 100px;
+                height: 100px;
+                top: 0;
+                left: 0;
+                border: 1px solid #DDD;
+                background: #F1F1F1;
+                border-radius: .2em;
+                background: url(../images/map_lienchian.png) no-repeat center center #FFF;
+                background-size: contain;
+                &.active {
+                    transform: translate(20px, -15px);
+                }
+                &:after {
+                    bottom: 0;
+                    top: auto;
+                    left: 0;
+                    width: 91px;
+                    height: 1.5em;
+                    margin-left: 0;
+                    content: "連江縣";
+                }
+                img {
+                    width: 80%;
+                    height: 80%;
+                    left: 10%;
+                    top: 10%;
+                }
+                &:hover, &:focus {
+                    background: url(../images/map_lienchian_hover.png) no-repeat center center;
+                    background-size: contain;
+                }
+            }
+            .kinmen {
+                width: 100px;
+                height: 100px;
+                top: 120px;
+                left: 0;
+                border: 1px solid #DDD;
+                background: #F1F1F1;
+                border-radius: .2em;
+                background: url(../images/map_kinmen.png) no-repeat center center #FFF;
+                background-size: contain;
+                &.active {
+                    transform: translate(20px, -15px);
+                }
+                &:after {
+                    bottom: 0;
+                    top: auto;
+                    left: 0;
+                    width: 91px;
+                    height: 1.5em;
+                    margin-left: 0;
+                    content: "金門縣";
+                }
+                img {
+                    width: 80%;
+                    height: 80%;
+                    left: 10%;
+                    top: 10%;
+                }
+                &:hover, &:focus {
+                    background: url(../images/map_kinmen_hover.png) no-repeat center center;
+                    background-size: contain;
+                }
+            }
+            .penghu {
+                width: 100px;
+                height: 100px;
+                top: 240px;
+                left: 0;
+                border: 1px solid #DDD;
+                background: #F1F1F1;
+                border-radius: .2em;
+                background: url(../images/map_penghu.png) no-repeat center center #FFF;
+                background-size: contain;
+                &.active {
+                    transform: translate(20px, -15px);
+                }
+                &:after {
+                    bottom: 0;
+                    top: auto;
+                    left: 0;
+                    width: 91px;
+                    height: 1.5em;
+                    margin-left: 0;
+                    content: "澎湖縣";
+                }
+                &:hover, &:focus {
+                    background: url(../images/map_penghu_hover.png) no-repeat center center;
+                    background-size: contain;
+                }
+            }
+        }
+        .road_list {
+            overflow: hidden;
+            .album {
+                min-height: 750px;
+                overflow: hidden;
+                @include screen('mobile') {
+                    min-height: 200px;
+                }
+                ul {
+                    li {
+                        .thumbnail {
+                            box-shadow: 0 0 2em -1em rgba(0, 0, 0, 0.5);
+                        }
+                    }
+                }
+            }
+        }
+        .county_list {
+            overflow: hidden;
+            p {
+                margin: 0 0 1em;
+                text-align: left;
+                @include screen('xs_mobile') {
+                    text-align: center;
+                }
+            }
+            ul {
+                @include li-reset;
+                display: flex;
+                flex-flow: row wrap;
+                li {
+                    flex: 0 1 calc(100% / 3 - .5em);
+                    margin: 0 .25em .5em;
+                    a {
+                        display: block;
+                        padding: .75em .5em;
+                        background: #F1F1F1;
+                        color: #222;
+                        text-align: center;
+                        &:hover, &:focus {
+                            background: $primaryColor;
+                            color: #FFF;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    table {
+        td {
+            a {
+                @include aSetting_nocolor;
+            }
+            &.date {
+                text-align: center;
+                color: #666;
+                @include screen('mobile') {
+                    text-align: left;
+                }
+            }
+            &.num {
+                text-align: center;
+                color: #666;
+                @include screen('mobile') {
+                    text-align: left;
+                }
+            }
+        }
+    }
+    .list {
+        &>ul, ol {
+            list-style-type: none;
+            padding: 0;
+            border-top: 2px solid $primaryColor;
+            &>li {
+                padding: 1em 0;
+                border-bottom: 1px solid #DDD;
+                position: relative; // outline: 1px solid blue;
+                .tag {
+                    margin-left: 2em;
+                }
+                &>a {
+                    display: block;
+                    padding-left: 2em;
+                    position: relative;
+                    line-height: 1.45em;
+                    color: $color-word;
+                    &:hover {
+                        color: $aHover;
+                    }
+                    .num {
+                        width: 1.5em;
+                        text-align: right;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        &:after {
+                            content: ".";
+                            display: inline-block;
+                        }
+                    }
+                }
+                span.dept {
+                    display: inline-block;
+                    font-size: .938em;
+                    @include screen("mobile") {
+                        display: block;
+                    }
+                }
+                time {
+                    display: block;
+                    color: #AAA;
+                    font-size: .938em;
+                }
+            }
+        }
+    }
+}
+.album {
+    margin: 1em auto;
+    ul {
+        @include li-reset;
+        li {
+            @include make_col(3, 1);
+            @media screen and (max-width: 1100px) {
+                @include make_col(2, 1);
+            }
+            @include screen('xs_mobile') {
+                @include make_col(1, 1);
+            }
+            overflow: visible;
+            a {
+                display: block;
+            }
+            .caption {
+                position: relative;
+                width: 100%;
+                height:4em;
+                h3 {
+                    overflow: hidden;
+                    display: block;
+                    font-size: 1.25rem;
+                    font-weight: 600;
+                    line-height: 1.4em;
+                    margin: 1rem;
+                    @include text-overflow;
+                }
+                p {
+                    margin: 0em 1rem 1em;
+                    color: #555;
+                    overflow: hidden;
+                    display: block;
+                    line-height: 1.45em;
+                    height: 2.9em;
+                    font-size: .938rem;
+                }
+                .road {
+                    display: block;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    font-size: .938rem;
+                    text-align: center;
+                    padding: 0rem 1em;
+                    height: 2rem;
+                    line-height: 2rem;
+                    z-index: 2;
+                    color: #333;
+                    background: #DADADA;
+                }
+                .county {
+                    position: absolute;
+                    left: 0em;
+                    top: 0em;
+                    font-size: .938rem;
+                    width: 5em;
+                    height: 2em;
+                    padding: .25em 1em;
+                    text-align: center;
+                    background: $color-orange;
+                    color: #FFF;
+                }
+                .collect {
+                    position: absolute;
+                    top: 4px;
+                    right: 8px;
+                    width: 20px;
+                    height: 20px;
+                    background: url(../images/icon_collect.svg) no-repeat center center;
+                    background-size: contain;
+                    font-size: 0;
+                    display: block;
+                    &.active {
+                        background: url(../images/icon_collect_active.svg) no-repeat center center;
+                        background-size: contain;
+                    }
+                }
+            }
+            .thumbnail {
+                width: 100%;
+                max-width: 90%;
+                margin: 0 auto 1em;
+                a {
+                    &:hover, &:focus {
+                        .img-container {
+                            img {
+                                opacity: 1;
+                                transform: scale(1.1);
+                            }
+                        }
+                    }
+                }
+                .img-container {
+                    margin-bottom: 0;
+                    background: #000;
+                    img {
+                        transition: .3s ease-out;
+                        opacity: .85;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+}
+@keyframes balloon_ani {
+    0% {
+        bottom: 50px;
+    }
+    50% {
+        bottom: 80px;
+    }
+    100% {
+        bottom: 50px;
+    }
+}
