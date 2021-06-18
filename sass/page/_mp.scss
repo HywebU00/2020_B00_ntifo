@@ -432,14 +432,11 @@
 }
 // social
 .social {
-    background: url(../images/social_bg.jpg) center center no-repeat fixed;
-    background-size: cover;
+    background: #FFF;
     min-height: 500px;
     position: relative;
     overflow: hidden;
-    @include screen('xs_mobile') {
-        background: #696564;
-    }
+
     &:after {
         content: "";
         position: absolute;
@@ -456,17 +453,21 @@
         position: relative;
         z-index: 2;
         margin-bottom: 1rem;
-        color: #FFF;
-        text-shadow: 0px 0px 10px rgba(0, 0, 0, .85);
-        small {
-            color: #FFF;
+        color: #333;
+        font-size: 3em;
+        @include screen('mobile') {
+            font-size: 2em;
         }
+
     }
     .socialContent {
         position: relative;
         z-index: 2;
         display: flex;
         flex-flow: row wrap;
+        @include screen('mobile') {
+            justify-content: center;
+        }
         .slick-prev {
             left: 0px;
             display: none;
@@ -493,10 +494,11 @@
                 margin-bottom: 1em;
             }
             @include screen('xs_mobile') {
-                flex-basis: 80%;
-                max-width: 80%;
-                min-width: 300px;
-                margin: 0 auto 1em;
+                flex-grow: 0;
+                flex-basis: 40%;
+                max-width: 40%;
+                min-width: 100px;
+                margin: 0 .25em 1em;
             }
             a.img-container {
                 flex-basis: 100%;
@@ -522,7 +524,7 @@
             }
             .description {
                 flex-basis: 100%;
-                background: #FFF;
+                background: #F1F1F1;
                 position: relative;
                 min-height: 10em;
                 padding: 1em;
@@ -530,6 +532,9 @@
                     padding: 2em 1em;
                     min-height: auto;
                     width: 100%;
+                }
+                @include screen('mobile') {
+                    padding: .5em 1em;
                 }
                 .collect {
                     position: absolute;
@@ -586,6 +591,9 @@
                     color: #222;
                     text-align: center;
                     font-family: 'Noto Serif TC', serif;
+                    @include screen('mobile') {
+                        font-size: 1.25em;
+                    }
                 }
                 p {
                     height: 3em;
@@ -854,7 +862,7 @@
 .photo {
     position: relative;
     overflow: hidden;
-    background: url(../images/photo_bg.jpg) no-repeat top center;
+    background: url(../images/social_bg.jpg) center center no-repeat fixed;
     background-size: cover;
     &.effect {
         &:after {
@@ -867,8 +875,8 @@
         position: absolute;
         top: 0;
         left: -30%;
-        background: rgba($primaryColor, .3);
-        background: linear-gradient(125deg, rgba($primaryColor, .8) 50%, rgba($primaryColor, 0) 50%);
+        background: rgba($secondaryColor, .3);
+        background: linear-gradient(125deg, rgba($secondaryColor, .8) 50%, rgba($secondaryColor, 0) 50%);
         width: 100%;
         height: 100%;
         z-index: 2;
@@ -1289,7 +1297,7 @@
         position: absolute;
         background: url(../images/mag_bg.png) no-repeat left center;
         background-size: contain;
-        left: 5%;
+        left: 0%;
         bottom: 0%;
         width: 40%;
         height: 60%;
@@ -1311,11 +1319,14 @@
         }
     }
     .container {
+        @include screen('notebook') {
+            @include gutter(10%);
+        }
         .mag_grid {
             position: relative;
             z-index: 2;
             padding-left: 10em;
-            @include screen('notebook') {
+            @media screen and (max-width: 1100px) {
                 padding-left: 0;
             }
             @include screen('tablet') {
@@ -1735,6 +1746,9 @@
         }
     }
     .tabContent {
+        @include screen('xs_mobile') {
+            padding: .5em 0;
+        }
         ul {
             @include li-reset;
             li {
@@ -1750,8 +1764,14 @@
                     position: relative;
                     display: block;
                     padding-left: 1.25em;
+                    display: flex;
+                    flex-flow: row wrap;
+                    align-items: center;
                     @include screen('mobile') {
-                        font-size: 1.25rem;
+                        font-size: 1rem;
+                        @include text-overflow;
+                        max-width: 100%;
+
                     }
                     &:hover, &:focus {
                         color: $aColor;
@@ -1768,8 +1788,50 @@
                         top: .2em;
                     }
                     time {
+                        flex-grow: 0;
+                        flex-shrink: 1;
+                        flex-basis: 80px;
                         margin-right: .5em;
+                        margin-left: 0;
+                        font-size: .938rem;
+                        @include screen('mobile') {
+                            order: 2;
+                        }
+
                     }
+                    .tag {
+                        margin-right: .5em;
+                        margin-left: 0;
+                        background: #e5e3df;
+                        color: #FFF;
+                        text-align: center;
+                        font-size: .938rem;
+                        padding-left: 1em;
+                        padding-right: 1em;
+                        line-height: 1.4em;
+                        display: inline-block;
+                        margin-bottom: 0;
+                        color: #696256;
+                        &:before {
+                            display: none;
+                        }
+                        @include screen('mobile') {
+                            line-height: 1.2em;
+                            order: 0;
+                            margin-bottom: .5em;
+                        }
+                    }
+                    span {
+                        flex-grow: 1;
+                        flex-shrink: 1;
+                        flex-basis: 50%;
+                        @include text-overflow;
+                        @include screen('mobile') {
+                            flex-basis: 100%;
+                            order: 3;
+                        }
+                    }
+
                 }
             }
         }

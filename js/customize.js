@@ -523,43 +523,43 @@ $(function() {
     });
     //右側按鈕
     if ($('.quickDot').length > 0) {
-        $('.gotoTopic').click(function(e) {
-            $('html, body').stop(true, true).animate({ scrollTop: $('.topic').offset().top }, 600, 'linear');
+        $('.gotoMpSlider').click(function(e) {
+            $('html, body').stop(true, true).animate({ scrollTop: $('.mpSlider').offset().top - 70 }, 600, 'linear');
             $(this).blur();
             e.preventDefault();
         });
         $('.gotoNews').click(function(e) {
-            $('html, body').stop(true, true).animate({ scrollTop: $('.news').offset().top }, 600, 'linear');
+            $('html, body').stop(true, true).animate({ scrollTop: $('.newsTab').offset().top - 70 }, 600, 'linear');
             $(this).blur();
             e.preventDefault();
         });
         $('.gotoSocial').click(function(e) {
-            $('html, body').stop(true, true).animate({ scrollTop: $('.social').offset().top - 40 }, 600, 'linear');
+            $('html, body').stop(true, true).animate({ scrollTop: $('.social').offset().top - 70 }, 600, 'linear');
             $(this).blur();
             e.preventDefault();
         });
         $('.gotoAbout').click(function(e) {
-            $('html, body').stop(true, true).animate({ scrollTop: $('.about').offset().top }, 600, 'linear');
+            $('html, body').stop(true, true).animate({ scrollTop: $('.about').offset().top - 70 }, 600, 'linear');
             $(this).blur();
             e.preventDefault();
         });
         $('.gotoPhoto').click(function(e) {
-            $('html, body').stop(true, true).animate({ scrollTop: $('.photo').offset().top }, 600, 'linear');
+            $('html, body').stop(true, true).animate({ scrollTop: $('.photo').offset().top - 70 }, 600, 'linear');
             $(this).blur();
             e.preventDefault();
         });
         $('.gotoVideo').click(function(e) {
-            $('html, body').stop(true, true).animate({ scrollTop: $('.video').offset().top }, 600, 'linear');
+            $('html, body').stop(true, true).animate({ scrollTop: $('.video').offset().top - 70 }, 600, 'linear');
             $(this).blur();
             e.preventDefault();
         });
         $('.gotoCpIntro').click(function(e) {
-            $('html, body').stop(true, true).animate({ scrollTop: $('.cp_intro').offset().top - 40 }, 600, 'linear');
+            $('html, body').stop(true, true).animate({ scrollTop: $('.cp_intro').offset().top - 70 }, 600, 'linear');
             $(this).blur();
             e.preventDefault();
         });
         $('.gotoCpLengend').click(function(e) {
-            $('html, body').stop(true, true).animate({ scrollTop: $('.cp_legend').offset().top - 40 }, 600, 'linear');
+            $('html, body').stop(true, true).animate({ scrollTop: $('.cp_legend').offset().top - 70 }, 600, 'linear');
             $(this).blur();
             e.preventDefault();
         });
