@@ -44,7 +44,6 @@ body {
     position: relative;
     margin: 0 auto;
     padding: 0;
-    padding-top: 100px;
     // 可先設定一個中央區塊最大寬，限制accesskey對齊
     @include screen('tablet') {
         padding-top: 60px;
@@ -99,16 +98,16 @@ body {
                 margin-left: 5%;
                 padding: 1em 1em 1em;
                 text-align: center;
-                left:0;
-                bottom:0;
-                top:3em;
+                left: 0;
+                bottom: 0;
+                top: 3em;
             }
-            span{
+            span {
                 @include screen('xs_mobile') {
                     height: 4.5em;
                     line-height: 1.5;
-                    display:block;
-                    overflow:hidden;
+                    display: block;
+                    overflow: hidden;
                 }
             }
         }
@@ -131,7 +130,7 @@ body {
             font-size: 1.125rem;
             line-height: 1.65;
             @include screen('xs_mobile') {
-                font-size:.938rem;
+                font-size: .938rem;
             }
         }
         img {

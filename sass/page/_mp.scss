@@ -867,8 +867,8 @@
         position: absolute;
         top: 0;
         left: -30%;
-        background: rgba(0, 0, 0, .3);
-        background: linear-gradient(125deg, rgba(0, 0, 0, .2) 50%, rgba(0, 0, 0, 0) 50%);
+        background: rgba($primaryColor, .3);
+        background: linear-gradient(125deg, rgba($primaryColor, .8) 50%, rgba($primaryColor, 0) 50%);
         width: 100%;
         height: 100%;
         z-index: 2;
@@ -1081,26 +1081,106 @@
         }
     }
 }
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        left: 5%;
+        top: 30%;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        left: 20%;
+        top: 30%;
+        transform: translateX(0px);
+    }
+}
+
 // 首頁輪播
 .mpSlider {
     width: 100%;
     @include gutter(0);
+    .slick-prev, .slick-next {
+        top: 55% !important;
+    }
     .img-container {
         @include aspect-ratio(1, 1);
     }
+    .slick-current {
+        .img_layer {
+            opacity: 1;
+            animation: fadeInLeft 1.2s 1s both $cubic;
+        }
+    }
     .slick-slide {
         overflow: hidden;
+        .img_layer {
+            position: absolute;
+            width: 60%;
+            height: 60%;
+            left: 20%;
+            top: 30%;
+            // transform: translate(-50%, -40%);
+            z-index: 2;
+            transform: translate(-50%, -40%);
+            opacity: 0;
+            display: flex;
+            flex-flow: row wrap;
+            align-content: center;
+            @include screen('tablet') {
+                top: 20%;
+            }
+            img {
+                object-fit: contain;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+            }
+            h2 {
+                color: #FFF;
+                display: block;
+                width: 90%;
+                margin: 0 auto .25em;
+                text-shadow: 0px 0px 5px rgba(0, 0, 0, .75), 0px 0px 10px rgba(0, 0, 0, .75);
+                text-align: center;
+                font-size: 3.5em;
+                flex-grow: 0;
+                flex-shrink: 1;
+                flex-basis: 90%;
+                height: auto;
+                @include screen('tablet') {
+                    font-size: 2.5em;
+                }
+                @include screen('mobile') {
+                    font-size: 1.5em;
+                }
+            }
+            p {
+                color: #FFF;
+                display: block;
+                width: 80%;
+                text-align: center;
+                margin: 0 auto .5em;
+                text-shadow: 0px 0px 3px rgba(0, 0, 0, .75), 0px 0px 8px rgba(0, 0, 0, .75);
+                @include text-line(4, 1.5em);
+                flex-grow: 0;
+                flex-shrink: 1;
+                flex-basis: 80%;
+            }
+        }
         img {
             object-fit: cover;
             transition: transform 10s ease-out 0.4s;
             transform: scale(1);
         }
         &.slick-current {
-            img {
+            picture img {
                 transform: scale(1.2);
             }
         }
-        &.slick-current.start img {
+        &.slick-current.start picture img {
             transition: transform 0s 0s;
             transform: scale(1);
         }
@@ -1192,6 +1272,503 @@
                     span {
                         display: block;
                         right: 2em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.magazine {
+    background: #e8e6e6;
+    position: relative;
+    padding-top: 4em;
+    overflow: hidden;
+    &:before {
+        content: "";
+        position: absolute;
+        background: url(../images/mag_bg.png) no-repeat left center;
+        background-size: contain;
+        left: 5%;
+        bottom: 0%;
+        width: 40%;
+        height: 60%;
+        @include screen('tablet') {
+            display: none;
+        }
+    }
+    &:after {
+        content: "";
+        position: absolute;
+        background: url(../images/mag_bg_right.png) no-repeat left center;
+        background-size: contain;
+        right: -15%;
+        top: 10%;
+        width: 40%;
+        height: 60%;
+        @include screen('tablet') {
+            display: none;
+        }
+    }
+    .container {
+        .mag_grid {
+            position: relative;
+            z-index: 2;
+            padding-left: 10em;
+            @include screen('notebook') {
+                padding-left: 0;
+            }
+            @include screen('tablet') {
+                width: 94%;
+                margin: 0 auto;
+            }
+            h3 {
+                margin: .5em 0 .5em 0;
+                line-height: 1.65;
+                font-family: 'Noto Serif TC', serif;
+                color: #222;
+                @include text-line(3, 1.45em);
+            }
+            p {
+                color: #888;
+                font-size: .938rem;
+            }
+            a {
+                &:hover, &:focus {
+                    h3 {
+                        color: $aHover;
+                    }
+                }
+            }
+            .row_top {
+                display: flex;
+                @include screen('tablet') {
+                    display: flex;
+                    flex-flow: row wrap;
+                }
+                .cover {
+                    flex-grow: 0;
+                    flex-shrink: 1;
+                    flex-basis: 35%;
+                    min-width: 320px;
+                    margin: 0 .5em .5em 0;
+                    position: relative;
+                    @include screen('tablet') {
+                        flex-basis: 100%;
+                        background: #fff;
+                        height: auto;
+                        margin: 0 0 .5em;
+                    }
+                    a {
+                        display: block;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        @include screen('tablet') {
+                            @include aspect-ratio(3, 4);
+                            margin: 0 auto 1em;
+                            min-width: 280px;
+                            max-width: 360px;
+                            position: relative;
+                            transform: scale(.8);
+                        }
+                        .pic {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            img {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                            }
+                        }
+
+                    }
+                }
+                .content_list {
+                    flex-grow: 1;
+                    flex-shrink: 1;
+                    flex-basis: 50%;
+                    display: flex;
+                    flex-flow: row wrap;
+                    align-item: stretch;
+                    @include screen('tablet') {
+                        flex-basis: 100%;
+                    }
+                    .block {
+                        display: block;
+                        margin-bottom: .5em;
+                        background: #fff;
+                        padding-right: 1em;
+                        overflow: hidden;
+                        &.right {
+                            padding-left: .5em;
+                            padding-right: 0;
+                            @include screen('tablet') {
+                                padding-left: 0;
+                                padding-right: .5em;
+                            }
+                            a {
+                                .pic {
+                                    margin: 0 0 0 .5em;
+                                    order: 2;
+                                    @include screen('tablet') {
+                                        order: 0;
+                                        margin: 0 .5em 0 0;
+                                    }
+                                }
+                            }
+                        }
+                        a {
+                            display: flex;
+                            align-content: stretch;
+                            margin: 0;
+                            .pic {
+                                flex-grow: 0;
+                                flex-shrink: 1;
+                                flex-basis: 210px;
+                                margin: 0 .5em 0 0;
+                                @include aspect-ratio(1, 1);
+                                position: relative;
+                                @include screen('tablet') {
+                                    flex-basis: 190px;
+                                    transform: scale(.9);
+                                }
+                                img {
+                                    width: 100%;
+                                    object-fit: cover;
+                                }
+
+                            }
+                            .text {
+                                flex-grow: 1;
+                                flex-shrink: 1;
+                                flex-basis: 100px;
+                                p {
+                                    @include text-line(4, 1.45em);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .row_bottom {
+                display: flex;
+                @include screen('tablet') {
+                    flex-flow: row wrap;
+                }
+                .block {
+                    flex-grow: 1;
+                    flex-shrink: 1;
+                    flex-basis: 45%;
+                    display: block;
+                    background: #fff;
+                    padding-right: 1em;
+                    overflow: hidden;
+                    margin-right: 0.5em;
+                    @include screen('tablet') {
+                        flex-basis: 100%;
+                        margin: 0 0 .5em 0;
+                    }
+                    &.right {
+                        padding-left: 0em;
+                        padding-right: .5em;
+                        margin-right: 0;
+                        a {
+                            .pic {
+                                margin: 0 .5em 0 0;
+                                order: 0;
+                            }
+                        }
+                    }
+                    &.left {
+                        flex-grow: 0;
+                        flex-shrink: 1;
+                        flex-basis: 35%;
+                        min-width: 320px;
+                        margin: 0 .5em 0 0;
+                        position: relative;
+                        padding: 0;
+                        @include screen('tablet') {
+                            flex-basis: 100%;
+                            margin: 0 0 .5em 0;
+                            padding-right: .5em;
+                        }
+                        a {
+                            display: block;
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            top: 0;
+                            left: 0;
+                            &:hover, &:focus {
+                                .pic {
+                                    &:after {
+                                        background: rgba(0, 0, 0, .45);
+                                    }
+                                }
+                                .text {
+                                    @include screen('tablet') {
+                                        h3 {
+                                            color: $aHover;
+                                        }
+                                    }
+                                }
+                            }
+                            @include screen('tablet') {
+                                position: relative;
+                                display: flex;
+                            }
+                            .pic {
+                                position: absolute;
+                                width: 100%;
+                                height: 100%;
+                                left: 0;
+                                top: 0;
+                                margin: 0;
+                                @include screen('tablet') {
+                                    position: relative;
+                                    flex-basis: 190px;
+                                    transform: scale(.9);
+                                    margin: 0 .5em 0 0;
+                                }
+                                &:after {
+                                    content: "";
+                                    position: absolute;
+                                    width: 100%;
+                                    height: 100%;
+                                    background: rgba(0, 0, 0, .25);
+                                    top: 0;
+                                    left: 0;
+                                    z-index: 1;
+                                    transition: .3s ease-out;
+                                }
+                            }
+                            .text {
+                                position: absolute;
+                                z-index: 2;
+                                width: 100%;
+                                height: 100%;
+                                padding: 1em;
+                                @include screen('tablet') {
+                                    position: relative;
+                                    padding: 0;
+                                }
+                                h3, p {
+                                    color: #FFF;
+                                    text-shadow: 0px 0px 5px rgba(0, 0, 0, .85);
+                                    @include screen('tablet') {
+                                        color: #555;
+                                        text-shadow: none;
+                                    }
+                                }
+                                h3 {
+                                    @include text-line(2, 1.45em);
+                                    @include screen('tablet') {
+                                        @include text-line(3, 1.45em);
+                                        color: #222;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    a {
+                        display: flex;
+                        align-content: stretch;
+                        margin: 0;
+                        .pic {
+                            flex-grow: 0;
+                            flex-shrink: 1;
+                            flex-basis: 210px;
+                            margin: 0 .5em 0 0;
+                            @include aspect-ratio(1, 1);
+                            position: relative;
+                            @include screen('tablet') {
+                                flex-basis: 190px;
+                                transform: scale(.9);
+                            }
+                            img {
+                                width: 100%;
+                                object-fit: cover;
+                            }
+
+                        }
+                        .text {
+                            flex-grow: 1;
+                            flex-shrink: 1;
+                            flex-basis: 100px;
+                            p {
+                                @include text-line(4, 1.45em);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// 分眾按鈕
+.entrance {
+    padding: 1em 1em 0;
+    margin-bottom: .5em;
+    .container {
+        border-bottom: 1px dashed #DDD;
+        padding-bottom: 1em;
+
+        .entranceBlock {
+            position: relative;
+            display: flex;
+            justify-content: flex-end;
+            z-index: 99;
+            .pic {
+                flex-grow: 0;
+                flex-shrink: 1;
+                flex-basis: 40%;
+                max-height: 150px;
+                text-align: center;
+                pointer-events: none;
+                img {
+                    width: 80%;
+                    margin: 0 0 0 auto;
+                    transform: scale(1.1) translateY(-130px);
+                }
+                @include screen('mobile') {
+                    display: none;
+                }
+            }
+            a {
+                flex-grow: 1;
+                flex-shrink: 1;
+                flex-basis: 20%;
+                margin: 0 0 0 1rem;
+                max-height: 130px;
+                background: #c8bca6;
+                border-radius: .25em;
+                padding: 1em;
+                font-size: 1.75em;
+                color: #FFF;
+                text-shadow: 0px 0px 5px rgba(0, 0, 0, .75);
+                position: relative;
+                @include screen('mobile') {
+                    margin: 0 .25rem;
+                    padding: .5em;
+                    font-size: 1.25rem;
+                    min-height: 4em;
+                }
+                &.people {
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        width: 40%;
+                        height: 80%;
+                        bottom: 0;
+                        right: 5%;
+                        background: url(../images/btn_people.png) no-repeat center bottom;
+                        background-size: contain;
+                        z-index: 0;
+                    }
+                    &:hover, &:focus {
+                        background: #f1c701;
+                    }
+                }
+                &.institute {
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        width: 40%;
+                        height: 80%;
+                        bottom: 0;
+                        right: 5%;
+                        background: url(../images/btn_institute.png) no-repeat center bottom;
+                        background-size: contain;
+                        z-index: 0;
+                    }
+                    &:hover, &:focus {
+                        background: #74ac13;
+                    }
+                }
+            }
+        }
+    }
+}
+//newsTab
+.newsTab {
+    padding: 1em 0;
+    .container {
+        @include screen('mobile') {
+            @include gutter;
+        }
+    }
+    .tabItem {
+        background: $color-yellow;
+        border-radius: .25em;
+        @include screen('mobile') {
+            margin-bottom: .25em;
+        }
+        a {
+            border: none;
+            border-radius: .25em;
+
+            &:hover, &:focus {
+                border: none;
+                color: #564b47;
+            }
+        }
+        &.active {
+            &>a {
+                border: none;
+                border-radius: .25em;
+                background: $color-orange;
+                color: #FFF;
+                &:hover, &:focus {
+                    color: #FFF;
+                }
+            }
+
+        }
+    }
+    .tabContent {
+        ul {
+            @include li-reset;
+            li {
+                display: block;
+                margin-bottom: .5em;
+                border-bottom: 1px dashed #DDD;
+                padding: .5em 0;
+                a {
+                    font-size: 1.125rem;
+                    color: #222;
+                    line-height: 1.45;
+                    font-weight: bold;
+                    position: relative;
+                    display: block;
+                    padding-left: 1.25em;
+                    @include screen('mobile') {
+                        font-size: 1.25rem;
+                    }
+                    &:hover, &:focus {
+                        color: $aColor;
+                    }
+                    &:before {
+                        position: absolute;
+                        width: 1em;
+                        height: 1em;
+                        background: url(../images/icon_leaf.svg) no-repeat center center;
+                        background-size: contain;
+                        content: "";
+                        margin-right: .5em;
+                        left: 0;
+                        top: .2em;
+                    }
+                    time {
+                        margin-right: .5em;
                     }
                 }
             }

@@ -370,14 +370,14 @@ $(function() {
         responsive: [{
             breakpoint: 992,
             settings: "unslick"
-        },{
+        }, {
             breakpoint: 545,
             settings: {
                 slidesToShow: 2,
                 slidesToScroll: 1,
                 arrows: true
             }
-        },{
+        }, {
             breakpoint: 544,
             settings: {
                 slidesToShow: 1,
