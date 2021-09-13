@@ -81,6 +81,7 @@ $menuItems: 15;
                 text-align: left;
             }
             & > ul {
+                margin: 0;
                 & > li {
                     transform: scale(1.15) translateX(-30px);
                     opacity: 0;

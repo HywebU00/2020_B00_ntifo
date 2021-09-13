@@ -34,7 +34,7 @@ body {
 .main {
     position: relative;
     margin: 0 auto 5em;
-    @include screen('mobile') {
+    @include screen('tablet') {
         padding-top: 60px;
     }
     // 可先設定一個中央區塊最大寬，限制accesskey對齊

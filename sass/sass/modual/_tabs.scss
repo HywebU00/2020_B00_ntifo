@@ -57,6 +57,7 @@
             text-align: left;
             width: 100% !important;
             border-bottom: 1px solid #ddd;
+            font-size: 1.25rem;
         }
     }
 }
@@ -83,6 +84,7 @@
     display: none;
     @include screen('mobile') {
         position: static;
+        padding: 30px 0px;
     }
     ul {
         @include li-reset;

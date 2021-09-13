@@ -128,7 +128,7 @@ $(function () {
         $carousel.find('.start').removeClass('start');
     }, 0);
     // 廣告輪播
-    $('.adSlider').slick({
+    $('.cooperationSlider').slick({
         mobileFirst: true,
         dots: false,
         infinite: true,
@@ -144,7 +144,7 @@ $(function () {
             {
                 breakpoint: 1200,
                 settings: {
-                    slidesToShow: 5,
+                    slidesToShow: 3,
                     slidesToScroll: 1,
                     arrows: true,
                 },
@@ -152,15 +152,15 @@ $(function () {
             {
                 breakpoint: 768,
                 settings: {
-                    slidesToShow: 4,
+                    slidesToShow: 2,
                     slidesToScroll: 1,
                     arrows: true,
                 },
             },
             {
-                breakpoint: 575,
+                breakpoint: 200,
                 settings: {
-                    slidesToShow: 3,
+                    slidesToShow: 1,
                     slidesToScroll: 1,
                     arrows: true,
                 },
