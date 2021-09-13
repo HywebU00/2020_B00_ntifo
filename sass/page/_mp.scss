@@ -119,7 +119,7 @@
                 content: '';
                 position: absolute;
                 width: 50%;
-                height: 5px;
+                height: 2px;
                 background: #fff;
                 top: -10%;
                 left: 0;
@@ -578,9 +578,7 @@
             }
             .row_bottom {
                 display: flex;
-                @include screen('tablet') {
-                    flex-flow: row wrap;
-                }
+                flex-flow: row wrap;
                 .block {
                     flex-grow: 1;
                     flex-shrink: 1;

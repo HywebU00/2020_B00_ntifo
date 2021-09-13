@@ -7,6 +7,7 @@
     z-index: 99;
     transition: 0.3s ease-out;
     overflow-x: hidden;
+    overflow-y: visible;
     // background-color: rgba(0, 0, 0, 0.25);
     // box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     @extend %clearfix;
