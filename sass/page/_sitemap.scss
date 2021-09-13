@@ -1,6 +1,5 @@
  /* sitemap */
  .sitemap {
-     min-height:500px;
      margin: 0px auto 1em;
      @extend %clearfix;
      p {
@@ -19,7 +18,7 @@
      .accesskeyDefine {
          padding: 1em 2em;
          background: #EEE;
-         @include border-radius(6px);
+         border-radius: 6px;
          li {
              margin-bottom: .2em;
          }
@@ -30,7 +29,7 @@
  .cascading {
      border-top: 1px solid #CCC;
      @include gutter;
-     @include box-sizing;
+     box-sizing: border-box;
      ul {
          @include li-reset;
      }
@@ -40,7 +39,7 @@
          display: inline-block;
          vertical-align: top;
          margin: 0 -5px 1em 0; // margin-right:改為負5;
-         @include box-sizing;
+         box-sizing: border-box;
          padding: 0px .5em;
          a {
              margin: .2em 0;

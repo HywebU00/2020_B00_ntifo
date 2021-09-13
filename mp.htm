@@ -1,22 +1,31 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-Hant" class="no-js">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="keywords" content="農訓,農訓協會,NTIFO" />
+    <meta name="description" content="以辦理農民團體幹部聯合訓練增進知識技能，提高工作熱忱、發揮服務功能，促進研究發展加強農村建設為宗旨。" />
     <title>中華民國農訓協會</title>
     <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
     <![endif]-->
+    <!-- hyUI css -->
+    <link rel="stylesheet" href="css/hyui.css" />
     <!-- slick css-->
     <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
-    <link rel="stylesheet" href="css/hyui.css"><!-- hyUI css -->
-    <link rel="stylesheet" href="css/animate.css"><!-- animate.css -->
-    <link rel="stylesheet" href="css/jquery.fancybox.min.css"><!-- fancybox-->
-    <link href="images/favicon.png" rel="icon" type="image/x-icon"><!-- favicon -->
+    <!-- 燈箱fancybox -->
+    <link rel="stylesheet" type="text/css" href="vendor/fancybox/jquery.fancybox.min.css" />
+    <!-- favicon -->
+    <link href="images/favicon.png" rel="icon" type="image/x-icon" />
+    <!-- font aewsome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <!-- animate -->
+    <link rel="stylesheet" href="css/animate.css" />
 </head>
 
 <body>
@@ -29,28 +38,43 @@
             <div class="container">
                 <a class="accesskey" href="#aU" id="aU" accesskey="U" title="網站標題" tabindex="2">:::</a>
                 <!-- navigation Start -->
-                <nav class="navigation">
-                    <ul>
-                        <li><a href="#">回首頁</a></li>
-                        <li><a href="#">聯絡我們</a></li>
-                        <li><a href="#">沃田旅店</a></li>
-                        <li><a href="#">全台農會</a></li>
-                        <li><a href="#">全台漁會</a></li>
-                    </ul>
+                <nav class="navigation" role="navigation" aria-label="Site">
+                    <!-- 新增div navlist -->
+                    <div class="navlist">
+                        <ul>
+                            <li><a href="#">回首頁</a></li>
+                            <li><a href="#">聯絡我們</a></li>
+                            <li><a href="#">沃田旅店</a></li>
+                            <li><a href="#">全台農會</a></li>
+                            <li><a href="#">全台漁會</a></li>
+                            <li><a href="#">會員登入</a></li>
+                            <li><a href="#">立即註冊</a></li>
+                        </ul>
+                    </div>
+                    <!-- language -->
+                    <!-- <div class="language">
+                        <a href="#">語言選擇</a>
+                        <ul>
+                            <li><a href="#">繁體中文</a></li>
+                            <li><a href="#">简体中文</a></li>
+                            <li><a href="#">ENGLISH</a></li>
+                        </ul>
+                    </div> -->
                 </nav>
                 <!-- navigation End -->
                 <h1>
                     <a href="index.htm"><img src="images/logo.png" alt="網站標題" /></a>
                 </h1>
                 <!-- Search Start -->
-                <div class="search">
+                <div class="search" role="search">
                     <div class="form_grp">
                         <label for="mustSameAsId">搜尋</label>
-                        <input name="username" id="mustSameAsId" type="text" placeholder="請輸入文字" accesskey="S">
-                        <input name="" type="submit" title="查詢" value="查詢" />
+                        <input name="username" id="mustSameAsId" type="text" placeholder="請輸入文字" accesskey="S"
+                            title="請輸入文字" aria-label="搜尋網站內容" />
+                        <button type="button" class="btn btn-search">查詢</button>
                     </div>
-                    <div class="btn_grp">
-                        <input name="" type="submit" value="進階搜尋" />
+                    <!-- <div class="btn_grp">
+                        <button type="button" class="btn">進階搜尋</button>
                     </div>
                     <div class="keywordHot">
                         <ul>
@@ -58,29 +82,51 @@
                             <li><a href="#">查詢</a></li>
                             <li><a href="#">字詞三</a></li>
                         </ul>
-                    </div>
+                    </div> -->
                 </div>
                 <!-- Search End -->
                 <!-- noscript -->
-                <noscript> 您的瀏覽器不支援JavaScript語法，JavaScript語法並不影響內容的陳述。您可使用按鍵盤上的Ctrl鍵+ (+)鍵放大/(-)鍵縮小來改變字型大小；回到上一頁可使用瀏覽器提供的 Alt+左方向鍵(←) 快速鍵功能；列印可使用瀏覽器提供的(Ctrl+P)功能。您的瀏覽器，不支援script語法，若您的瀏覽器無法支援請點選此超連結 <a href="#">網站導覽</a>
+                <noscript> 您的瀏覽器不支援JavaScript語法，JavaScript語法並不影響內容的陳述。您可使用按鍵盤上的Ctrl鍵+
+                    (+)鍵放大/(-)鍵縮小來改變字型大小；回到上一頁可使用瀏覽器提供的 Alt+左方向鍵(←)
+                    快速鍵功能；列印可使用瀏覽器提供的(Ctrl+P)功能。您的瀏覽器，不支援script語法，若您的瀏覽器無法支援請點選此超連結 <a href="#">網站導覽</a>
                 </noscript>
                 <!-- menu Start -->
-                <nav class="menu">
+                <nav class="menu" role="navigation" aria-label="About page">
                     <ul>
-                        <li><a href="#">關於協會</a></li>
-                        <li><a href="#">近期課程</a>
+                        <li>
+                            <a href="#">關於協會</a>
                             <ul>
-                                <li><a href="#">第二層選單</a></li>
-                                <li><a href="#">第二層選單</a></li>
-                                <li><a href="#">第二層選單</a></li>
-                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">協會簡介</a></li>
+                                <li><a href="#">里程碑 Story Line</a></li>
+                                <li><a href="#">協會首長</a></li>
+                                <li><a href="#">各處職掌</a></li>
+                                <li><a href="#">國際合作</a></li>
                             </ul>
                         </li>
                         <li><a href="#">最新消息</a></li>
-                        <li><a href="#">熱門推薦</a></li>
-                        <li><a href="#">下載區</a></li>
-                        <li><a href="#">農漁智庫</a></li>
-                        <li><a href="#">問卷調查</a></li>
+                        <li>
+                            <a href="http://www.google.com">農訓雜誌</a>
+                            <ul>
+                                <li><a href="http://www.google.com">出版品一覽</a></li>
+                                <li><a href="#">農訓文章</a></li>
+                                <li><a href="#">特別企劃</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">訓練課程</a>
+                            <ul>
+                                <li><a href="#">課程清單</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">資源服務</a>
+                            <ul>
+                                <li><a href="#">下載區</a></li>
+                                <li><a href="#">課程資源</a></li>
+                                <li><a href="#">影音專區</a></li>
+                                <li><a href="#">相關連結</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </nav>
                 <!-- menu End -->
@@ -90,497 +136,333 @@
         <!-- main Start -->
         <div id="center" class="main">
             <a class="accesskey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a>
-            <!-- 大圖輪播 -->
-            <section class="mpSlider mask">
-                <div class="img-container">
-                    <a href="#" title="">
+            <!-- 任何一個section下一層都要包下一層都要包div container作對齊 -->
+            <!-- kv -->
+            <section class="kv">
+                <div class="mpSlider">
+                    <div class="img-container">
+                        <picture>
+                            <source media="(min-width: 1200px)" data-srcset="images/mp_banner_01.jpg" />
+                            <source media="(min-width: 992px)" data-srcset="images/mp_banner_01.jpg" />
+                            <source media="(min-width: 576px)" data-srcset="images/mp_banner_01.jpg" />
+                            <source media="(max-width: 575px)" data-srcset="images/mp_banner_01.jpg" />
+                            <img data-src="images/mp_banner_01.jpg" class="cover lazy" />
+                            <noscript><img src="images/mp_banner_01.jpg" /></noscript>
+                        </picture>
                         <!-- 可壓圖或是文字 -->
                         <div class="img_layer">
-                            <img src="images/img_layer01.png" alt="">
+                            <h2>田裡綠浪　美濃野蓮</h2>
+                            <p> 一年365天，無論冬寒夏熱，池裡總有人抱起野蓮水花四濺，這是美濃特別的風景。從湖裡的野菜化身農夫的新寵，分擔菸業時代終結後在地人生計的重擔。在餐桌上做為美濃的代名詞，無論用樹子清炒，還是裹粉油炸，清新爽脆的客庄滋味，只要嘗過一次，就會深深地從嘴裡記進心底。
+                            </p>
+                            <div class="more">375期 農訓雜誌 【封面故事】</div>
                         </div>
-                        <!-- 底圖 -->
+                    </div>
+                    <div class="img-container">
                         <picture>
-                            <source media="(min-width: 1200px)" data-srcset="images/mp_bg.jpg">
-                            <source media="(min-width: 992px)" data-srcset="images/mp_bg.jpg">
-                            <source media="(min-width: 576px)" data-srcset="images/mp_bg.jpg">
-                            <source media="(max-width: 575px)" data-srcset="images/mp_bg.jpg">
-                            <img data-src="images/mp_bg.jpg" class="cover lazy">
-                            <noscript><img src="images/mp_bg.jpg"></noscript>
+                            <source media="(min-width: 1200px)" data-srcset="images/mp_banner_02.jpg" />
+                            <source media="(min-width: 992px)" data-srcset="images/mp_banner_02.jpg" />
+                            <source media="(min-width: 576px)" data-srcset="images/mp_banner_02.jpg" />
+                            <source media="(max-width: 575px)" data-srcset="images/mp_banner_02.jpg" />
+                            <img data-src="images/mp_banner_02.jpg" class="cover lazy" />
+                            <noscript><img src="images/mp_banner_02.jpg" /></noscript>
                         </picture>
-                        <!-- css預設圖說不顯示，可不套 -->
-                        <span class="caption">圖說1</span>
-                    </a>
-                </div>
-                <div class="img-container">
-                    <a href="#" title="">
                         <!-- 可壓圖或是文字 -->
                         <div class="img_layer">
-                            <img src="images/img_layer02.png" alt="">
+                            <h2>農訓協會打造<br />農漁業線上學習庫</h2>
+                            <p> 新冠疫情後，更加速各產業導入數位的決心。農訓協會與緯育TibaMe for
+                                Business合作導入線上學習資源與數位課程製作服務，服務全台及離島超過340家農漁會，今年開始部份實體培訓轉為線上，打造全台最大「農漁業零距離學習庫」，在疫情影響下學習不停擺!
+                            </p>
+                            <div class="more">農訓協會 【焦點報導】</div>
                         </div>
-                        <!-- 底圖 -->
+                    </div>
+                    <div class="img-container">
                         <picture>
-                            <source media="(min-width: 1200px)" data-srcset="images/mp_bg_0.jpg">
-                            <source media="(min-width: 992px)" data-srcset="images/mp_bg_0.jpg">
-                            <source media="(min-width: 576px)" data-srcset="images/mp_bg_0.jpg">
-                            <source media="(max-width: 575px)" data-srcset="images/mp_bg_0.jpg">
-                            <img data-src="images/mp_bg_0.jpg" class="cover lazy">
-                            <noscript><img src="images/mp_bg_0.jpg"></noscript>
+                            <source media="(min-width: 1200px)" data-srcset="images/mp_banner_03.jpg" />
+                            <source media="(min-width: 992px)" data-srcset="images/mp_banner_03.jpg" />
+                            <source media="(min-width: 576px)" data-srcset="images/mp_banner_03.jpg" />
+                            <source media="(max-width: 575px)" data-srcset="images/mp_banner_03.jpg" />
+                            <img data-src="images/mp_banner_03.jpg" class="cover lazy" />
+                            <noscript><img src="images/mp_banner_03.jpg" /></noscript>
                         </picture>
-                        <!-- css預設圖說不顯示，可不套 -->
-                        <span class="caption">圖說1</span>
-                    </a>
-                </div>
-                <div class="img-container">
-                    <a href="#" title="">
                         <!-- 可壓圖或是文字 -->
                         <div class="img_layer">
-                            <h2>成為農漁會最值得信賴的訓練機構，人才培育的搖籃</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam modi eligendi atque optio quam? Cumque modi libero totam, laborum. Sequi, dolorum doloribus inventore numquam deserunt ab maiores quasi dolores nemo.</p>
+                            <h2>神的食物-可可 <br />落腳國境之南</h2>
+                            <p> 是的！你沒看錯，台灣有種植可可，地點就在屏東內埔。由原產自屏東、農民自行研發製作的生巧克力，濃郁綿密的口感更勝於進口舶來品，這是台灣可可道地純正的風味，是農民苦心堅持10年的成果，更是屏東縣農業升級轉型、博得生機的最佳展現。
+                            </p>
+                            <div class="more">378期 農訓雜誌 【樹上掛的】</div>
                         </div>
-                        <!-- 底圖 -->
-                        <picture>
-                            <source media="(min-width: 1200px)" data-srcset="images/mp_banner_01.jpg">
-                            <source media="(min-width: 992px)" data-srcset="images/mp_banner_01.jpg">
-                            <source media="(min-width: 576px)" data-srcset="images/mp_banner_01.jpg">
-                            <source media="(max-width: 575px)" data-srcset="images/mp_banner_01.jpg">
-                            <img data-src="images/mp_banner_01.jpg" class="cover lazy">
-                            <noscript><img src="images/mp_banner_01.jpg"></noscript>
-                        </picture>
-                        <!-- css預設圖說不顯示，可不套 -->
-                        <span class="caption">圖說1</span>
-                    </a>
-                </div>
-                <div class="img-container">
-                    <a href="#" title="">
-                        <!-- 可壓圖或是文字 -->
-                        <div class="img_layer">
-                            <h2>與農漁會攜手開拓國際視野</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam modi eligendi atque optio quam? Cumque modi libero totam, laborum. Sequi, dolorum doloribus inventore numquam deserunt ab maiores quasi dolores nemo.</p>
-                        </div>
-                        <!-- 底圖 -->
-                        <picture>
-                            <source media="(min-width: 1200px)" data-srcset="images/mp_banner_02.jpg">
-                            <source media="(min-width: 992px)" data-srcset="images/mp_banner_02.jpg">
-                            <source media="(min-width: 576px)" data-srcset="images/mp_banner_02.jpg">
-                            <source media="(max-width: 575px)" data-srcset="images/mp_banner_02.jpg">
-                            <img data-src="大尺寸圖檔" class="cover lazy">
-                            <noscript><img src="images/mp_banner_02.jpg"></noscript>
-                        </picture>
-                        <!-- css預設圖說不顯示，可不套 -->
-                        <span class="caption">圖說2</span>
-                    </a>
-                </div>
-                <div class="img-container">
-                    <a href="#" title="">
-                        <!-- 可壓圖或是文字 -->
-                        <div class="img_layer">
-                            <h2>讓全世界看見台灣農漁會</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam modi eligendi atque optio quam? Cumque modi libero totam, laborum. Sequi, dolorum doloribus inventore numquam deserunt ab maiores quasi dolores nemo.</p>
-                        </div>
-                        <!-- 底圖 -->
-                        <picture>
-                            <source media="(min-width: 1200px)" data-srcset="images/mp_banner_03.jpg">
-                            <source media="(min-width: 992px)" data-srcset="images/mp_banner_03.jpg">
-                            <source media="(min-width: 576px)" data-srcset="images/mp_banner_03.jpg">
-                            <source media="(max-width: 575px)" data-srcset="images/mp_banner_03.jpg">
-                            <img data-src="大尺寸圖檔" class="cover lazy">
-                            <noscript><img src="images/mp_banner_03.jpg"></noscript>
-                        </picture>
-                        <!-- css預設圖說不顯示，可不套 -->
-                        <span class="caption">圖說2</span>
-                    </a>
-                </div>
-            </section>
-            <!-- 分眾按鈕 -->
-            <section class="section entrance">
-                <div class="container">
-                    <div class="entranceBlock">
-                        <div class="pic wow fadeInLeft" data-wow-duration=".5s" data-wow-delay="1.75s">
-                            <img src="images/fruit.png" alt="">
-                        </div>
-                        <a href="#" class="people wow fadeInRight" data-wow-duration=".5s" data-wow-delay="2s">一般民眾</a>
-                        <a href="#" class="institute wow fadeInRight" data-wow-duration=".5s" data-wow-delay="2.25s">農漁會</a>
                     </div>
                 </div>
             </section>
-            <!-- 消息頁籤區塊 -->
-            <section class="section newsTab">
+            <!-- news -->
+            <section class="news">
                 <div class="container">
-                    <div class="tabSet wow fadeInRight" data-wow-duration=".5s" data-wow-delay="1s">
-                        <section class="tabs example-1">
-                            <h2 class="tabItem active"><a href="#">最新消息</a></h2>
+                    <div class="tabSet">
+                        <section class="tabs">
+                            <button type="button" class="tabItem active">新聞公告</button>
                             <!--選到的頁籤項目-->
                             <div class="tabContent">
                                 <ul>
-                                    <li>
-                                        <a href="#">
-                                            <time>109.12.12</time>
-                                            <div class="tag">分類</div>
-                                            <span>柳營區農會牛奶節暨新大樓落成100週年慶(柳營區農會)</span>
-                                        </a>
+                                    <li><time>2021/01/01</time><a href="#">新聞公告</a><span class="dept">三芝鄉農會</span></li>
+                                    <li><time>2021/01/01</time>
+                                        <a href="#">年度台灣豬標章行銷推廣與產銷履歷豬肉推廣及地產地消在地特</a><span class="dept">XX鄉農會</span>
                                     </li>
-                                    <li><a href="#">
-                                            <time>109.12.12</time>
-                                            <div class="tag">分類</div>
-                                            <span>年度台灣豬標章行銷推廣與產銷履歷豬肉推廣及地產地消在地特色畜產品多元化料理品嚐活動(田寮區農會)</span>
-                                        </a></li>
-                                    <li>
-                                        <a href="#">
-                                            <time>109.12.12</time>
-                                            <div class="tag">分類</div>
-                                            <span>赤腳行旗山香蕉好食節(旗山區農會)</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <time>109.12.12</time>
-                                            <div class="tag">分類</div>
-                                            <span>農業跨年嘉年華(公館鄉農會)</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <time>109.12.12</time>
-                                            <div class="tag">分類</div>
-                                            <span>竹塘魅力米香˙找回吃米的人竹塘鄉農會)</span>
-                                        </a>
-                                    </li>
+                                    <li><time>2021/01/01</time><a href="#">柳營區農會牛奶節暨新大樓落成100週年慶(柳營區農會)</a><span
+                                            class="dept">XX鄉農會</span></li>
+                                    <li><time>2021/01/01</time><a href="#">赤腳行旗山香蕉好食節(旗山區農會)</a><span
+                                            class="dept">XX鄉農會</span></li>
+                                    <li><time>2021/01/01</time><a href="#">竹塘魅力米香˙找回吃米的人竹塘鄉農會)</a><span
+                                            class="dept">XX鄉農會</span></li>
                                 </ul>
                                 <a href="#" class="more">更多</a>
                             </div>
-                            <h2 class="tabItem"><a href="#">課程資訊</a></h2>
+                            <button type="button" class="tabItem">課程資訊</button>
                             <div class="tabContent">
                                 <ul>
-                                    <li>
-                                        <a href="#">
-                                            <time>109.12.12</time>
-                                            <div class="tag">分類</div>
-                                            <span>竹塘魅力米香˙找回吃米的人竹塘鄉農會)</span>
-                                        </a>
+                                    <li><time>2021/01/01</time><a href="#">課程資訊</a><span class="dept">三芝鄉農會</span></li>
+                                    <li><time>2021/01/01</time>
+                                        <a href="#">年度台灣豬標章行銷推廣與產銷履歷豬肉推廣及地產地消在地特</a><span class="dept">XX鄉農會</span>
                                     </li>
-                                    <li>
-                                        <a href="#">
-                                            <time>109.12.12</time>
-                                            <div class="tag">分類</div>
-                                            <span>柳營區農會牛奶節暨新大樓落成100週年慶(柳營區農會)</span>
-                                        </a>
-                                    </li>
-                                    <li><a href="#">
-                                            <time>109.12.12</time>
-                                            <div class="tag">分類</div>
-                                            <span>年度台灣豬標章行銷推廣與產銷履歷豬肉推廣及地產地消在地特色畜產品多元化料理品嚐活動(田寮區農會)</span>
-                                        </a></li>
-                                    <li>
-                                        <a href="#">
-                                            <time>109.12.12</time>
-                                            <div class="tag">分類</div>
-                                            <span>赤腳行旗山香蕉好食節(旗山區農會)</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <time>109.12.12</time>
-                                            <div class="tag">分類</div>
-                                            <span>農業跨年嘉年華(公館鄉農會)</span>
-                                        </a>
-                                    </li>
+                                    <li><time>2021/01/01</time><a href="#">柳營區農會牛奶節暨新大樓落成100週年慶(柳營區農會)</a><span
+                                            class="dept">XX鄉農會</span></li>
+                                    <li><time>2021/01/01</time><a href="#">赤腳行旗山香蕉好食節(旗山區農會)</a><span
+                                            class="dept">XX鄉農會</span></li>
+                                    <li><time>2021/01/01</time><a href="#">竹塘魅力米香˙找回吃米的人竹塘鄉農會)</a><span
+                                            class="dept">XX鄉農會</span></li>
                                 </ul>
                                 <a href="#" class="more">更多</a>
                             </div>
-                            <h2 class="tabItem"><a href="#">農訓雜誌</a></h2>
+                            <button type="button" class="tabItem">農訓雜誌</button>
                             <div class="tabContent">
                                 <ul>
-                                    <li>
-                                        <a href="#">
-                                            <time>109.12.12</time>
-                                            <div class="tag">分類</div>
-                                            <span>赤腳行旗山香蕉好食節(旗山區農會)</span>
-                                        </a>
+                                    <li><time>2021/01/01</time><a href="#">農訓雜誌</a><span class="dept">三芝鄉農會</span></li>
+                                    <li><time>2021/01/01</time>
+                                        <a href="#">年度台灣豬標章行銷推廣與產銷履歷豬肉推廣及地產地消在地特</a><span class="dept">XX鄉農會</span>
                                     </li>
-                                    <li>
-                                        <a href="#">
-                                            <time>109.12.12</time>
-                                            <div class="tag">分類</div>
-                                            <span>竹塘魅力米香˙找回吃米的人竹塘鄉農會)</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <time>109.12.12</time>
-                                            <div class="tag">分類</div>
-                                            <span>柳營區農會牛奶節暨新大樓落成100週年慶(柳營區農會)</span>
-                                        </a>
-                                    </li>
-                                    <li><a href="#">
-                                            <time>109.12.12</time>
-                                            <div class="tag">分類</div>
-                                            <span>年度台灣豬標章行銷推廣與產銷履歷豬肉推廣及地產地消在地特色畜產品多元化料理品嚐活動(田寮區農會)</span>
-                                        </a></li>
-                                    <li>
-                                        <a href="#">
-                                            <time>109.12.12</time>
-                                            <div class="tag">分類</div>
-                                            <span>農業跨年嘉年華(公館鄉農會)</span>
-                                        </a>
-                                    </li>
+                                    <li><time>2021/01/01</time><a href="#">柳營區農會牛奶節暨新大樓落成100週年慶(柳營區農會)</a><span
+                                            class="dept">XX鄉農會</span></li>
+                                    <li><time>2021/01/01</time><a href="#">赤腳行旗山香蕉好食節(旗山區農會)</a><span
+                                            class="dept">XX鄉農會</span></li>
+                                    <li><time>2021/01/01</time><a href="#">竹塘魅力米香˙找回吃米的人竹塘鄉農會)</a><span
+                                            class="dept">XX鄉農會</span></li>
                                 </ul>
                                 <a href="#" class="more">更多</a>
                             </div>
-                            <h2 class="tabItem"><a href="#">搶鮮機</a></h2>
+                            <button type="button" class="tabItem">搶鮮趣</button>
                             <div class="tabContent">
                                 <ul>
-                                    <li>
-                                        <a href="#">
-                                            <time>109.12.12</time>
-                                            <div class="tag">分類</div>
-                                            <span>農業跨年嘉年華(公館鄉農會)</span>
-                                        </a>
+                                    <li><time>2021/01/01</time><a href="#">搶鮮趣</a><span class="dept">三芝鄉農會</span></li>
+                                    <li><time>2021/01/01</time>
+                                        <a href="#">年度台灣豬標章行銷推廣與產銷履歷豬肉推廣及地產地消在地特</a><span class="dept">XX鄉農會</span>
                                     </li>
-                                    <li>
-                                        <a href="#">
-                                            <time>109.12.12</time>
-                                            <div class="tag">分類</div>
-                                            <span>竹塘魅力米香˙找回吃米的人竹塘鄉農會)</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <time>109.12.12</time>
-                                            <div class="tag">分類</div>
-                                            <span>柳營區農會牛奶節暨新大樓落成100週年慶(柳營區農會)</span>
-                                        </a>
-                                    </li>
-                                    <li><a href="#">
-                                            <time>109.12.12</time>
-                                            <div class="tag">分類</div>
-                                            <span>年度台灣豬標章行銷推廣與產銷履歷豬肉推廣及地產地消在地特色畜產品多元化料理品嚐活動(田寮區農會)</span>
-                                        </a></li>
-                                    <li>
-                                        <a href="#">
-                                            <time>109.12.12</time>
-                                            <div class="tag">分類</div>
-                                            <span>赤腳行旗山香蕉好食節(旗山區農會)</span>
-                                        </a>
-                                    </li>
+                                    <li><time>2021/01/01</time><a href="#">柳營區農會牛奶節暨新大樓落成100週年慶(柳營區農會)</a><span
+                                            class="dept">XX鄉農會</span></li>
+                                    <li><time>2021/01/01</time><a href="#">赤腳行旗山香蕉好食節(旗山區農會)</a><span
+                                            class="dept">XX鄉農會</span></li>
+                                    <li><time>2021/01/01</time><a href="#">竹塘魅力米香˙找回吃米的人竹塘鄉農會)</a><span
+                                            class="dept">XX鄉農會</span></li>
                                 </ul>
                                 <a href="#" class="more">更多</a>
                             </div>
                         </section>
+                        <div class="leaf_bg"></div>
                     </div>
                 </div>
             </section>
+            <!-- 農訓雜誌 -->
             <!-- 農訓雜誌區塊 -->
-            <section class="section magazine">
+            <section class="magazine">
                 <div class="container">
+                    <div class="td_logo">
+                        <img src="images/td_logo.png" alt="">
+                    </div>
                     <div class="mag_grid">
                         <div class="row_top">
                             <div class="cover">
                                 <a href="#">
                                     <div class="pic wow fadeInRight" data-wow-duration=".5s" data-wow-delay="1s">
-                                        <img src="images/cover_magazine.jpg" alt="">
+                                        <img src="images/cover_magazine.jpg" alt="" />
                                     </div>
                                 </a>
                             </div>
                             <div class="content_list">
-                                <div class="block left wow fadeInRight" data-wow-duration=".5s" data-wow-delay="1.25s">
+                                <div class="block left wow fadeInRight" data-wow-duration=".5s" data-wow-delay="1.2s">
                                     <a href="#">
                                         <div class="pic">
-                                            <img src="images/content_pic_01.jpg" alt="">
+                                            <img src="images/content_pic_01.jpg" alt="" />
                                         </div>
                                         <div class="text">
                                             <h3>376期-【發行人LINE一下】做出最好的排列組合</h3>
-                                            <p>「光是美國自己每年的國防預算就高達約7,500億美元。但面對小小的病毒，我們卻沒有事先做任何防備。結果，這樣一顆小小的病毒將為人類帶來二戰以來最嚴重的經濟、政治和社會傷害。」 CNN重量級節目主持人Fareed Zakaria一語道出了他的觀點，從2020年初開始的新冠肺炎效應一直延續到今天，似乎還沒有要停止。</p>
+                                            <p> 「光是美國自己每年的國防預算就高達約7,500億美元。但面對小小的病毒，我們卻沒有事先做任何防備。結果，這樣一顆小小的病毒將為人類帶來二戰以來最嚴重的經濟、政治和社會傷害。」
+                                                CNN重量級節目主持人Fareed Zakaria一語道出了他的觀點，從2020年初開始的新冠肺炎效應一直延續到今天，似乎還沒有要停止。
+                                            </p>
                                         </div>
                                     </a>
                                 </div>
-                                <div class="block right wow fadeInRight" data-wow-duration=".5s" data-wow-delay="1.5s">
+                                <div class="block right wow fadeInRight" data-wow-duration=".5s" data-wow-delay="1.4s">
                                     <a href="#">
                                         <div class="pic">
-                                            <img src="images/content_pic_02.jpg" alt="">
+                                            <img src="images/content_pic_02.jpg" alt="" />
                                         </div>
                                         <div class="text">
                                             <h3>376期-【發行人LINE一下】做出最好的排列組合</h3>
-                                            <p>「光是美國自己每年的國防預算就高達約7,500億美元。但面對小小的病毒，我們卻沒有事先做任何防備。結果，這樣一顆小小的病毒將為人類帶來二戰以來最嚴重的經濟、政治和社會傷害。」 CNN重量級節目主持人Fareed Zakaria一語道出了他的觀點，從2020年初開始的新冠肺炎效應一直延續到今天，似乎還沒有要停止。</p>
+                                            <p> 「光是美國自己每年的國防預算就高達約7,500億美元。但面對小小的病毒，我們卻沒有事先做任何防備。結果，這樣一顆小小的病毒將為人類帶來二戰以來最嚴重的經濟、政治和社會傷害。」
+                                                CNN重量級節目主持人Fareed Zakaria一語道出了他的觀點，從2020年初開始的新冠肺炎效應一直延續到今天，似乎還沒有要停止。
+                                            </p>
                                         </div>
                                     </a>
                                 </div>
                             </div>
                         </div>
                         <div class="row_bottom">
-                            <div class="block left wow fadeInRight" data-wow-duration=".5s" data-wow-delay="1.75s">
+                            <div class="block left wow fadeInRight" data-wow-duration=".5s" data-wow-delay="1.6s">
                                 <a href="#">
                                     <div class="pic">
-                                        <img src="images/content_pic_03.jpg" alt="">
+                                        <img src="images/content_pic_03.jpg" alt="" />
                                     </div>
                                     <div class="text">
                                         <h3>376期-【發行人LINE一下】做出最好的排列組合</h3>
-                                        <p>「光是美國自己每年的國防預算就高達約7,500億美元。但面對小小的病毒，我們卻沒有事先做任何防備。結果，這樣一顆小小的病毒將為人類帶來二戰以來最嚴重的經濟、政治和社會傷害。」 CNN重量級節目主持人Fareed Zakaria一語道出了他的觀點，從2020年初開始的新冠肺炎效應一直延續到今天，似乎還沒有要停止。</p>
+                                        <p> 「光是美國自己每年的國防預算就高達約7,500億美元。但面對小小的病毒，我們卻沒有事先做任何防備。結果，這樣一顆小小的病毒將為人類帶來二戰以來最嚴重的經濟、政治和社會傷害。」
+                                            CNN重量級節目主持人Fareed Zakaria一語道出了他的觀點，從2020年初開始的新冠肺炎效應一直延續到今天，似乎還沒有要停止。 </p>
                                     </div>
                                 </a>
                             </div>
-                            <div class="block right wow fadeInRight" data-wow-duration=".5s" data-wow-delay="2s">
+                            <div class="block right wow fadeInRight" data-wow-duration=".5s" data-wow-delay="1.8s">
                                 <a href="#">
                                     <div class="pic">
-                                        <img src="images/content_pic_04.jpg" alt="">
+                                        <img src="images/content_pic_04.jpg" alt="" />
                                     </div>
                                     <div class="text">
                                         <h3>376期-【發行人LINE一下】做出最好的排列組合</h3>
-                                        <p>「光是美國自己每年的國防預算就高達約7,500億美元。但面對小小的病毒，我們卻沒有事先做任何防備。結果，這樣一顆小小的病毒將為人類帶來二戰以來最嚴重的經濟、政治和社會傷害。」 CNN重量級節目主持人Fareed Zakaria一語道出了他的觀點，從2020年初開始的新冠肺炎效應一直延續到今天，似乎還沒有要停止。</p>
+                                        <p> 「光是美國自己每年的國防預算就高達約7,500億美元。但面對小小的病毒，我們卻沒有事先做任何防備。結果，這樣一顆小小的病毒將為人類帶來二戰以來最嚴重的經濟、政治和社會傷害。」
+                                            CNN重量級節目主持人Fareed Zakaria一語道出了他的觀點，從2020年初開始的新冠肺炎效應一直延續到今天，似乎還沒有要停止。 </p>
                                     </div>
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="left_bg"></div>
+                <div class="right_bg"></div>
             </section>
-            <!-- 最新消息 資料請後台設定最多5筆 -->
-            <!-- <section class="section news mask">
-    <div class="container">
-        <h2 class="wow fadeInRight" data-wow-duration=".5s" data-wow-delay="1s"><img src="images/h2_news.png" alt="最新消息"></h2>
-        <div class="listContent wow fadeInLeftt" data-wow-duration=".5s" data-wow-delay="1s">
-            <ul>
-                <li><a href="#"><time>109.12.12</time>柳營區農會牛奶節暨新大樓落成100週年慶(柳營區農會)</a></li>
-                <li><a href="#"><time>109.12.12</time>年度台灣豬標章行銷推廣與產銷履歷豬肉推廣及地產地消在地特色畜產品多元化料理品嚐活動(田寮區農會)</a></li>
-                <li><a href="#"><time>109.12.12</time>赤腳行旗山香蕉好食節(旗山區農會)</a></li>
-                <li><a href="#"><time>109.12.12</time>農業跨年嘉年華(公館鄉農會)</a></li>
-                <li><a href="#"><time>109.12.12</time>竹塘魅力米香˙找回吃米的人竹塘鄉農會)</a></li>
-            </ul>
-            <a href="#" class="more">閱讀更多</a>
-        </div>
-    </div>
-</section> -->
-            <!-- 農訓協會社群連結 -->
-            <section class="section social">
+            <!-- 握田旅店 -->
+            <section class="hotel">
                 <div class="container">
-                    <h2>農訓協會社群連結</h2>
-                    <div class="socialContent">
-                        <div class="item wow fadeInRight" data-wow-duration=".5s" data-wow-delay=".5s">
-                            <a href="#" class="img-container">
-                                <img src="images/link_01.jpg" alt="">
-                            </a>
-                            <div class="description">
-                                <h3>農訓協會</h3>
-                                <p>粉絲專頁</p>
-                            </div>
-                        </div>
-                        <div class="item wow fadeInRight" data-wow-duration=".5s" data-wow-delay=".75s">
-                            <a href="#" class="img-container">
-                                <img src="images/link_02.jpg" alt="">
-                            </a>
-                            <div class="description">
-                                <h3>農訓雜誌</h3>
-                                <p>粉絲專頁</p>
-                            </div>
-                        </div>
-                        <div class="item wow fadeInRight" data-wow-duration=".5s" data-wow-delay="1s">
-                            <a href="#" class="img-container">
-                                <img src="images/link_03.jpg" alt="">
-                            </a>
-                            <div class="description">
-                                <h3>農訓訓練處</h3>
-                                <p>粉絲專頁</p>
-                            </div>
-                        </div>
-                        <div class="item wow fadeInRight" data-wow-duration=".5s" data-wow-delay="1.25s">
-                            <a href="#" class="img-container">
-                                <img src="images/link_04.jpg" alt="">
-                            </a>
-                            <div class="description">
-                                <h3>沃田旅店</h3>
-                                <p>粉絲專頁</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- 國際交流 -->
-            <section class="section photo">
-                <div class="container">
-                    <h2 class="wow fadeInLeft" data-wow-duration=".5s" data-wow-delay="1s">國際合作<small>Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Vero eos, sapiente non eius atque accusamus tempora eum maiores, quibusdam optio id pariatur quis a, perferendis tenetur, voluptatum maxime vitae doloribus.</small></h2>
-                    <div class="photoContent wow fadeInRight" data-wow-duration=".5s" data-wow-delay="1s">
-                        <div class="photoSlider">
+                    <!-- 旅店主圖 -->
+                    <div class="mellow_pic wow fadeInLeft" data-wow-duration=".75s" data-wow-delay="1s">
+                        <a href="#">
                             <div class="img-container">
-                                <a href="#" title="">
-                                    <picture>
-                                        <source media="(min-width: 1200px)" data-srcset="images/photo_01.jpg">
-                                        <source media="(min-width: 992px)" data-srcset="images/photo_01.jpg">
-                                        <source media="(min-width: 576px)" data-srcset="images/photo_01.jpg">
-                                        <source media="(max-width: 575px)" data-srcset="images/photo_01.jpg">
-                                        <img data-src="images/photo_01.jpg" class="cover lazy">
-                                        <noscript><img src="images/photo_01.jpg"></noscript>
-                                    </picture>
-                                    <div class="caption">
-                                        <span class="title">韓國光陽市政府 Gwangyang</span>
-                                        <span class="info">光陽市（韓語：광양시）是位於南韓全羅南道的城市。 總面積448平方公里，人口約有138萬人。 光陽市是溫暖陽光的故鄉，由白頭山大干山脈向南延伸，形成湖南正脈的山稜圍繞而成， 擁有秀麗的自然景觀及得天獨厚的氣候條件，是一個適合居住的樂土。 農訓協會韓國光陽市基於雙方農業互補發展的可能性，為了增進相互理解和友誼，並促進共同繁榮與發展， 於2006年1月經雙方協商達成農業交流與發展的意向。</span>
-                                    </div>
-                                </a>
+                                <img src="images/mellow_pic.jpg" alt="" />
                             </div>
-                            <div class="img-container">
-                                <a href="#" title="">
-                                    <picture>
-                                        <source media="(min-width: 1200px)" data-srcset="images/photo_02.jpg">
-                                        <source media="(min-width: 992px)" data-srcset="images/photo_02.jpg">
-                                        <source media="(min-width: 576px)" data-srcset="images/photo_02.jpg">
-                                        <source media="(max-width: 575px)" data-srcset="images/photo_02.jpg">
-                                        <img data-src="大尺寸圖檔" class="cover lazy">
-                                        <noscript><img src="images/photo_02.jpg"></noscript>
-                                    </picture>
-                                    <div class="caption">
-                                        <span class="title">韓國順天大學</span>
-                                        <span class="info">(Sunchon National University)位於全羅南道，在歷任校長及師生共同努力下，把該校的聲望及研究成果提升到新的高峰， 未來在宋英武校長的領導下，相信該校的成就發展不可限量。農訓協會自1997年與順天大學締結合作關係以來， 為台、韓兩國農民組織發展，奠立穩固邦誼，功勞卓著，也因此和順天大學的學術交流，對全國的農業和農民幫助極大。 順天大學設有農業生命科學學院，30年來培育許多人才，並對日後的發展奠定良好的基礎。 農訓協會與韓國國立順天大學的合作交流，最早從教育交流開始，進而發展至農產品的交易，十幾來成效良好，未來將持續進行交流。</span>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <a href="#" class="more">更多國際合作</a>
+                        </a>
                     </div>
-                </div>
-            </section>
-            <!-- 關於農訓 -->
-            <section class="section about mask">
-                <div class="container">
-                    <div class="aboutContent wow fadeInLeft" data-wow-duration=".5s" data-wow-delay=".5s">
-                        <h3>關於我們</h3>
-                        <p>成為農漁會最值得信賴的訓練機構，人才培育的搖籃。<br> 與農漁會攜手開拓國際視野，讓全世界看見台灣農漁會。</p>
+                    <!-- 旅店資訊 -->
+                    <div class="mellow_info wow fadeInRight" data-wow-duration=".75s" data-wow-delay="1.5s">
+                        <img src="images/mellow_logo.jpg" alt="">
+                        <h3>一家每年辦農民節與漁民節的飯店</h3>
+                        <p>沃田旅店，<br />植根於全台342家農漁會的肥沃土壤。<br />台灣農漁物的豐饒成熟，<br />台灣農漁會的熱情好客。<br />期待您親自體驗 沃田旅店！</p>
                         <ul>
-                            <li>台北市士林區中山北路七段113號</li>
-                            <li><a href="tel:+886-2-28762676">+886-2-28762676</a></li>
-                            <li><a href="mailto:ws@ntifo.org.tw">ws@ntifo.org.tw</li>
+                            <li><i class="fas fa-map-marker-alt"></i>台北市士林區中山北路七段127號</li>
+                            <li><i class="fas fa-phone-square-alt"></i>+ 886 2 28752288</li>
                         </ul>
                     </div>
-                    <div class="listContent wow fadeInRight" data-wow-duration=".5s" data-wow-delay="1s">
-                        <h3>快速連結</h3>
-                        <ul>
-                            <li><a href="#">台灣農業人才培訓網</a></li>
-                            <li><a href="#">沃田旅店</a></li>
-                            <li><a href="#">全台農會</a></li>
-                            <li><a href="#">全台漁會</a></li>
-                            <li><a href="#">友好連結</a></li>
-                        </ul>
-                    </div>
+                </div>
+            </section>
+            <!-- 連結 -->
+            <section class="link">
+                <div class="container">
+                    <ul class="wow fadeInUp" data-wow-duration=".5s" data-wow-delay="1.5s">
+                        <li>
+                            <a href="#">
+                                <div class="img-container">
+                                    <img src="images/link_ntifo.png" alt="" />
+                                </div>
+                                <div class="link_info">
+                                    <h3>農訓協會</h3>
+                                    <span>粉絲專頁</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img-container">
+                                    <img src="images/link_mag.jpg" alt="" />
+                                </div>
+                                <div class="link_info">
+                                    <h3>農訓雜誌</h3>
+                                    <span>粉絲專頁</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img-container">
+                                    <img src="images/link_training.jpg" alt="" />
+                                </div>
+                                <div class="link_info">
+                                    <h3>農訓訓練處</h3>
+                                    <span>粉絲專頁</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img-container">
+                                    <img src="images/link_mellow.jpg" alt="" />
+                                </div>
+                                <div class="link_info">
+                                    <h3>沃田旅店</h3>
+                                    <span>粉絲專頁</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg_img">
+                    <img src="images/farm_bg.jpg" alt="" />
                 </div>
             </section>
         </div>
         <!-- fatfooter Start -->
         <section class="fatfooter">
             <div class="container">
-                <button type="button" name="收合" class="btn btn-fatfooter">收合</button>
+                <button type="button" name="展開選單/OPEN" aria-label="導覽選單展開/收合" class="btn btn-fatfooter"> 收合 </button>
                 <nav>
                     <ul>
-                        <li><a href="#">關於協會</a></li>
-                        <li><a href="#">近期課程</a>
+                        <li>
+                            <a href="#">關於協會</a>
                             <ul>
-                                <li><a href="#">第二層選單</a></li>
-                                <li><a href="#">第二層選單</a></li>
-                                <li><a href="#">第二層選單</a></li>
-                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">協會簡介</a></li>
+                                <li><a href="#">里程碑 Story Line</a></li>
+                                <li><a href="#">協會首長</a></li>
+                                <li><a href="#">各處職掌</a></li>
+                                <li><a href="#">國際合作</a></li>
                             </ul>
                         </li>
                         <li><a href="#">最新消息</a></li>
-                        <li><a href="#">熱門推薦</a></li>
-                        <li><a href="#">下載區</a></li>
-                        <li><a href="#">農漁智庫</a></li>
-                        <li><a href="#">問卷調查</a></li>
+                        <li>
+                            <a href="http://www.google.com">農訓雜誌</a>
+                            <ul>
+                                <li><a href="http://www.google.com">出版品一覽</a></li>
+                                <li><a href="#">農訓文章</a></li>
+                                <li><a href="#">特別企劃</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">訓練課程</a>
+                            <ul>
+                                <li><a href="#">課程清單</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">資源服務</a>
+                            <ul>
+                                <li><a href="#">下載區</a></li>
+                                <li><a href="#">課程資源</a></li>
+                                <li><a href="#">影音專區</a></li>
+                                <li><a href="#">相關連結</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -590,82 +472,115 @@
         <footer>
             <div class="container">
                 <a class="accesskey" href="#aZ" id="aZ" accesskey="Z" title="頁尾區">:::</a>
+                <!-- footer logo -->
                 <div class="footer_logo">
-                    <img src="images/logo_footer.png" alt="" class="img-responsive">
+                    <img src="images/footer_logo.png" alt="" class="img-responsive" />
+                    <p> 成為農漁會最值得信賴的訓練機構，人才培育的搖籃。<br /> 與農漁會攜手開拓國際視野，讓全世界看見台灣農漁會。 </p>
                 </div>
+                <!-- footer info -->
                 <div class="footer_info">
                     <ul class="footer_link">
                         <li><a href="javascript:;">隱私權政策</a></li>
                         <li><a href="javascript:;">網站安全政策</a></li>
                         <li><a href="javascript:;">政府網站資料開放宣告</a></li>
                     </ul>
-                    <p>本網站版權屬於 中華民國農民團體幹部聯合訓練協會 所有。<br /> ©2020 NTIFO. All rights reserved. Built on NTIFO</p>
-                    <span class="update">更新日期:<em>2018/01/01</em></span>
-                    <span class="counter">累計瀏覽人次:<em>46476653</em></span>
+                    <p class="Copyright"> 本網站版權屬於 中華民國農民團體幹部聯合訓練協會所有。<br /> ©2021 NTIFO. All rights reserved. Built on
+                        NTIFO </p>
+                    <ul class="contact">
+                        <li><i class="fas fa-map-marker-alt"></i>台北市士林區中山北路七段113號</li>
+                        <li><i class="fas fa-phone-square-alt"></i>+886-2-28762676</li>
+                        <li><i class="fas fa-envelope"></i><a mailto="ws@ntifo.org.tw">ws@ntifo.org.tw</a></li>
+                    </ul>
                 </div>
+                <!-- footer icon -->
                 <div class="footer_icon">
                     <a target="_blank" href="javascript:;" title="另開視窗">
-                        <img src="images/duns.png" alt="">
+                        <img src="images/basic/accessibility.jpg" alt="" />
                     </a>
+                </div>
+                <div class="footer_bottom">
+                    <span class="update">更新日期:<em>2018/01/01</em></span>
+                    <span class="counter">累計瀏覽人次:<em>46476653</em></span>
+                    <!-- quick_link 快速連結 -->
+                    <ul>
+                        <li><a href="#">沃田旅店</a></li>
+                        <li><a href="#">全台農會</a></li>
+                        <li><a href="#">全台漁會</a></li>
+                    </ul>
                 </div>
             </div>
         </footer>
         <!-- footer End -->
-    </div>
-    <!-- rightQuickDot 只有首頁才有，不用套程式-->
-    <div class="quickDot">
-        <ul>
-            <li>
-                <a href="#" class="gotoMpSlider"><span>焦點輪播</span></a>
-            </li>
-            <li>
-                <a href="#" class="gotoNews"><span>最新消息</span></a>
-            </li>
-            <li>
-                <a href="#" class="gotoSocial"><span>社群連結</span></a>
-            </li>
-            <li>
-                <a href="#" class="gotoAbout"><span>關於農訓</span></a>
-            </li>
-            <li>
-                <a href="#" class="gotoPhoto"><span>國際交流</span></a>
-            </li>
-        </ul>
-    </div>
-    <a href="javascript:;" class="scrollToTop">回頁首</a>
-    <!-- 登入視窗 -->
-    <div style="display: none;" id="hidden-content" class="login">
-        <h2>請使用社群帳號登入</h2>
-        <div class="btn_grp">
-            <button type="botton" class="btn btn-fb"><img src="images/icon_fb.svg" alt="">Facebok帳號登入</button>
-            <button type="botton" class="btn btn-google"><img src="images/icon_google.svg" alt="">Google帳號登入</button>
-            <button type="botton" class="btn btn-twitter"><img src="images/icon_twitter.svg" alt="">Twitter帳號登入</button>
-            <button type="botton" class="btn btn-line"><img src="images/icon_line.svg" alt="">LINE帳號登入</button>
+        <!-- fixed panel -->
+        <div class="fixed_panel wow bounceInRight" data-wow-duration="1.5s" data-wow-delay="2s">
+            <a href="#" class="toggle_btn"><i class="fas fa-chevron-right"></i></a>
+            <div class="item active">
+                <h3>
+                    <a href="#"><span>一般民眾</span><i class="fas fa-minus-square"></i></a>
+                </h3>
+                <div class="service_list">
+                    <ul>
+                        <li><a href="#">農漁會活動</a></li>
+                        <li><a href="#">一般民眾推薦資訊連結</a></li>
+                        <li><a href="#">分眾推薦資訊連結</a></li>
+                        <li><a href="#">推薦資訊連結</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="item">
+                <h3>
+                    <a href="#"><span>農漁會人員</span><i class="fas fa-plus-square"></i></a>
+                </h3>
+                <div class="service_list">
+                    <ul>
+                        <li><a href="#">農漁會活動</a></li>
+                        <li><a href="#">一般民眾推薦資訊連結</a></li>
+                        <li><a href="#">分眾推薦資訊連結</a></li>
+                        <li><a href="#">推薦資訊連結</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bottom_function">
+                <div class="fb">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                </div>
+                <div class="mail">
+                    <a mailto="ws@ntifo.org.tw"><i class="fas fa-paper-plane"></i><span>Contact
+                            Us:ws@ntifo.org.tw</span>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
+    <a href="javascript:;" class="scrollToTop">回頁首</a>
     <!-- JQ -->
-    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <!-- hyUI -->
+    <script src="js/hyui.js"></script>
     <!-- 外掛 plugin js -->
-    <script src="vendor/jquery.easing.min.js"></script><!-- ease -->
-    <script src="vendor/slick/slick.min.js "></script><!-- slick -->
-    <script src="vendor/slick/slick-lightbox.js "></script><!-- slick lightbox -->
-    <script src="vendor/lazyload/lazyload.js"></script><!-- lazyload -->
-    <script src="vendor/picturefill/picturefill.min.js" async></script><!-- picturefill -->
-    <script src="vendor/scrolltable/jquery.scroltable.min.js"></script><!-- scrolltable -->
-    <script src="js/hyui.js"></script><!-- hyUI -->
-    <script src="js/customize.js"></script><!-- 客製js -->
-    <script src="js/wow.min.js"></script><!-- wow -->
+    <script src="vendor/jquery.easing.min.js"></script>
+    <!-- ease -->
+    <script src="vendor/slick/slick.min.js "></script>
+    <!-- slick -->
+    <script src="vendor/slick/slick-lightbox.js "></script>
+    <!-- slick lightbox -->
+    <script src="vendor/lazyload/lazyload.js"></script>
+    <!-- lazyload -->
+    <script src="vendor/picturefill/picturefill.min.js" async></script>
+    <!-- picturefill -->
+    <script src="vendor/scrolltable/jquery.scroltable.min.js"></script>
+    <!-- scrolltable -->
+    <!-- sticky-sidebar -->
+    <script src="vendor/sticky-sidebar/sticky-sidebar.js"></script>
+    <script src="vendor/sticky-sidebar/ResizeSensor.js"></script>
+    <!-- fancy -->
     <script src="vendor/fancybox/jquery.fancybox.min.js"></script>
-    <script>
-    wow = new WOW({
-        boxClass: 'wow', // default
-        animateClass: 'animated', // default
-        offset: 0, // default
-        mobile: true, // default
-        live: true // default
-    })
-    new WOW().init();
-    </script>
+    <!-- paroller -->
+    <script src="vendor/paroller/jquery.paroller.min.js"></script>
+    <!-- wow -->
+    <script src="vendor/wow/wow.min.js"></script>
+    <!-- 客製js -->
+    <script src="js/customize.js"></script>
 </body>
 
 </html>

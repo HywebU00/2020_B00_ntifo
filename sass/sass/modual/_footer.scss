@@ -1,0 +1,189 @@
+footer {
+    clear: both;
+    text-align: left;
+    font-size: 0.813em;
+    padding: 1em 0;
+    .container {
+        @include gutter;
+        > div {
+            padding-bottom: 1em;
+        }
+        display: flex;
+        flex-flow: row wrap;
+    }
+    a {
+        text-decoration: none;
+        color: #555;
+    }
+    .footer_logo {
+        flex: 0 1 28em;
+        padding: 0 1em;
+        @include screen('mobile') {
+            flex: 1 1 100%;
+            padding: 0;
+            br {
+                display: none;
+            }
+        }
+        img {
+            max-width: 20em;
+        }
+        p {
+            margin: 0 0 0.5em;
+        }
+    }
+    .footer_info {
+        padding: 1em 2em 0;
+        flex: 1 1 40%;
+        @include screen('mobile') {
+            flex: 1 1 100%;
+            padding: 1em 0em;
+            br {
+                display: none;
+            }
+        }
+        p {
+            margin: 0 0 0.5em;
+        }
+    }
+    .contact {
+        @include li-reset;
+        li {
+            i {
+                margin-right: 0.5em;
+                opacity: 0.5;
+            }
+            a {
+                color: #555;
+                &:hover,
+                &:focus {
+                    color: $aHover;
+                }
+            }
+        }
+    }
+    .footer_bottom {
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 100%;
+        justify-content: flex-start;
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 0 !important;
+        display: flex;
+        flex-flow: row wrap;
+        .update,
+        .counter {
+            flex-grow: 0;
+            flex-shrink: 1;
+            flex-basis: auto;
+            margin-top: 0.25em;
+            @include screen('mobile') {
+                flex-grow: 1;
+                flex-shrink: 1;
+                flex-basis: 100%;
+                order: 1;
+            }
+        }
+        ul {
+            @include li-reset;
+            flex-grow: 0;
+            flex-shrink: 1;
+            flex-basis: auto;
+            margin-left: auto;
+            @include screen('mobile') {
+                flex-grow: 1;
+                flex-shrink: 1;
+                flex-basis: 100%;
+                order: 0;
+            }
+            li {
+                display: inline-block;
+                margin-right: 1em;
+                a {
+                    display: block;
+                    padding: 0.25em 0 0.25em 0em;
+                    color: #555;
+                    &:hover,
+                    &:focus {
+                        color: $aHover;
+                    }
+                }
+            }
+        }
+    }
+    .footer_icon {
+        flex: 1 1 20%;
+        min-width: 150px;
+        @include screen('tablet') {
+            flex: 1 1 100%;
+            text-align: right;
+        }
+    }
+    // 版權連結
+    .footer_link {
+        @include li-reset();
+        clear: both;
+        display: flex;
+        border-bottom: 1px solid #ddd;
+        margin-bottom: 0.5em;
+        @include screen('mobile') {
+            flex-flow: row wrap;
+        }
+        li {
+            flex: 0 1 auto;
+            margin: 0px 5px 5px 0px;
+            @include screen('mobile') {
+                flex: 1 1 25%;
+            }
+            a {
+                display: block;
+                padding: 0em;
+                margin-right: 1em;
+                color: #555;
+                text-align: center;
+                transition: 0.3s ease-out;
+                white-space: nowrap;
+                &:hover,
+                &:focus {
+                    color: darken($primaryColor, 10);
+                }
+            }
+        }
+    }
+    p {
+        line-height: 1.65em;
+    }
+    .update,
+    .counter {
+        display: inline-block;
+        margin-right: 5px;
+        em {
+            font-style: normal;
+            color: $primaryColor;
+            padding: 0 0.5em;
+        }
+    }
+    .footer_icon {
+        a {
+            display: inline-block;
+            vertical-align: top;
+            position: relative;
+            &:focus {
+                &:after {
+                    content: '';
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    box-shadow: 0px 0px 0px 1px $aHover inset;
+                    z-index: 99;
+                }
+            }
+        }
+        img {
+            max-width: 150px;
+        }
+    }
+}

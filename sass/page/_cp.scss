@@ -1,305 +1,12 @@
 @charset "utf-8";
-.cp{
-    min-height:500px;
-}
 // 文章標題
-h1.title, h2.title {
+h1.title,
+h2.title {
+    font-size: 2em;
     line-height: 1.25em;
-    margin: .4em 0;
+    margin: 0.5em 0;
 }
-.full {
-    overflow: hidden;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    max-width: 100% !important;
-    h3 {
-        font-size: 3.2em;
-        margin: 0 0 .5em;
-        @include screen('xs_mobile') {
-            text-align: center;
-            font-size: 1.75em;
-        }
-    }
-    h4 {
-        font-size: 1.75em;
-        @include screen('xs_mobile') {
-            text-align: center;
-            font-size: 1.25em;
-            br {
-                display: none;
-            }
-        }
-    }
-    .parallax {
-        max-width: 100%;
-        margin: 0 auto;
-        background: url(../images/parallax2.jpg) no-repeat center center fixed;
-        background-size: cover;
-        height: 20em;
-        position: relative;
-        @include screen('tablet') {
-            display: none;
-        }
-        .white_logo {
-            position: absolute;
-            left: 50%;
-            top: 30%;
-            width: 400px;
-            margin-left: -500px;
-            img {
-                width: 100%;
-            }
-        }
-    }
-    .parallax2 {
-        max-width: 100%;
-        margin: 0 auto;
-        background: url(../images/parallax.jpg) no-repeat center center fixed;
-        background-size: cover;
-        height: 24em;
-        position: relative;
-        @include screen('tablet') {
-            display: none;
-        }
-        .white_logo {
-            position: absolute;
-            right: 5%;
-            top: 30%;
-            width: 400px;
-            img {
-                width: 100%;
-            }
-        }
-    }
-    article {
-        &.bgColor {
-            background: #F1F1F1;
-        }
-        &.bgColor2 {
-            background: #093e95;
-            color: #FFF;
-        }
-        max-width: 100%;
-        margin: 0 auto 2em;
-        display: flex;
-        flex-flow: row nowrap;
-        ~article {
-            margin: 2em auto;
-            @include screen('mobile') {
-                margin: 0 auto;
-            }
-        }
-        +.parallax, +.parallax2 {
-            margin-top: -2em;
-        }
-        @include screen('mobile') {
-            flex-flow: row wrap;
-            margin: 0 auto;
-        }
-        .container {
-            max-width: 1200px !important;
-            flex-grow: 0;
-            margin: 0 auto;
-            display: flex;
-            flex-flow: row nowrap;
-            @include screen('mobile') {
-                flex-flow: row wrap;
-                align-content: flex-start;
-                display: block;
-            }
-        }
-        .word {
-            flex-grow: 1;
-            flex-shrink: 1;
-            flex-basis: 200px;
-            min-width: 200px;
-            padding: 3em 1.5em;
-            @include screen('mobile') {
-                flex-basis: 100%;
-                min-width: 100%;
-                padding: 1.5em;
-            }
-        }
-        .img {
-            flex-grow: 0;
-            flex-shrink: 1;
-            flex-basis: 400px;
-            line-height: 0;
-            display: flex;
-            margin: 1em 0;
-            img {
-                width: 100%;
-                line-height: 0;
-                margin: 0;
-            }
-            @include screen('mobile') {
-                flex-basis: 100%;
-                min-width: 100%;
-                margin: 0 0 auto;
-                align-self: flex-start;
-                height: auto;
-                display: block;
-            }
-        }
-    }
-    .about_bottom {
-        background: url(../images/bg-bottom.jpg) no-repeat center center;
-        background-size: cover;
-        background-attachment: fixed;
-        padding: 1em 0 4em;
-        color: #FFF;
-        @include screen('mobile') {
-            background-attachment: scroll;
-        }
-        h3 {
-            text-align: center;
-            margin-bottom: 1em;
-        }
-        ul {
-            max-width: 1000px;
-            margin: 0 auto 1em;
-            @include screen('mobile') {
-                margin: 0 2em 1em;
-            }
-            li {
-                margin-bottom: 1em;
-            }
-        }
-    }
-    p {
-        font-size: 1.125em;
-        @include screen('mobile') {
-            font-size: 1em;
-        }
-    }
-}
-.featureSlider {
-    margin-bottom: 2.5em !important;
-}
-.cp_story {
-    background: #F5F5F5;
-    max-width: 100% !important;
-    position: relative;
-    .featureSlider {
-        max-width: $container-max;
-        margin: 0 auto 1em;
-    }
-    p {
-        max-width: 80%;
-        margin: 0 auto 1em;
-        position: relative;
-        z-index: 2;
-        @include screen('notebook') {
-            max-width: 70%;
-        }
-        @include screen('mobile') {
-            max-width: 100%;
-        }
-    }
-    &:before {
-        position: absolute;
-        width: 261px;
-        height: 257px;
-        background: url(../images/cp_story_left.png) no-repeat left top;
-        left: 50%;
-        margin-left: -48%;
-        bottom: -10%;
-        transition: .3s ease-out;
-        @include screen('notebook') {
-            margin-left: -52%;
-        }
-        @include screen('tablet') {
-            display: none;
-        }
-    }
-    &:after {
-        position: absolute;
-        width: 261px;
-        height: 257px;
-        background: url(../images/cp_story_right.png) no-repeat left top;
-        right: 10%;
-        bottom: 20%;
-        transition: .3s ease-out;
-        @include screen('notebook') {
-            right: -5%;
-        }
-        @include screen('tablet') {
-            display: none;
-        }
-    }
-}
-.cp_topic {
-    border-bottom: 1px dashed #F1F1F1;
-    position: relative;
-    p {
-        max-width: 80%;
-        margin: 0 auto 1em;
-        position: relative;
-        z-index: 2;
-        @include screen('notebook') {
-            max-width: 70%;
-        }
-        @include screen('mobile') {
-            max-width: 100%;
-        }
-    }
-    &:after {
-        position: absolute;
-        width: 300px;
-        height: 187px;
-        background: url(../images/cp_topic_right.png) no-repeat left top;
-        right: 3%;
-        bottom: -8%;
-        transition: .3s ease-out;
-        @include screen('notebook') {
-            right: -5%;
-        }
-        @include screen('tablet') {
-            display: none;
-        }
-    }
-}
-.cp_story, .cp_topic, .change, .basic {
-    @extend %clearfix;
-    margin: 0 2em;
-    padding: 1em 0;
-    h3 {
-        font-size: 2.5rem;
-        text-align: center;
-        line-height: 1.45em;
-        margin: 0 auto .5rem;
-        padding-bottom: 1rem;
-        border-bottom: $primaryColor 1px solid;
-        max-width: 600px;
-        @include screen('xs_mobile') {
-            max-width: 300px;
-            margin: 0 auto .25em;
-        }
-    }
-    .cp_subContent {
-        max-width: 1000px;
-        padding: 1.5em 2.5em;
-        line-height: 2em;
-        margin: 0 auto 1em;
-        color: #555;
-        text-align: center;
-        position: relative;
-        p {
-            font-size: 1.25rem;
-        }
-        @include screen('mobile') {
-            padding: 1.5em;
-            p {
-                font-size: 1.125em;
-            }
-        }
-    }
-}
-.change, .othervideo {
-    @include screen('mobile') {
-        padding: 1em 0 !important;
-    }
-}
+// .tt{ color: #222; }
 .cp {
     .pic {
         float: left;
@@ -307,9 +14,9 @@ h1.title, h2.title {
         width: auto;
         width: 45%;
         max-width: 400px;
-        background: #F1F1F1;
+        background: #f1f1f1;
         overflow: hidden;
-        padding: .5em .5em .2em;
+        padding: 0.5em 0.5em 0.2em;
         img {
             float: none;
             width: 100%;
@@ -319,7 +26,7 @@ h1.title, h2.title {
         span {
             text-align: center;
             display: block;
-            font-size: .938em;
+            font-size: 0.938em;
         }
         @include screen('mobile') {
             float: none;
@@ -327,11 +34,11 @@ h1.title, h2.title {
             width: auto;
             margin: 0px auto;
             display: block;
-            margin-bottom: .5em;
+            margin-bottom: 0.5em;
         }
     }
     table {
-        background: #FFF;
+        background: #fff;
     }
     img {
         &.float_left {
@@ -360,49 +67,36 @@ h1.title, h2.title {
     a {
         @include aSetting;
     }
-}
-// 文章標籤
-div.tag {
-    @extend %clearfix;
-    padding: .5em 0 .5em 1.5em;
-    margin-bottom: .5em;
-    position: relative;
-    &:before {
-        display: block;
-        position: absolute;
-        top: .3em;
-        left: .1em;
-        content: "";
-        width: 1em;
-        height: 1em;
-        top: .9em;
-        background: url(../images/basic/icon_tag.png) no-repeat center center;
-        background-size: 1em;
-    }
-    ul {
-        display: inline-block;
-        @include li-reset;
+    .publish_info {
+        font-size: 0.875em;
+        line-height: 1.5em;
+        list-style: none;
+        margin: 0 0 0.7em 0;
+        border-left: solid 5px $primaryColor;
+        padding: 0.8em 1.5em 0.8em;
+        background: #f2f2f2;
+        display: flex;
+        flex-wrap: wrap;
+        @extend %clearfix;
+        box-sizing: border-box;
+
         li {
-            display: inline-block;
-            margin: 0 .2em .2em 0;
-            a {
-                display: block;
-                font-size: .813em;
-                @include aSetting_nocolor;
-                border-radius: 4px;
-                border: 1px solid #DDD;
-                padding: .2em .5em;
-                &:hover, &:focus {
-                    border: 1px solid $aHover;
-                }
+            flex: 1 1 calc(100% / 3);
+            margin-bottom: 0.5em;
+            @include screen('tablet') {
+                flex: 1 1 calc(100% / 2);
+            }
+            @include screen('mobile') {
+                flex: 1 1 calc(100% / 1);
             }
         }
     }
 }
+
 // 檔案下載
 .file_download {
     width: 100%;
-    margin: 0 auto;
+    margin: 0 auto 2em;
     @include clearfix();
     h3 {
         font-size: 1.5em;
@@ -411,227 +105,164 @@ div.tag {
         border-bottom: 1px solid $primaryColor;
     }
     ul {
-        counter-reset: counter;
         list-style-type: none;
         padding: 0;
-        margin-left: 1em;
-        @media screen and (max-width: 767px) {
-            margin-left: 0;
-        }
+        margin: 0;
     }
     li {
+        display: flex;
+        flex-wrap: wrap;
         position: relative;
-        margin-bottom: 10px;
-        padding-left: 1em;
-        border-bottom: 1px solid #EEE;
-        clear: both;
-        overflow: hidden;
-        padding-bottom: .5em;
-        span {
-            @include screen('mobile') {
-                display: block;
-                margin-bottom: .2em;
-            }
-        }
+        padding: 0.5em 0 0.5em 1.5em;
+        border-bottom: solid 1px #eee;
         &:before {
-            position: absolute; // outline: 1px solid red;
-            top: .8em;
-            left: .2em;
-            text-align: right;
-            width: 30px;
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background: #999;
-            content: "";
-            // counter-increment: counter;
-            // content: counters(counter, ".") " . ";
-            // display:none;
+            content: '·';
+            font-size: 2em;
+            font-weight: bold;
+            width: 1em;
+            height: 1em;
+            position: absolute;
+            top: 0.42em;
+            left: 0.1em;
+            color: #666;
         }
-        .update,
-        .file_view {
-            font-size: .813em;
-            color: #AAA;
-            width: 120px;
-            padding-left: 35px;
-            float: none;
-            margin-top: 5px;
-            @media screen and (max-width: 767px) {
-                display: inline-block;
-                float: none;
-                width: auto;
-                margin-top: 0;
-            }
-            @include screen('xs_mobile') {
-                display: none;
-            }
-        }
-        .update {
-            width: 150px;
-            @media screen and (max-width: 767px) {
-                margin-left: 5px;
-            }
-        }
-        a {
-            // padding: .2em 0px .2em 65px;
-            padding: 0px;
-            position: relative;
-            height: auto;
-            line-height: 20px;
-            display: inline-block;
-            vertical-align: middle;
-            margin: 0px .2em;
-            min-width: 32px;
-            text-align: center;
-            text-indent: -9999px;
-            height: 34px;
-            @include text-overflow;
-            @include box-sizing;
-            margin-bottom: .1em;
-            @include screen('mobile') {
-                max-width: 2em;
-                margin: 0px auto .5em 0px;
-            }
-            &:hover, &:focus {
-                &:before {
-                    content: "";
-                    z-index: 99;
-                    position: absolute;
-                    border-radius: 4px;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    box-shadow: 0px 0px 0px 2px $aHover inset;
-                }
-            }
-            .kb {
-                font-size: .75em;
+
+        .file_name {
+            line-height: 1.8em;
+            margin: 0.2em 0.5em 0.2em 0;
+            color: #222;
+            ~ span {
+                flex: 0 0 auto;
+                margin: 0.2em;
+                font-size: 0.875em;
+                line-height: 1.5em;
+                vertical-align: middle;
                 color: #666;
-                display: none;
-                margin: 0px .5em;
-            }
-            &:after {
-                content: "";
-                background: url(../images/basic/icon_file.png) no-repeat center center;
-                background-size: contain;
-                width: 26px;
-                height: 28px;
-                position: absolute;
-                top: 3px;
-                left: 3px;
-                text-align: right;
-            }
-            // word系列
-            &[href$="doc"] {
-                &:after {
-                    background: url(../images/basic/icon_doc.png) no-repeat center center;
-                    background-size: contain;
+                a {
+                    color: #fff;
+                    display: inline-block;
+                    margin-right: 8px;
                 }
             }
-            &[href$="docx"] {
-                &:after {
-                    background: url(../images/basic/icon_docx.png) no-repeat center center;
-                    background-size: contain;
+        }
+        $fileType: doc, docx, odt, xls, xlsx, csv, ods, ppt, pptx, odp, zip, txt, mov, mp3, jpg, wmv, mp4, pdf, other;
+        @each $fileType in $fileType {
+            span.file_#{$fileType} {
+                a {
+                    color: #fff;
+                    font-weight: bold;
+                    padding: 0em 1em;
+                    line-height: 1.5em;
+                    border-radius: 3px;
+                    min-width: 3.5em;
+                    &:hover,
+                    &:focus {
+                        color: #fff;
+                    }
                 }
             }
-            &[href$="odt"] {
-                &:after {
-                    background: url(../images/basic/icon_odt.png) no-repeat center center;
-                    background-size: contain;
+        }
+        span {
+            display: flex;
+            align-items: center;
+            &.file_doc,
+            &.file_docx,
+            &.file_odt {
+                a {
+                    background: #275cb7;
+                    &:hover,
+                    &:focus {
+                        background: darken(#275cb7, 5%);
+                    }
                 }
             }
-            // excel系列
-            &[href$="xls"] {
-                &:after {
-                    background: url(../images/basic/icon_xls.png) no-repeat center center;
-                    background-size: contain;
+            &.file_xls,
+            &.file_xlsx,
+            &.file_csv,
+            &.file_ods {
+                a {
+                    background: #387947;
+                    &:hover,
+                    &:focus {
+                        background: darken(#387947, 5%);
+                    }
                 }
             }
-            &[href$="csv"] {
-                &:after {
-                    background: url(../images/basic/icon_csv.png) no-repeat center center;
-                    background-size: contain;
+            &.file_ppt,
+            &.file_pptx,
+            &.file_odp,
+            &.file_pdf {
+                a {
+                    background: #c55a3b;
+                    &:hover,
+                    &:focus {
+                        background: darken(#c55a3b, 5%);
+                    }
                 }
             }
-            &[href$="ods"] {
-                &:after {
-                    background: url(../images/basic/icon_ods.png) no-repeat center center;
-                    background-size: contain;
+            &.file_pdf {
+                a {
+                    background: #c00;
+                    &:hover,
+                    &:focus {
+                        background: darken(#c00, 5%);
+                    }
                 }
             }
-            &[href$="xlsx"] {
-                &:after {
-                    background: url(../images/basic/icon_xlsx.png) no-repeat center center;
-                    background-size: contain;
+            &.file_zip {
+                a {
+                    background: #eb712e;
+                    &:hover,
+                    &:focus {
+                        background: darken(#eb712e, 5%);
+                    }
                 }
             }
-            // pdf系列
-            &[href$="pdf"] {
-                &:after {
-                    background: url(../images/basic/icon_pdf.png) no-repeat center center;
-                    background-size: contain;
+            &.file_txt,
+            &.file_other {
+                a {
+                    background: #555;
+                    &:hover,
+                    &:focus {
+                        background: darken(#555, 5%);
+                    }
                 }
             }
-            &[href$="ppt"] {
-                &:after {
-                    background: url(../images/basic/icon_ppt.png) no-repeat center center;
-                    background-size: contain;
+            &.file_mov {
+                a {
+                    background: #009999;
+                    &:hover,
+                    &:focus {
+                        background: darken(#009999, 5%);
+                    }
                 }
             }
-            &[href$="pptx"] {
-                &:after {
-                    background: url(../images/basic/icon_pptx.png) no-repeat center center;
-                    background-size: contain;
+            &.file_mp3,
+            &.file_mp4 {
+                a {
+                    background: #088ecc;
+                    &:hover,
+                    &:focus {
+                        background: darken(#088ecc, 5%);
+                    }
                 }
             }
-            &[href$="odp"] {
-                &:after {
-                    background: url(../images/basic/icon_odp.png) no-repeat center center;
-                    background-size: contain;
+            &.file_jpg {
+                a {
+                    background: #6c29a4;
+                    &:hover,
+                    &:focus {
+                        background: darken(#6c29a4, 5%);
+                    }
                 }
             }
-            // 其他格式
-            &[href$="zip"] {
-                &:after {
-                    background: url(../images/basic/icon_zip.png) no-repeat center center;
-                    background-size: contain;
-                }
-            }
-            &[href$="txt"] {
-                &:after {
-                    background: url(../images/basic/icon_txt.png) no-repeat center center;
-                    background-size: contain;
-                }
-            }
-            &[href$="mov"] {
-                &:after {
-                    background: url(../images/basic/icon_mov.png) no-repeat center center;
-                    background-size: contain;
-                }
-            }
-            &[href$="mp3"] {
-                &:after {
-                    background: url(../images/basic/icon_mp3.png) no-repeat center center;
-                    background-size: contain;
-                }
-            }
-            &[href$="jpg"] {
-                &:after {
-                    background: url(../images/basic/icon_jpg.png) no-repeat center center;
-                    background-size: contain;
-                }
-            }
-            &[href$="wmv"] {
-                &:after {
-                    background: url(../images/basic/icon_wmv.png) no-repeat center center;
-                    background-size: contain;
-                }
-            }
-            &[href$="mp4"] {
-                &:after {
-                    background: url(../images/basic/icon_mp4.png) no-repeat center center;
-                    background-size: contain;
+            &.file_wmv {
+                a {
+                    background: #430a1f;
+                    &:hover,
+                    &:focus {
+                        background: darken(#430a1f, 5%);
+                    }
                 }
             }
         }
@@ -639,8 +270,7 @@ div.tag {
 }
 // 外部連結
 .web_link {
-    width: 100%;
-    margin: 0 auto;
+    margin: 1em 0;
     @extend %clearfix;
     h3 {
         font-size: 1.5em;
@@ -650,951 +280,30 @@ div.tag {
     }
     ol,
     ul {
-        counter-reset: counter;
         list-style-type: none;
         padding: 0;
-        margin-left: 1em;
-        @media screen and (max-width: 767px) {
-            margin-left: 0;
-        }
+        margin: 0;
     }
     li {
         position: relative;
-        margin-bottom: 10px;
-        border-bottom: 1px solid #EEE;
-        a {
-            padding: .2em 0px .2em 35px;
-            position: relative;
-            height: auto;
-            line-height: 1.45em;
-            display: block;
-            @include aSetting_nocolor;
-            &:before {
-                position: absolute; // outline: 1px solid red;
-                top: 5px;
-                left: 0px;
-                text-align: right;
-                width: 30px;
-                counter-increment: counter;
-                content: counters(counter, ".") " . ";
-            }
-        }
-    }
-}
-.change, .othervideo {
-    position: relative;
-    overflow: hidden;
-    padding: 2em 0 1em;
-    max-width: 100% !important;
-    h3 {
-        margin-bottom: .5rem;
-    }
-    &:after {
-        background: #F1F1F1;
-        width: 100%;
-        bottom: 0;
-        left: 0;
-        height: 45%;
-        content: "";
-        position: absolute;
-        z-index: 1;
-    }
-}
-.othervideo {
-    h3 {
-        font-size: 2.5rem;
-        text-align: center;
-        line-height: 1.45em;
-        margin: 0 auto .5rem;
-        padding-bottom: 1rem;
-        border-bottom: $primaryColor 1px solid;
-        max-width: 600px;
-        @include screen('xs_mobile') {
-            max-width: 300px;
-            margin: 0 auto .25em;
-        }
-    }
-}
-.changeSlider, .othervideoSlider, .basicContent {
-    padding: 1em 2em;
-    margin: 0 auto;
-    position: relative;
-    z-index: 2;
-    max-width: 1200px;
-    .slick-prev {
-        left: 5px;
-        background: url(../vendor/slick/icon_arrow_left.png) center center no-repeat rgba(0, 0, 0, .45);
-        background-size: 80%;
-        &:hover, &:focus {
-            background: url(../vendor/slick/icon_arrow_left.png) center center no-repeat rgba(0, 0, 0, .75);
-            background-size: 80%;
-        }
-        @include screen('xs_mobile') {
-            left: -15px;
-        }
-    }
-    .slick-next {
-        right: 5px;
-        background: url(../vendor/slick/icon_arrow_right.png) center center no-repeat rgba(0, 0, 0, .45);
-        background-size: 80%;
-        &:hover, &:focus {
-            background: url(../vendor/slick/icon_arrow_right.png) center center no-repeat rgba(0, 0, 0, .75);
-            background-size: 80%;
-        }
-        @include screen('xs_mobile') {
-            right: -15px;
-        }
-    }
-    .item {
-        margin: 0 2em;
-        background: rgba(255, 255, 255, 1);
-        box-shadow: 0px 0px 5px rgba(0, 0, 0, .25);
-        margin-bottom: 2em;
-        position: relative;
-        .description {
-            position: relative;
-            // height: 13rem;
-            padding: 1em 0;
-            h3 {
-                height: 3em;
-                overflow: hidden;
-                display: block;
-                font-size: 1.5rem;
-                font-weight: 600;
-                line-height: 1.5em;
-                margin: 0rem 1rem 1rem;
-                border: none;
-                text-shadow: none;
-                color: #222;
-                @include screen('xs_mobile') {
-                    font-size: 1.25rem;
-                }
-            }
-            p {
-                height: 4.5em;
-                overflow: hidden;
-                margin: 0rem 1rem .5rem;
-                color: #666;
-            }
-        }
-    }
-    a {
-        &:hover, &:focus {
-            .description {
-                h3 {
-                    color: $aHover;
-                }
-            }
-        }
-    }
-}
-.changeSlider {
-    .item {
-        .categlog {
-            position: absolute;
-            width: auto;
-            top: 0em;
-            left: 0em;
-            width: 100%;
-            height: 30px;
-            padding: 0em;
-            z-index: 99;
-            font-size: .875rem;
-            overflow:hidden;
-            span {
-                display: inline-block;
-                color: #FFF;
-                background: $primaryColor;
-                padding: .25em 1em;
-                width: auto;
-                position: relative;
-                white-space:nowrap;
-                &:after {
-                    position: absolute;
-                    width: 0;
-                    content: "";
-                    height: 0;
-                    border-style: solid;
-                    border-width: 40px 12px 0 0;
-                    border-color: $primaryColor transparent transparent transparent;
-                    right: -10px;
-                    top: 0;
-                }
-            }
-        }
-        .description {
-            height: 7rem;
-        }
-    }
-    @include screen('xs_mobile') {
-        padding:1em 2.5em;
-        .slick-prev{
-            left:15px;
-        }
-        .slick-next{
-            right:15px;
-        }
-    }
-}
-.othervideo {
-    background: url(../images/othervideo_bg.jpg) no-repeat top center;
-    background-size: cover;
-    &:after {
-        display: none;
-    }
-    h3 {
-        color: #FFF;
-        text-shadow: 0px 0px 5px rgba(0, 0, 0, .75);
-        border-bottom: 1px solid #FFF;
-    }
-}
-.othervideoSlider {
-    margin: 0 auto;
-    width: 50%;
-    min-width: 400px;
-    @include screen('xs_mobile') {
-        width: 90%;
-        min-width: 100px;
-        padding: 0 !important;
-    }
-    a {
-        &:hover, &:focus {
-            color: $aHover;
-            .img-container {
-                &:after {
-                    opacity: 1;
-                }
-                img {
-                    transform: scale(1.1);
-                }
-            }
-        }
-    }
-    .img-container {
-        margin-bottom: 0;
-        background: #000;
-        @include aspect-ratio(16,9);
-        &:after {
-            position: absolute;
-            width: 4em;
-            height: 4em;
-            background: url(../images/icon_play.svg) no-repeat center center;
-            background-size: contain;
-            content: "";
-            left: 50%;
-            top: 50%;
-            margin-left: -2em;
-            margin-top: -2em;
-            z-index: 2;
-            opacity: .75;
-            transition: .3s ease-out;
-        }
-        img {
-            transition: .3s ease-out;
-            object-fit: cover;
-        }
-    }
-}
-.publish_info {
-    font-size: 0.875em;
-    line-height: 1.5em;
-    list-style: none;
-    margin: 0 0 .7em 0;
-    padding: 0.8em;
-    @extend %clearfix;
-    @include box-sizing;
-    @include screen('mobile') {
-        font-size: 0.938em;
-    }
-    li {
-        width: 32%;
-        margin-bottom: .5em;
-        display: inline-block;
-        vertical-align: top;
-        @include screen('tablet') {
-            width: 48%;
-            margin-bottom: .2em;
-            font-size: 0.875em;
-        }
-        @include screen('mobile') {
-            width: 100%;
-            display: block;
-        }
-    }
-}
-// 基本資料
-.basic {
-    padding: 1em 0;
-    @include screen('mobile') {
-        padding: 1em 0 !important;
-    }
-    .basicContent {
-        .googlemap {
-            float: left;
-            width: 45%;
-            height: 400px;
-            margin: 0 1em 1em 0;
-            @include screen('mobile') {
-                float: none;
-                width: 100%;
-                margin: 0 auto 1em;
-            }
-            iframe {
-                width: 100%;
-                height: 100%;
-            }
-        }
-        @include screen('xs_mobile') {
-            @include gutter;
-        }
-    }
-    .basic_info {
-        overflow: hidden;
-        p {
-            font-size: 1.25rem;
-            .hour {
-                font-size: 2.5rem;
-                font-weight: bold;
-                margin-right: .5rem;
-            }
-        }
-        &>ul {
-            display: flex;
-            flex-flow: row wrap;
-            margin: 0;
-            padding: 0;
-            &>li {
-                flex: 1 1 48%;
-                list-style: none;
-                padding: 1em;
-                margin-bottom: 2em;
-                @include screen('mobile') {
-                    flex: 1 1 100%;
-                    margin-bottom: 0;
-                }
-                h4 {
-                    display: block;
-                    font-size: 1.25rem;
-                    margin: 0 0 .5em;
-                }
-                ul {
-                    margin: 0;
-                    padding: 0;
-                    li {
-                        display: inline-block;
-                        vertical-align: middle;
-                        margin-bottom: .5em;
-                        img {
-                            display: inline-block;
-                            vertical-align: middle;
-                            margin-right: .5em;
-                        }
-                    }
-                }
-            }
-        }
-        .weather {
-            padding: 1em;
-            display: flex;
-            flex-flow: row wrap;
-            border-top: 1px solid #DEDEDE;
-            h4 {
-                flex: 1 1 100%;
-                font-size: 1.5rem;
-                margin: 0 0 .5em;
-            }
-            .weather-container {
-                flex: 0 1 calc(100% / 7);
-                padding-top: 7px;
-                line-height: 15px;
-                line-height: 1;
-                text-align: center;
-                font-weight: 400;
-                height: 90px;
-                width: 75px;
-                border-radius: 1px;
-                @include screen('mobile') {
-                    flex: 0 1 75px;
-                }
-                &.weather-active {
-                    border: 1px solid #e9e9e9;
-                    background: #fcfcfc;
-                }
-                &.gray {
-                    color: #bababa !important;
-                }
-                .weather-week {
-                    font-size: .813rem;
-                    color: #999;
-                }
-                .weather-temperature {
-                    display: flex;
-                    font-size: .813rem;
-                    justify-content: center;
-                    .darkGray {
-                        color: #666;
-                        flex: 0 1 60%;
-                        text-align: right;
-                    }
-                    .gray {
-                        color: #BBB;
-                        flex: 0 1 40%;
-                        text-align: left;
-                    }
-                }
-            }
-        }
-    }
-}
-// tab
-.innerpage>.container>.tab_block {
-    max-width: 100% !important;
-}
-.tab_block {
-    max-width: 100%;
-    .tabSet {
-        max-width: 1200px;
-        margin: 0 auto 1em;
-    }
-}
-// 比較
-.comparison {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    max-width: 1200px;
-    margin: 0 auto 1em;
-    // height: 420px;
-    overflow: hidden;
-    align-content: flex-start;
-    clear: both;
-    @include screen('mobile') {
-        height: auto;
-    }
-    h3 {
-        flex-grow: 1;
-        flex-shrink: 1;
-        flex-basis: 100%;
-        font-size: 1.25rem;
-        text-align: center;
-        line-height: 1.45em;
-        margin: 0 auto 1rem;
-        color: #555;
-        // height: 2em;
-        // padding-bottom: 1rem;
-        position: relative;
-        span {
-            background: #FFF;
-            padding: .25em 1em;
-            margin: 0 auto;
-            position: relative;
-            z-index: 2;
-        }
+        padding: 0.25em 0;
+        border-bottom: solid 1px #eee;
+        padding-left: 1.5em;
         &:before {
+            content: '·';
+            font-size: 2em;
+            font-weight: bold;
+            width: 1em;
+            height: 1em;
             position: absolute;
-            width: 100%;
-            top: 50%;
-            left: 0;
-            content: "";
-            border-bottom: #CCC 1px dashed;
-            z-index: 1;
-        }
-        @include screen('xs_mobile') {
-            max-width: 300px;
-            margin: 0 auto .25em;
-        }
-    }
-    .before, .after {
-        flex-grow: 1;
-        flex-shrink: 1;
-        flex-basis: 45%;
-        max-width: 45%;
-        margin: 0 2% 2em;
-        background: #FFF;
-        border-radius: .35em;
-        padding: .5em 1em 1em;
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-        @include screen('xs_mobile') {
-            flex-grow: 1;
-            flex-shrink: 1;
-            flex-basis: 95%;
-            max-width: 95%;
-        }
-        h4 {
-            // background: $primaryColor;
-            color: darken($primaryColor, 10);
-            padding: .15em .5em .15em .75em;
-            margin-bottom: .5em;
-            margin-top: 0;
-            position: relative;
-            overflow: hidden;
-            @include screen('mobile') {
-                text-align: left;
-            }
-            &:after {
-                content: "";
-                position: absolute;
-                width: 2em;
-                height: 2em;
-                background: $primaryColor;
-                transform: rotate(45deg);
-                left: -2em;
-                top: 0;
-            }
-        }
-        p {
-            font-size: .813rem;
-            margin: 0 0 .5em 0em;
-            padding-left: 1em;
-            border-left: 1px solid #CCC;
-            height: 4.5em;
-            line-height: 1.5em;
-            overflow: hidden;
-            display: block;
+            top: 0.25em;
+            left: 0.1em;
             color: #666;
         }
-        .slick-slide {
-            p {
-                font-size: 1rem;
-                height: 3rem;
-            }
-        }
-    }
-}
-// 簡介
-.cp_intro {
-    @extend %clearfix;
-    margin-bottom: 1em;
-    text-align: left;
-    padding: 2em 0 5em;
-    max-width: 100%;
-    position: relative;
-    max-width: 100% !important;
-    background: url(../images/cp_infro.png) no-repeat center bottom #F1F1F1;
-    .cp_subContent {
-        @include gutter;
-    }
-    .photoSet {
-        float: left;
-        width: 42%;
-        min-width: 300px;
-        height: 430px;
-        margin: 0 2em 0 0;
-        padding-bottom: 2em;
-        overflow: hidden;
-        // outline:1px solid red;
-        display: flex;
-        flex-flow: row wrap;
-        align-content: stretch;
-        position: relative;
-        &>div {
-            display: none;
-            &:nth-child(1) {
-                display: block;
-            }
-            &:nth-child(2) {
-                display: block;
-            }
-            &:nth-child(3) {
-                display: block;
-            }
-            &:nth-child(4) {
-                display: block;
-            }
-            &:nth-child(5) {
-                display: block;
-                &:after {
-                    position: absolute;
-                    content: "";
-                    background: rgba(0, 0, 0, .75);
-                    width: 100%;
-                    height: 100%;
-                    top: 0;
-                    left: 0;
-                    z-index: 2;
-                }
-                span {
-                    position: absolute;
-                    z-index: 3;
-                    color: #FFF;
-                    top: 50%;
-                    left: 50%;
-                    width: 100%;
-                    text-align: center;
-                    transform: translate(-50%, -50%);
-                }
-            }
-        }
-        @include screen('mobile') {
-            height: 360px;
-        }
-        @include screen('xs_mobile') {
-            float: none;
-            width: 100%;
-            height: 340px;
-            margin: 0 auto 1em;
-        }
-        p {
-            flex-basis: 100%;
-            width: 100%;
-            height: 2em;
-            font-size: .938rem !important;
-            margin: 0;
-            align-self: flex-end;
-            position: absolute;
-            bottom: 0;
-            left: 1em;
-            span {
-                color: $primaryColor;
-            }
-        }
-        .video {
-            flex-basis: 60%;
-            min-height: auto;
-            position: relative;
-            width: 100%;
-            border: 1px solid #FFF;
-            position: relative;
-            background: none;
-            flex-grow: 1;
-            flex-shrink: 1;
-            a {
-                display: block;
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                height: 100%;
-                overflow: hidden;
-                &:after {
-                    position: absolute;
-                    width: 4em;
-                    height: 4em;
-                    background: url(../images/icon_play.svg) no-repeat center center;
-                    background-size: contain;
-                    content: "";
-                    left: 50%;
-                    top: 50%;
-                    margin-left: -2em;
-                    margin-top: -2.5em;
-                    z-index: 2;
-                    opacity: .75;
-                    transition: .3s ease-out;
-                }
-            }
-            &:hover, &:focus {
-                img {
-                    transform: scale(1.1);
-                }
-                &:after {
-                    opacity: 1;
-                }
-            }
-            img {
-                max-width: 100%;
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                transition: .3s ease-out;
-                object-fit: cover;
-            }
-        }
-        .img {
-            background: #F1F1F1;
-            flex-basis: 33%;
-            flex-grow: 1;
-            flex-shrink: 1;
-            position: relative;
-            width: 100%;
-            border: 1px solid #FFF;
-            overflow: hidden;
-            a {
-                display: block;
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                overflow: hidden;
-            }
-            &:hover, &:focus {
-                img {
-                    transform: scale(1.1);
-                }
-            }
-            img {
-                max-width: 100%;
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                transition: .3s ease-out;
-                object-fit: cover;
-            }
-        }
-        .big {
-            flex-basis: 60%;
-        }
-    }
-    h3 {
-        font-size: 2.5rem;
-        text-align: left;
-        line-height: 1.45em;
-        margin: 0 auto .5rem;
-        padding-bottom: 1rem;
-        @include screen('xs_mobile') {
-            max-width: 300px;
-            margin: 0 auto .25em;
-            text-align: center;
-        }
-    }
-    .cp_subContent {
-        overflow: hidden;
-        max-width: 1200px;
-        margin: 0 auto;
-        @include gutter;
-        p {
-            line-height: 1.7em;
-            font-size: 1.25rem;
-        }
-    }
-}
-// 秘境傳說
-.innerpage>.container>.cp_legend {
-    max-width: 100% !important;
-}
-.cp_legend {
-    @extend %clearfix;
-    margin-bottom: 1em;
-    text-align: left;
-    padding: 2em 0;
-    max-width: 100%;
-    background: darken($primaryColor, 5);
-    color: #FFF;
-    img {
-        float: left;
-        width: 40%;
-        min-width: 300px;
-        margin: 0 2em 0 0;
-        border: 8px solid #FFF;
-        box-shadow: 0px 0px 2em -1em rgba(0, 0, 0, .65);
-        @include screen('xs_mobile') {
-            float: none;
-            width: 100%;
-            margin: 0 auto;
-        }
-    }
-    h3 {
-        font-size: 2.5rem;
-        text-align: left;
-        line-height: 1.45em;
-        margin: 0 auto .5rem;
-        padding-bottom: 1rem;
-        color: #FFF;
-        @include screen('xs_mobile') {
-            max-width: 300px;
-            margin: 0 auto .25em;
-            text-align: center;
-        }
-    }
-    .cp_subContent {
-        overflow: hidden;
-        max-width: 1200px;
-        margin: 0 auto;
-        @include gutter;
-        p {
-            line-height: 1.7em;
-            font-size: 1.25rem;
-            color: #FFF;
-        }
-    }
-}
-// 相關推薦
-.innerpage>.container>.recommend {
-    max-width: 100% !important;
-}
-.recommend {
-    width: auto;
-    overflow: hidden;
-    padding: 2.5em 4em;
-    background: darken($primaryColor, 25);
-    transition: .3s ease-out;
-    .roadSlider {
-        max-width: 1200px;
-        margin: 0 auto;
-        @include screen('mobile') {
-            max-width: 90%;
-        }
-    }
-    h3 {
-        font-size: 2.5rem;
-        text-align: center;
-        line-height: 1.45em;
-        margin: 0 auto .5rem;
-        padding-bottom: 1rem;
-        border-bottom: $primaryColor 1px solid;
-        max-width: 600px;
-        color: #FFF;
-        @include screen('xs_mobile') {
-            max-width: 300px;
-            margin: 0 auto .25em;
-        }
-    }
-    @include screen('mobile') {
-        max-width: 100%;
-        margin: 0 auto;
-        padding: 1.5em 2em 4em;
-    }
-    .slick-prev {
-        left: -40px;
-        @include screen('mobile') {
-            left: -30px;
-        }
-    }
-    .slick-next {
-        right: -40px;
-        @include screen('mobile') {
-            right: -30px;
-        }
-    }
-    .item {
-        margin: 0 1em 2em;
-        background: rgba(255, 255, 255, 1);
-        box-shadow: 0px 0px 5px rgba(0, 0, 0, .25);
-        position: relative;
-        &:focus {
-            box-shadow: 0px 5px 10px rgba(0, 0, 0, 1);
-            outline: none;
-        }
         a {
+            padding: 0.2em 0px;
             display: block;
-            color: #000;
-            &:hover, &:focus {
-                color: $aHover;
-                .img-container {
-                    img {
-                        opacity: 1;
-                        transform: scale(1.1);
-                    }
-                }
-                .description {
-                    &:after {
-                        background: $primaryColor;
-                    }
-                }
-            }
-        }
-        .img-container {
-            margin-bottom: 0;
-            background: #000;
-            img {
-                opacity: .75;
-                transition: .3s ease-out;
-                object-fit: cover;
-            }
-        }
-        .description {
-            position: relative;
-            height: 16rem;
-            padding-top: 1em;
-            p {
-                height: 6em;
-                overflow: hidden;
-                display: block;
-                font-size: .938rem;
-                color: #666;
-                text-align: left;
-                font-weight: 600;
-                line-height: 1.5em;
-                margin: 0rem 1rem 2rem;
-            }
-            h3 {
-                height: 3em;
-                overflow: hidden;
-                display: block;
-                font-size: 1.5rem;
-                text-align: left;
-                font-weight: 600;
-                line-height: 1.5em;
-                margin: 1.15rem 1rem .5rem;
-                color: #555;
-            }
-            &:after {
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                width: 100%;
-                height: 2rem;
-                background: #F1F1F1;
-                content: "";
-                transition: .3s ease-out;
-            }
-            .collect {
-                position: absolute;
-                top: 4px;
-                right: 8px;
-                width: 20px;
-                height: 20px;
-                background: url(../images/icon_collect.svg) no-repeat center center;
-                background-size: contain;
-                font-size: 0;
-                display: block;
-                &.active {
-                    background: url(../images/icon_collect_active.svg) no-repeat center center;
-                    background-size: contain;
-                }
-            }
-            .road {
-                display: block;
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                font-size: .938rem;
-                text-align: center;
-                padding: 0rem 1em;
-                height: 2rem;
-                line-height: 2rem;
-                z-index: 2;
-                color: #333;
-                background: #DADADA;
-            }
-            .county {
-                position: absolute;
-                left: 0em;
-                top: 0em;
-                font-size: .938rem;
-                width: 5em;
-                height: 2em;
-                padding: .25em 1em;
-                text-align: center;
-                background: $color-orange;
-                color: #FFF;
-            }
-            .dot {
-                position: absolute;
-                border-radius: .2em;
-                background: #EEE;
-                text-align: center;
-                min-width: 2em;
-                height: 1.4em;
-                line-height: 1.4em;
-                right: .5em;
-                bottom: .3em;
-                color: #444;
-                z-index: 2;
-                background: #FFF;
-                border-radius: .2em;
-                &:before {
-                    position: absolute;
-                    width: 1em;
-                    height: 1em;
-                    background: url(../images/icon_reddot.svg) no-repeat center center;
-                    background-size: contain;
-                    content: "";
-                    left: -1.2em;
-                    top: .2em;
-                }
-            }
+            @include aSetting_nocolor;
         }
     }
 }
