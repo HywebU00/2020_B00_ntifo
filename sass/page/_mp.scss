@@ -242,7 +242,7 @@
         justify-content: flex-end;
         position: relative;
         z-index: 2;
-        margin-top: -6em;
+        margin-top: -5em;
         @include screen('mobile') {
             margin-top: 0;
         }
@@ -1007,7 +1007,7 @@ a.more {
         transform: rotate(45deg);
         position: absolute;
         right: -10px;
-        top: 14px;
+        top: 12px;
         border-left: none;
         border-bottom: none;
         transition: 0.3s ease-out;
@@ -1116,7 +1116,7 @@ a.more {
         }
     }
     .cooperationSlider {
-        margin: 0 5em;
+        margin: 0 5em 3em;
         @include screen('xs_mobile') {
             margin: 0 1em;
         }
@@ -1128,6 +1128,7 @@ a.more {
                 position: absolute;
                 width: 90%;
                 left: 5%;
+                overflow: hidden;
                 img {
                     position: absolute;
                     width: 100%;
@@ -1135,6 +1136,38 @@ a.more {
                     top: 0;
                     left: 0;
                     object-fit: cover;
+                }
+                &:hover,
+                &:focus {
+                    .caption {
+                        transform: scale(1);
+                        opacity: 1;
+                    }
+                }
+                .caption {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 2;
+                    top: 0;
+                    left: 0;
+                    padding: 2em;
+                    background: rgba(0, 0, 0, 0.55);
+                    opacity: 0;
+                    transform: scale(1.3);
+                    transition: 0.5s $cubic;
+                    i {
+                        font-size: 2em;
+                        margin: 1em auto;
+                    }
+                    h3 {
+                        color: #fff;
+                        width: 100%;
+                        margin: 0 auto;
+                        text-align: center;
+                        @include text-overflow;
+                        height: 3em;
+                    }
                 }
             }
         }
@@ -1148,7 +1181,7 @@ a.more {
                 RGBA(255, 255, 255, 1);
             background-size: 30px 30px;
             border: 1px solid rgba(255, 255, 255, 0.75);
-            top: 45% !important;
+            top: 40% !important;
             box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px,
                 rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
             left: -20px !important;

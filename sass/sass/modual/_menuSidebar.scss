@@ -57,7 +57,7 @@ $menuItems: 15;
             .megamenu {
                 & > ul {
                     & > li {
-                        transform: scale(1) translateX(0px);
+                        transform: scale(1) translateY(0px);
                         opacity: 1;
                         @for $i from 1 through $menuItems {
                             &:nth-child(#{$i}) {
@@ -83,7 +83,7 @@ $menuItems: 15;
             & > ul {
                 margin: 0;
                 & > li {
-                    transform: scale(1.15) translateX(-30px);
+                    transform: scale(1) translateY(30px);
                     opacity: 0;
                     transition: transform 0.5s $cubic, opacity 0.6s $cubic;
                     @for $i from 1 through $menuItems {

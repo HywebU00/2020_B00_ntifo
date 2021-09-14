@@ -52,6 +52,7 @@
             margin-left: -3px;
             &:after {
                 opacity: 1;
+                display: block;
             }
         }
     }
@@ -68,6 +69,9 @@
         margin: 0 0 0 20px;
         position: relative;
         background: #fff;
+        @include screen('tablet') {
+            background: none;
+        }
         &:after {
             position: absolute;
             content: '';
@@ -79,7 +83,7 @@
             bottom: 0;
             left: 0;
             z-index: -1;
-            opacity: 0;
+            display: none;
             @include screen('tablet') {
                 display: none;
             }

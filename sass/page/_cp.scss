@@ -2,9 +2,13 @@
 // 文章標題
 h1.title,
 h2.title {
-    font-size: 2em;
-    line-height: 1.25em;
+    font-size: 3em;
+    line-height: 1.45em;
     margin: 0.5em 0;
+    text-align: center;
+    @include screen('mobile') {
+        font-size: 2em;
+    }
 }
 // .tt{ color: #222; }
 .cp {

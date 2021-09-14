@@ -89,8 +89,8 @@ $(function () {
     if ($('.stickySidebar').length > 0) {
         var stickySidebar = new StickySidebar('.stickySidebar', {
             containerSelector: '.main',
-            topSpacing: 93,
-            bottomSpacing: 0,
+            topSpacing: 200,
+            bottomSpacing: 800,
             minWidth: 768,
             resizeSensor: true,
         });
