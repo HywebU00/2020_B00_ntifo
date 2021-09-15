@@ -26,7 +26,8 @@
             margin: 0px auto;
             max-width: 300px;
             float: left;
-            margin-right: 1em
+            margin-right: 1em;
+            background-color: #000;
         }
 
         @media screen and (max-width:545px) {
@@ -130,7 +131,7 @@
         }
 
         h2 {
-            margin: .5em 0 .25em;
+            margin: .5em .25em .25em .5em;
             font-size: 1rem;
             line-height: 1.25em;
             white-space: nowrap;
@@ -139,6 +140,11 @@
         .table_wrapper h2 {
             flex: 0 0 150px;
             padding-right: 1em;
+        }
+
+        .outline {
+            outline: 2px solid red;
+            ;
         }
 
         hr {
@@ -151,160 +157,112 @@
     <div class="demo_wrap">
         <h1><img src="images/logo.png" alt=""></h1>
         <div class="btn_grp">
-            <a href="https://github.com/HywebU00/hyui_flex" class="btn">切版檔案請按此下載</a>
+            <a href="https://github.com/HywebU00/2020_B00_ntifo" class="btn">切版檔案請按此下載</a>
+        </div>
+        <hr>
+        <span
+            style="display:inline-block; background:red; font-size:13px;color:#FFF;padding:.5em;margin-left:-.15em;">先套紅色的部分</span>
+        <div class="outline">
+            <div class="table_wrapper">
+                <h2>首頁</h2>
+                <!-- hyUI 標準頁面 -->
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="num">編號</th>
+                            <th>頁面名稱</th>
+                            <th>檔案名稱</th>
+                            <th>選單樣式</th>
+                            <th>格線系統</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td>首頁</td>
+                            <!-- 連結放到a裡面就好 -->
+                            <td><a href="mp.htm"></a></td>
+                            <td><span class="gray">list</span></td>
+                            <td><span class="gray">flex</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <hr>
+            <div class="table_wrapper">
+                <h2>標準頁面</h2>
+                <!-- hyUI 標準頁面 -->
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="num">編號</th>
+                            <th>頁面名稱</th>
+                            <th>檔案名稱</th>
+                            <th>備註</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td>標準條列</td>
+                            <td><a href="lp.htm"></a></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>標準內容</td>
+                            <td><a href="cp.htm"></a></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>下載專區</td>
+                            <td><a href="lp_download.htm"></a></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>常見問答</td>
+                            <td><a href="lp_qa.htm"></a></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>影音條列</td>
+                            <td><a href="lp_video.htm"></a></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>相關連結</td>
+                            <td><a href="lp_link.htm"></a></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>網站地圖</td>
+                            <td><a href="sitemap.htm"></a></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Google Search頁面</td>
+                            <td><a href="gs.htm"></a></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>404 網站錯誤</td>
+                            <td><a href="404.htm"></a></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
         <hr>
         <div class="table_wrapper">
-            <h2>首頁</h2>
-            <!-- hyUI 標準頁面 -->
-            <table>
-                <thead>
-                    <tr>
-                        <th class="num">編號</th>
-                        <th>頁面名稱</th>
-                        <th>檔案名稱</th>
-                        <th>選單樣式</th>
-                        <th>格線系統</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td></td>
-                        <td>首頁</td>
-                        <!-- 連結放到a裡面就好 -->
-                        <td><a href="mp.htm"></a></td>
-                        <td><span class="gray">list</span></td>
-                        <td><span class="gray">float</span></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>首頁</td>
-                        <!-- 連結放到a裡面就好 -->
-                        <td><a href="mp_megamenu.htm"></a></td>
-                        <td><span class="gray">megamenu</span></td>
-                        <td><span class="gray">float</span></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>flex grid</td>
-                        <!-- 連結放到a裡面就好 -->
-                        <td><a href="mp_flex.htm"></a></td>
-                        <td><span class="gray">list</span></td>
-                        <td><span class="gray">flex</span></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <hr>
-        <div class="table_wrapper">
-            <h2>標準頁面</h2>
-            <!-- hyUI 標準頁面 -->
-            <table>
-                <thead>
-                    <tr>
-                        <th class="num">編號</th>
-                        <th>頁面名稱</th>
-                        <th>檔案名稱</th>
-                        <th>備註</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td></td>
-                        <td>標準條列</td>
-                        <td><a href="lp.htm"></a></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>標準內容</td>
-                        <td><a href="cp.htm"></a></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>下載專區</td>
-                        <td><a href="lp_download.htm"></a></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>常見問答</td>
-                        <td><a href="lp_qa.htm"></a></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>影音條列</td>
-                        <td><a href="lp_video.htm"></a></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>列表頁-表格</td>
-                        <td><a href="lp_table.htm"></a></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>列表頁-相簿</td>
-                        <td><a href="lp_album.htm"></a></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>內容頁</td>
-                        <td><a href="cp.htm"></a></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>內容頁-照片</td>
-                        <td><a href="cp_photo.htm"></a></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>節點頁</td>
-                        <td><a href="np.htm"></a></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>轉寄友人</td>
-                        <td><a href="fp.htm"></a></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>意見信箱</td>
-                        <td><a href="qp.htm"></a></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>網站地圖</td>
-                        <td><a href="sitemap.htm"></a></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>Google Search頁面</td>
-                        <td><a href="gs.htm"></a></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>404 網站錯誤</td>
-                        <td><a href="404.htm"></a></td>
-                        <td></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <hr>
-        <div class="table_wrapper">
-            <h2>特殊頁面+元件</h2>
+            <h2>以下不用看</h2>
             <table>
                 <thead>
                     <tr>
@@ -349,6 +307,42 @@
                         <td></td>
                         <td>...</td>
                         <td><a href="..."></a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>內容頁-照片</td>
+                        <td><a href="cp_photo.htm"></a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>節點頁</td>
+                        <td><a href="np.htm"></a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>轉寄友人</td>
+                        <td><a href="fp.htm"></a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>意見信箱</td>
+                        <td><a href="qp.htm"></a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>列表頁-表格</td>
+                        <td><a href="lp_table.htm"></a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>列表頁-相簿</td>
+                        <td><a href="lp_album.htm"></a></td>
                         <td></td>
                     </tr>
                 </tbody>

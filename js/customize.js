@@ -101,6 +101,16 @@ $(function () {
     });
     new WOW().init();
     //sticky sidebar
+    if ($('.link_img').length > 0) {
+        var stickySidebar = new StickySidebar('.link_img', {
+            containerSelector: '.lp_link',
+            topSpacing: 300,
+            bottomSpacing: 0,
+            minWidth: 545,
+            resizeSensor: true,
+        });
+    }
+    //sticky sidebar
     if ($('.stickySidebar').length > 0) {
         var stickySidebar = new StickySidebar('.stickySidebar', {
             containerSelector: '.main',
@@ -235,7 +245,7 @@ $(function () {
     });
     //
     $('.cppic_slider').slick({
-        dots: true,
+        dots: false,
         infinite: false,
         speed: 500,
         slidesToShow: 4,

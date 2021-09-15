@@ -54,6 +54,79 @@
                     }
                 }
             }
+            .btn_grp {
+                button {
+                    min-width: 10em;
+                }
+            }
+        }
+    }
+}
+.lp_link {
+    display: flex;
+    .link_img {
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: 20%;
+        @include screen('xs_mobile') {
+            display: none;
+        }
+        img {
+            width: 100%;
+        }
+    }
+    & > ul {
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 50%;
+        padding: 0 2em;
+        @include screen('xs_mobile') {
+            padding: 0 1em;
+        }
+        & > li {
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+            padding: 1em;
+            position: relative;
+            .num {
+                width: 3em;
+                text-align: right;
+                position: absolute;
+                top: 1.25em;
+                left: -1em;
+                &:after {
+                    content: '.';
+                    display: inline-block;
+                }
+            }
+            .tag {
+                flex-grow: 0;
+                flex-shrink: 1;
+                flex-basis: 100px;
+                margin: 0 1em 0 0;
+                a {
+                    font-weight: normal;
+                }
+                &:before {
+                    display: none;
+                }
+                li {
+                    margin: 0;
+                }
+            }
+            a {
+                flex-grow: 1;
+                flex-shrink: 1;
+                flex-basis: auto;
+                align-self: center;
+                color: #333;
+                font-weight: bold;
+                &:hover,
+                &:focus {
+                    color: $aHover;
+                }
+            }
         }
     }
 }
@@ -69,6 +142,14 @@
             flex-basis: 30%;
             margin: 0 1.5% 2em;
             background-color: #fff;
+            @include screen('mobile') {
+                flex-basis: 46%;
+                margin: 0 2% 2em;
+            }
+            @include screen('xs_mobile') {
+                flex-basis: 90%;
+                margin: 0 auto 2em;
+            }
             a {
                 color: #333;
                 display: block;
@@ -125,6 +206,7 @@
                     width: 90%;
                     margin: 0 auto;
                     color: #777;
+                    font-size: 0.875rem;
                 }
                 h3 {
                     width: 90%;
@@ -209,6 +291,7 @@
                     max-width: 80%;
                     @include screen('xs_mobile') {
                         padding-left: 2rem;
+                        max-width: 100%;
                     }
                     &:before {
                         position: absolute;

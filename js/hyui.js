@@ -643,8 +643,8 @@ $(function () {
         if (cookie == 'small') {
             //$('.font_size').find('.small').click();
             $('.font_size').find('.small').parent('li').siblings('li').find('a').removeClass('active');
-            $('.innerpage').removeClass('large_size medium_size').addClass('small_size');
-            $('.font_size').find('.small').addClass('active');
+            $('.innerpage').removeClass('large_size medium_size').addClass('medium_size');
+            $('.font_size').find('.medium').addClass('active');
             e.preventDefault();
         } else {
             if (cookie == 'large') {

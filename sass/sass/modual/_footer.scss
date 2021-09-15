@@ -115,6 +115,7 @@ footer {
     .footer_icon {
         flex: 1 1 20%;
         min-width: 150px;
+        text-align: right;
         @include screen('tablet') {
             flex: 1 1 100%;
             text-align: right;
