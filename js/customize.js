@@ -167,7 +167,7 @@ $(function () {
         ease: 'ease',
         responsive: [
             {
-                breakpoint: 1200,
+                breakpoint: 992,
                 settings: {
                     slidesToShow: 3,
                     slidesToScroll: 1,
@@ -175,7 +175,7 @@ $(function () {
                 },
             },
             {
-                breakpoint: 768,
+                breakpoint: 545,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 1,
