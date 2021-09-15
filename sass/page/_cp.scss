@@ -4,17 +4,30 @@ h1.title,
 h2.title {
     font-size: 3em;
     line-height: 1.45em;
-    margin: 0.5em 0;
+    margin: 0.25em 0;
     text-align: center;
+    position: relative;
     @include screen('mobile') {
         font-size: 2em;
+    }
+    &:before {
+        position: absolute;
+        content: '';
+        height: 1em;
+        width: 0.25em;
+        background: $primaryColor;
+        transform: skew(-20deg) translateX(-30px);
+    }
+    &.text_left {
+        text-align: left;
+        margin-left: 1em;
     }
 }
 // .tt{ color: #222; }
 .cp {
     .pic {
         float: left;
-        margin: 0px 1em 1em 0;
+        margin: 0px 2em 1em 0;
         width: auto;
         width: 45%;
         max-width: 400px;
@@ -135,8 +148,11 @@ h2.title {
             line-height: 1.8em;
             margin: 0.2em 0.5em 0.2em 0;
             color: #222;
+            flex-grow: 0;
+            flex-shrink: 1;
+            flex-basis: 100%;
             ~ span {
-                flex: 0 0 auto;
+                flex: 0 0 100%;
                 margin: 0.2em;
                 font-size: 0.875em;
                 line-height: 1.5em;
@@ -158,7 +174,8 @@ h2.title {
                     padding: 0em 1em;
                     line-height: 1.5em;
                     border-radius: 3px;
-                    min-width: 3.5em;
+                    min-width: 5em;
+                    text-align: center;
                     &:hover,
                     &:focus {
                         color: #fff;
@@ -308,6 +325,116 @@ h2.title {
             padding: 0.2em 0px;
             display: block;
             @include aSetting_nocolor;
+        }
+    }
+}
+.link_to_other {
+    @extend %clearfix;
+    width: 80%;
+    min-width: 600px;
+    margin: 0 auto 1em;
+    padding: 0.5em;
+    a {
+        color: #333;
+        font-weight: bold;
+        display: block;
+        line-height: 1.5;
+        font-size: 1.125em;
+        @include text-overflow;
+        @include screen('mobile') {
+            height: 4em;
+            text-overflow: inherit;
+            white-space: normal;
+        }
+        span {
+            font-size: 0.75em;
+            color: #888;
+            display: block;
+            font-weight: normal;
+        }
+        &:hover,
+        &:focus {
+            color: $aHover;
+        }
+    }
+    .prev,
+    .next {
+        width: 50%;
+        float: left;
+        padding: 1em 2em;
+        position: relative;
+        border-right: 1px solid #666;
+        &:before {
+            position: absolute;
+            content: '';
+            width: 40px;
+            height: 40px;
+            transform: rotate(-45deg);
+            border: 5px solid #ccc;
+            border-bottom: none;
+            border-right: none;
+            top: 20%;
+            left: -40px;
+            transition: 0.3s ease-out;
+            opacity: 0.5;
+        }
+        &:hover {
+            &:before {
+                border: 5px solid $aHover;
+                border-bottom: none;
+                border-right: none;
+                left: -20px;
+                opacity: 1;
+            }
+        }
+    }
+    .next {
+        border-right: none;
+        &:before {
+            left: auto;
+            right: -40px;
+            transform: rotate(135deg);
+        }
+        &:hover {
+            &:before {
+                border: 5px solid $aHover;
+                border-bottom: none;
+                border-right: none;
+                left: auto;
+                right: -20px;
+                opacity: 1;
+            }
+        }
+    }
+    @include screen('mobile') {
+        width: 100%;
+        min-width: 260px;
+        padding: 0.2em;
+        .prev,
+        .next {
+            &:before {
+                width: 20px;
+                height: 20px;
+                top: 30%;
+                left: 0px;
+            }
+            &:hover {
+                &:before {
+                    left: 0px;
+                }
+            }
+        }
+        .next {
+            &:before {
+                left: auto;
+                right: 0px;
+            }
+            &:hover {
+                &:before {
+                    left: auto;
+                    right: 0px;
+                }
+            }
         }
     }
 }

@@ -1,5 +1,20 @@
 // 自行加入的JS請寫在這裡
 $(function () {
+    // qa
+    $('.lp_qa>ul>li')
+        .find('.qa_content')
+        .each(function (index) {
+            $(this)
+                .find('.q_block')
+                .children('a')
+                .off()
+                .click(function (e) {
+                    $('.lp_qa').find('.a_block').stop().slideUp('400', 'easeOutQuint');
+
+                    $(this).parent('.q_block').siblings('.a_block').stop().slideToggle('400', 'easeOutQuint');
+                    e.preventDefault();
+                });
+        });
     // fixed_panel
     $('.fixed_panel').find('.active').find('.service_list').show();
     $('.fixed_panel')

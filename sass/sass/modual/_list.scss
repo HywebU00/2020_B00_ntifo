@@ -1,3 +1,504 @@
+.adv_search {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    margin-bottom: 4em;
+    &:after {
+        position: absolute;
+        content: '';
+        width: 200%;
+        height: 90%;
+        background: #f4f4f4;
+        left: -20%;
+        bottom: -2em;
+        z-index: -1;
+    }
+    &:before {
+        position: absolute;
+        content: '';
+        width: 600px;
+        height: 400px;
+        background: url(../images/advsearch.png) no-repeat center bottom;
+        left: -150px;
+        bottom: -2em;
+        z-index: 0;
+        pointer-events: none;
+    }
+    .container {
+        padding: 3em 2em;
+        background: #fff;
+        width: 200%;
+        margin-left: 20%;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        @include screen('xs_mobile') {
+            width: 100%;
+            margin: 0 auto 1em;
+        }
+        .form_grid {
+            max-width: 720px;
+            margin: 0 auto;
+            border: none;
+            .form_grp {
+                display: flex;
+                align-items: center;
+                .form_title {
+                }
+                .form_content {
+                    .checkbox_grp {
+                        display: flex;
+                        label {
+                            flex-grow: 0;
+                            flex-basis: auto;
+                            white-space: nowrap;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.lp_video {
+    ul {
+        @include li-reset;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        li {
+            flex-grow: 0;
+            flex-shrink: 1;
+            flex-basis: 30%;
+            margin: 0 1.5% 2em;
+            background-color: #fff;
+            a {
+                color: #333;
+                display: block;
+                padding-bottom: 1.5em;
+                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                transition: 0.3s $cubic;
+                &:hover,
+                &:focus {
+                    box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 35px;
+                    .img-container {
+                        img {
+                            transform: scale(1.1);
+                            opacity: 1;
+                        }
+                    }
+                    h3 {
+                        color: $aHover;
+                    }
+                }
+                .img-container {
+                    width: 100%;
+                    margin-bottom: 0.5em;
+                    background: #000;
+                    @include aspect-ratio(4, 3);
+                    img {
+                        object-fit: cover;
+                        opacity: 0.8;
+                        transition: 0.3s $cubic;
+                    }
+                    i {
+                        position: absolute;
+                        z-index: 2;
+                        color: #c4302b;
+                        transform: translate(-50%, -50%);
+                        top: 50%;
+                        left: 50%;
+                        font-size: 4em;
+                        &:after {
+                            position: absolute;
+                            content: '';
+                            width: 30px;
+                            height: 30px;
+                            transform: translate(-50%, -50%);
+                            top: 50%;
+                            left: 50%;
+                            z-index: -1;
+                            background: #fff;
+                        }
+                    }
+                }
+                time {
+                    display: block;
+                    text-align: right;
+                    width: 90%;
+                    margin: 0 auto;
+                    color: #777;
+                }
+                h3 {
+                    width: 90%;
+                    margin: 1em auto 0.5em;
+                    @include text-line(2, 1.45em);
+                }
+            }
+        }
+    }
+}
+.lp_qa {
+    & > ul {
+        @include li-reset;
+        & > li {
+            padding: 0.5em 2em;
+            background: #fff;
+            display: flex;
+            flex-flow: row wrap;
+            align-content: flex-start;
+            margin-bottom: 0.5em;
+            transition: 0.3s $cubic;
+            border-bottom: 1px solid #ddd;
+            @include screen('mobile') {
+                padding: 1em 1.5em;
+            }
+
+            .tag {
+                flex-grow: 1;
+                flex-shrink: 1;
+                flex-basis: 120px;
+                margin: 0;
+            }
+            .qa_content {
+                flex-grow: 1;
+                flex-shrink: 1;
+                flex-basis: 100%;
+                margin: 0 0 0.25em;
+                line-height: 1.5em;
+                font-size: 1.25em;
+                margin-top: 0.25em;
+                @include screen('mobile') {
+                    flex-basis: 100%;
+                }
+                .q_block {
+                    color: #111;
+                    font-weight: bold;
+                    font-size: 1.5rem;
+                    margin-bottom: 0.25em;
+                    position: relative;
+                    padding-left: 2.5rem;
+                    @include screen('xs_mobile') {
+                        font-size: 1.25rem;
+                        padding-left: 2rem;
+                    }
+                    a {
+                        color: #111;
+                        display: block;
+                        &:before {
+                            position: absolute;
+                            content: 'Q:';
+                            top: 0;
+                            left: 0;
+                            font-weight: bold;
+                            font-family: Helvetica;
+                            font-size: 1.5rem;
+                        }
+                        &:hover,
+                        &:focus {
+                            color: $secondaryColor;
+                            &:before {
+                                color: $secondaryColor;
+                            }
+                        }
+                    }
+                }
+                .a_block {
+                    color: #666;
+                    font-size: 0.938rem;
+                    position: relative;
+                    padding-left: 2.5rem;
+                    display: none;
+                    max-width: 80%;
+                    @include screen('xs_mobile') {
+                        padding-left: 2rem;
+                    }
+                    &:before {
+                        position: absolute;
+                        content: 'A:';
+                        top: 0;
+                        left: 0;
+                        font-weight: bold;
+                        font-family: Helvetica;
+                        color: $primaryColor;
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+            .update {
+                flex-grow: 0;
+                flex-shrink: 1;
+                flex-basis: 120px;
+                font-size: 0.813rem;
+                color: #666;
+                text-align: right;
+                white-space: nowrap;
+                padding-top: 0.5em;
+                @include screen('mobile') {
+                    flex-basis: auto;
+                    padding-top: 0.25em;
+                    time {
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+    }
+}
+.lp_download {
+    & > ul {
+        @include li-reset;
+        & > li {
+            padding: 2em 3em;
+            background: #fff;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            display: flex;
+            flex-flow: row wrap;
+            align-content: flex-start;
+            margin-bottom: 2em;
+            transition: 0.3s $cubic;
+            &:hover {
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 35px;
+            }
+            .tag {
+                flex-grow: 0;
+                flex-shrink: 1;
+                flex-basis: 120px;
+                @include screen('mobile') {
+                    order: 0;
+                    flex-grow: 1;
+                    margin: 0;
+                }
+            }
+            h3 {
+                flex-grow: 1;
+                flex-shrink: 1;
+                flex-basis: auto;
+                margin: 0 0 0.25em;
+                line-height: 1.5em;
+                font-size: 1.5em;
+                @include screen('mobile') {
+                    order: 2;
+                    flex-basis: 100%;
+                }
+            }
+            .update {
+                flex-grow: 0;
+                flex-shrink: 1;
+                flex-basis: 120px;
+                font-size: 0.813rem;
+                color: #666;
+                white-space: nowrap;
+                @include screen('mobile') {
+                    order: 1;
+                    flex-basis: auto;
+
+                    text-align: right;
+                    padding-top: 0.25em;
+                    time {
+                        display: inline-block;
+                    }
+                }
+            }
+            .file {
+                flex-grow: 1;
+                flex-shrink: 1;
+                flex-basis: 100%;
+                padding-left: 120px;
+                @include screen('mobile') {
+                    order: 4;
+                    flex-basis: 100%;
+                    padding-left: 0;
+                }
+                ul {
+                    @include li-reset;
+                    li {
+                        display: flex;
+                        padding: 0.5em 0;
+                        border-bottom: 1px dashed #ccc;
+                        position: relative;
+                        padding-left: 1em;
+                        @include screen('mobile') {
+                            flex-flow: wrap row;
+                        }
+                        &:before {
+                            transition: 0.3s $cubic;
+                            position: absolute;
+                            content: '';
+                            left: 0em;
+                            top: 1em;
+                            width: 0;
+                            height: 0;
+                            border-style: solid;
+                            border-width: 3px 0 3px 4px;
+                            border-color: transparent transparent transparent #aaa;
+                        }
+                        &:hover {
+                            &:before {
+                                border-style: solid;
+                                border-width: 3px 0 3px 4px;
+                                border-color: transparent transparent transparent $primaryColor;
+                            }
+                        }
+                        &:last-child {
+                            border: none;
+                        }
+                        span {
+                            flex-grow: 1;
+                            flex-shrink: 1;
+                            flex-basis: 50%;
+                            @include screen('mobile') {
+                                flex-basis: 100%;
+                                margin-bottom: 0.5em;
+                            }
+                        }
+                        .type {
+                            flex-grow: 0;
+                            flex-shrink: 1;
+                            flex-basis: 40%;
+                            border-left: 1px solid #ddd;
+                            padding: 0 1em;
+                            @include screen('mobile') {
+                                flex-basis: 100%;
+                                border: none;
+                                padding-left: 0;
+                            }
+
+                            span {
+                                color: #333;
+                                margin-bottom: 0.5em;
+                            }
+                            a {
+                                display: inline-block;
+                            }
+                            $fileType: doc, docx, odt, xls, xlsx, csv, ods, ppt, pptx, odp, zip, txt, mov, mp3, jpg, wmv,
+                                mp4, pdf, other;
+                            @each $fileType in $fileType {
+                                span.file_#{$fileType} {
+                                    a {
+                                        color: #fff;
+                                        font-weight: bold;
+                                        padding: 0em 1em;
+                                        line-height: 1.5em;
+                                        border-radius: 3px;
+                                        min-width: 5em;
+                                        text-align: center;
+                                        font-size: 0.938rem;
+                                        &:hover,
+                                        &:focus {
+                                            color: #fff;
+                                        }
+                                    }
+                                }
+                            }
+                            span {
+                                display: inline-block;
+                                align-items: center;
+                                &.file_doc,
+                                &.file_docx,
+                                &.file_odt {
+                                    a {
+                                        background: #275cb7;
+                                        &:hover,
+                                        &:focus {
+                                            background: darken(#275cb7, 5%);
+                                        }
+                                    }
+                                }
+                                &.file_xls,
+                                &.file_xlsx,
+                                &.file_csv,
+                                &.file_ods {
+                                    a {
+                                        background: #387947;
+                                        &:hover,
+                                        &:focus {
+                                            background: darken(#387947, 5%);
+                                        }
+                                    }
+                                }
+                                &.file_ppt,
+                                &.file_pptx,
+                                &.file_odp,
+                                &.file_pdf {
+                                    a {
+                                        background: #c55a3b;
+                                        &:hover,
+                                        &:focus {
+                                            background: darken(#c55a3b, 5%);
+                                        }
+                                    }
+                                }
+                                &.file_pdf {
+                                    a {
+                                        background: #c00;
+                                        &:hover,
+                                        &:focus {
+                                            background: darken(#c00, 5%);
+                                        }
+                                    }
+                                }
+                                &.file_zip {
+                                    a {
+                                        background: #eb712e;
+                                        &:hover,
+                                        &:focus {
+                                            background: darken(#eb712e, 5%);
+                                        }
+                                    }
+                                }
+                                &.file_txt,
+                                &.file_other {
+                                    a {
+                                        background: #555;
+                                        &:hover,
+                                        &:focus {
+                                            background: darken(#555, 5%);
+                                        }
+                                    }
+                                }
+                                &.file_mov {
+                                    a {
+                                        background: #009999;
+                                        &:hover,
+                                        &:focus {
+                                            background: darken(#009999, 5%);
+                                        }
+                                    }
+                                }
+                                &.file_mp3,
+                                &.file_mp4 {
+                                    a {
+                                        background: #088ecc;
+                                        &:hover,
+                                        &:focus {
+                                            background: darken(#088ecc, 5%);
+                                        }
+                                    }
+                                }
+                                &.file_jpg {
+                                    a {
+                                        background: #6c29a4;
+                                        &:hover,
+                                        &:focus {
+                                            background: darken(#6c29a4, 5%);
+                                        }
+                                    }
+                                }
+                                &.file_wmv {
+                                    a {
+                                        background: #430a1f;
+                                        &:hover,
+                                        &:focus {
+                                            background: darken(#430a1f, 5%);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 .lp {
     table {
         td {
@@ -25,11 +526,12 @@
         ol {
             list-style-type: none;
             padding: 0;
-            border-top: 2px solid $primaryColor;
             & > li {
                 padding: 0.75em 0 0.5em 4em;
                 border-bottom: 1px solid #ddd;
                 position: relative; // outline: 1px solid blue;
+                clear: both;
+                overflow: hidden;
                 .tag {
                     margin-left: 2em;
                 }
@@ -42,8 +544,18 @@
                     font-size: 1.5em;
                     padding-right: 10em;
                     color: $color-word;
+
+                    .img-container {
+                        float: left;
+                        @include aspect-ratio(4, 3);
+                        width: 180px;
+                        margin: 0 0.5em 1em 0;
+                    }
                     @include screen('mobile') {
                         padding-right: 1em;
+                    }
+                    @include screen('xs_mobile') {
+                        padding-right: 0;
                     }
                     &:hover {
                         color: $aHover;
@@ -93,6 +605,26 @@
                     max-width: 800px;
                     @include text-line(3, 1.5em);
                     margin: 0.5em 0;
+                }
+            }
+        }
+        &.has_img {
+            @include screen('xs_mobile') {
+                & > ul,
+                & > ol {
+                    & > li {
+                        padding-top: 0.25em;
+                        margin-bottom: 1em;
+                        .num {
+                            display: none;
+                        }
+                        .img-container {
+                            float: none;
+                            width: 100%;
+                            margin: 0 0 0.5em;
+                        }
+                        padding: 0;
+                    }
                 }
             }
         }

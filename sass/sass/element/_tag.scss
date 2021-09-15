@@ -27,6 +27,12 @@ div.tag {
                 @include aSetting_nocolor;
                 border: 1px solid #ddd;
                 padding: 0.2em 0.75em;
+                &:hover,
+                &:focus {
+                    background-color: $primaryColor;
+                    color: #fff;
+                    border: 1px solid $primaryColor;
+                }
             }
         }
     }
