@@ -152,6 +152,30 @@ $(function () {
     setTimeout(function () {
         $carousel.find('.start').removeClass('start');
     }, 0);
+    // publish_slider
+    var $carousel_publish = $('.publish_slider').slick({
+        mobileFirst: true,
+        dots: false,
+        arrow: true,
+        infinite: true,
+        speed: 2000,
+        autoplaySpeed: 4000,
+        autoplay: true,
+        fade: true,
+        lazyLoaded: true,
+        lazyLoad: 'ondemand',
+        ease: 'ease',
+        pauseOnHover: false,
+    });
+    /* The first slide will not get the animation,
+    therefore I add and remove a class that will trigger the css animation */
+    $carousel_publish.find('.slick-current').addClass('start');
+    /* I use a set-timeoutfunction to hinder optimization
+    of adding and removing classes */
+    setTimeout(function () {
+        $carousel_publish.find('.start').removeClass('start');
+    }, 0);
+
     // 廣告輪播
     $('.cooperationSlider').slick({
         mobileFirst: true,
