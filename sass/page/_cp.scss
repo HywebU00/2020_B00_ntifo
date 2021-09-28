@@ -385,6 +385,12 @@ h2.title {
         &:focus {
             color: $aHover;
         }
+        img {
+            width: 50px;
+            height: 90px;
+            object-fit: contain;
+            float: right;
+        }
     }
     .prev,
     .next {
@@ -462,6 +468,335 @@ h2.title {
                 &:before {
                     left: auto;
                     right: 0px;
+                }
+            }
+        }
+    }
+}
+.publish_content {
+    .publish_feature {
+        display: flex;
+        justify-content: flex-start;
+        align-items: stretch;
+        min-height: 400px;
+        padding: 2em;
+        background: #fff;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+        @include screen('tablet') {
+            flex-flow: row wrap;
+        }
+        .book_pic {
+            flex-grow: 0;
+            flex-shrink: 1;
+            flex-basis: 35%;
+            display: flex;
+            min-width: 400px;
+            @include screen('tablet') {
+                flex-basis: 320px;
+                min-width: 320px;
+            }
+            @include screen('mobile') {
+                flex-basis: 100%;
+                min-width: 100%;
+            }
+            .cover {
+                flex-grow: 1;
+                flex-shrink: 1;
+                flex-basis: 80%;
+                a {
+                    display: block;
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+            .inner {
+                flex-grow: 0;
+                flex-shrink: 1;
+                flex-basis: 20%;
+                display: flex;
+                flex-flow: column wrap;
+                padding-left: 1em;
+                a {
+                    display: block;
+                    flex-grow: 0;
+                    flex-shrink: 1;
+                    flex-basis: 25%;
+                    @include aspect-ratio(1, 1);
+                    position: relative;
+                    width: 100%;
+                    border: 1px solid #ddd;
+                    margin-top: -1px;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        position: absolute;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+        .book_info {
+            flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: auto;
+            padding: 0 2em;
+            color: #333;
+            @include screen('tablet') {
+                padding: 0 1em;
+            }
+            // @include screen('mobile') {
+            //     padding: 0 1em;
+            // }
+            @include screen('mobile') {
+                flex-basis: 100%;
+                padding: 0.5em 0;
+            }
+            h3 {
+                font-size: 1.75rem;
+                margin: 0 0 2.5em;
+                line-height: 1.45em;
+                @include screen('tablet') {
+                    margin: 0 0 1em;
+                }
+            }
+            ul {
+                @include li-reset;
+                position: relative;
+                overflow: visible;
+                &:before {
+                    position: absolute;
+                    content: '';
+                    width: 40%;
+                    height: 3px;
+                    background: $primaryColor;
+                    top: -15px;
+                    left: 0;
+                }
+                li {
+                    padding-bottom: 0.25em;
+                    margin-bottom: 0.25em;
+                    border-bottom: 1px dashed #eee;
+                    font-size: 0.875rem;
+                    a {
+                        color: $aHover;
+                        &:hover,
+                        &:focus {
+                            color: $color-orange;
+                        }
+                        &:after {
+                            content: '、';
+                            color: #333;
+                        }
+                        &:last-child {
+                            &:after {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .book_buy {
+            flex-grow: 0;
+            flex-shrink: 0;
+            flex-basis: 250px;
+            background: #f1f1f1;
+            padding: 1em;
+            min-width: 250px;
+            @include screen('tablet') {
+                flex-grow: 1;
+                flex-shrink: 1;
+                flex-basis: 100%;
+                display: flex;
+            }
+            @include screen('mobile') {
+                flex-basis: 100%;
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+                flex-flow: row wrap;
+            }
+            .buy_block,
+            .ebook_block {
+                flex-grow: 1;
+                flex-shrink: 1;
+                flex-basis: 30%;
+                padding: 0 1em;
+                @include screen('xs_mobile') {
+                    flex-basis: 100%;
+                }
+            }
+            .buy_block {
+                border-bottom: 1px solid #bbb;
+                padding-bottom: 0.5em;
+                margin-bottom: 0.5em;
+                @include screen('tablet') {
+                    border: none;
+                }
+            }
+            h3 {
+                margin: 0 0 0.5em;
+            }
+            .btn_grp {
+                margin: 0.25em auto;
+                padding: 0;
+            }
+            button {
+                width: 100%;
+                height: 42px;
+                @include screen('tablet') {
+                    max-width: 250px;
+                }
+                &:hover,
+                &:focus {
+                    box-shadow: none !important;
+                }
+                &:active {
+                    transform: translateY(3px);
+                }
+                &.btn_buy {
+                    background: $color-orange;
+                    border: 1px solid $color-orange;
+                    color: #fff;
+                    font-size: 1.25rem;
+                    padding: 0;
+                    font-weight: bold;
+                    text-shadow: 0px 1px 5px rgba(0, 0, 0, 0.45);
+                }
+                &.btn_hyread {
+                    border: none;
+                    background: url(../images/btn_hyread.jpg) no-repeat center center;
+                    background-size: cover;
+                }
+                &.btn_kono {
+                    border: none;
+                    background: url(../images/btn_kono.jpg) no-repeat center center;
+                    background-size: cover;
+                }
+            }
+        }
+    }
+
+    .bookmark {
+        font-size: 1.5rem;
+        padding-top: 2em;
+    }
+    .book_content {
+        padding: 0 1em;
+        p {
+            color: #666;
+        }
+    }
+    .content_link {
+        clear: both;
+        margin: 1em 0;
+        ul {
+            @include li-reset;
+            display: flex;
+            li {
+                flex-grow: 0;
+                flex-shrink: 1;
+                flex-basis: 20%;
+                margin-right: 2%;
+                @include screen('mobile') {
+                    font-size: 0.875rem;
+                    flex-basis: 23%;
+                }
+                a {
+                    display: block;
+                    white-space: nowrap;
+                    padding: 0.5em 1em;
+                    border: 1px solid $primaryColor;
+                    text-align: center;
+                    color: #fff;
+                    background: $primaryColor;
+                    &:hover,
+                    &:focus {
+                        background: $color-orange;
+                        border: 1px solid $color-orange;
+                    }
+                }
+            }
+        }
+    }
+    .tableOfContent {
+        ul {
+            @include li-reset;
+            li {
+                display: flex;
+                align-items: flex-start;
+                align-content: flex-start;
+                margin-bottom: 0.5em;
+                border-bottom: 1px dashed #eee;
+                padding-bottom: 0.5em;
+                &:last-child {
+                    border: none;
+                }
+                &:hover {
+                    .pageNum {
+                        background: $color-orange;
+                        color: #fff;
+                    }
+                }
+                .pageNum {
+                    flex-grow: 0;
+                    flex-shrink: 0;
+                    flex-basis: 3em;
+                    width: 3em;
+                    height: 3em;
+                    background: #eee;
+                    text-align: center;
+                    line-height: 3em;
+                    border-radius: 50%;
+                    font-weight: bold;
+                    font-size: 1.25em;
+                    align-self: flex-start;
+                    color: #777;
+                }
+                .pageInfo {
+                    flex-grow: 1;
+                    flex-shrink: 1;
+                    flex-basis: auto;
+                    margin-left: 3rem;
+                    font-size: 0.938rem;
+                    @include screen('xs_mobile') {
+                        margin-left: 1em;
+                    }
+                    span {
+                        display: block;
+                        margin-bottom: 0.25em;
+                    }
+                    .textTitle {
+                        font-size: 1.25rem;
+                        font-weight: bold;
+                        margin: 0 0 0.25em;
+                        color: #111;
+                        a {
+                            display: block;
+                            color: #111;
+                            &:hover,
+                            &:focus {
+                                color: $color-orange;
+                            }
+                        }
+                    }
+                    p,
+                    .summary {
+                        margin: 0;
+                        color: #999;
+                        max-width: 80%;
+                        @include screen('notebook') {
+                            max-width: 70%;
+                        }
+                        @include text-overflow;
+                        @include screen('tablet') {
+                            white-space: normal;
+                            max-width: 100%;
+                        }
+                    }
                 }
             }
         }
