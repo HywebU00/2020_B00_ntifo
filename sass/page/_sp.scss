@@ -1,5 +1,6 @@
 // publish_slider
-.publish_slider {
+.publish_slider,
+.training_slider {
     margin: 1em auto 2em;
     .slick-prev,
     .slick-next {
@@ -139,7 +140,7 @@
                     writing-mode: vertical-rl;
                     text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8);
                     @include screen('xs_mobile') {
-                        display:none;
+                        display: none;
                     }
                 }
                 h3 {
@@ -167,6 +168,19 @@
                     @include screen('xs_mobile') {
                         display: none;
                     }
+                }
+            }
+        }
+    }
+}
+.training_slider {
+    .img-container {
+        a {
+            .caption {
+                background: rgba($color-orange, 0.8);
+                &:before {
+                    content: '訓練課程';
+                    background: rgba($color-orange, 0.8);
                 }
             }
         }
@@ -1300,6 +1314,408 @@
                         display: inline;
                         line-height: 1.25em;
                     }
+                }
+            }
+        }
+    }
+}
+.sp_training {
+    h2 {
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: 100%;
+        margin: 0 auto 0.5em;
+    }
+    .training_news {
+        box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+        padding: 2em;
+        ul {
+            padding: 2em 0 1em;
+            @include screen('mobile') {
+                padding: 0;
+            }
+            li {
+                display: flex;
+                align-items: center;
+                position: relative;
+                padding-right: 120px;
+                padding-left: 0.5em;
+                border-bottom: 1px dashed #ccc;
+                padding-top: 0.5em;
+                margin-bottom: 0.75em;
+                @include screen('mobile') {
+                    flex-flow: row wrap;
+                    justify-content: flex-start;
+                    padding: 0;
+                }
+                time {
+                    margin-right: 1em;
+                    flex-grow: 0;
+                    flex-shrink: 1;
+                    flex-basis: 80px;
+                    order: 1;
+                    display: inline-block;
+                    margin: 0 0 0 1em;
+                    font-size: 0.813em;
+                    color: #666;
+                }
+                .dept {
+                    position: absolute;
+                    top: 0.75em;
+                    right: 0.5em;
+                    text-align: center;
+                    font-size: 0.813rem;
+                    padding: 0 0.5em;
+                    color: #333;
+                    width: 100px;
+                    background: #eee;
+                    @include text-overflow;
+                    @include screen('mobile') {
+                        position: relative;
+                        flex-grow: 0;
+                        flex-shrink: 1;
+                        flex-basis: auto;
+                        order: 2;
+                        top: 0.15em;
+                    }
+                }
+                a {
+                    display: block;
+                    flex-grow: 1;
+                    flex-shrink: 1;
+                    flex-basis: 30%;
+                    font-weight: bold;
+                    padding: 0.25em 0.5em;
+                    font-size: 1.125em;
+                    color: #333;
+                    @include text-overflow;
+                    @include screen('xs_mobile') {
+                        padding: 0.5em;
+                    }
+                    &:before {
+                        transition: 0.3s $cubic;
+                        position: absolute;
+                        content: '';
+                        left: 0.25em;
+                        top: 1.2em;
+                        width: 0;
+                        height: 0;
+                        border-style: solid;
+                        border-width: 3px 0 3px 4px;
+                        border-color: transparent transparent transparent #888;
+                        @include screen('mobile') {
+                            display: none;
+                        }
+                    }
+                    &:hover,
+                    &:focus {
+                        color: darken($primaryColor, 0);
+                        &:before {
+                            border-style: solid;
+                            border-width: 3px 0 3px 4px;
+                            border-color: transparent transparent transparent $primaryColor;
+                        }
+                    }
+                    @include screen('mobile') {
+                        flex-basis: 100%;
+                        order: 3;
+                        padding-left: 0.6em;
+                    }
+                }
+            }
+        }
+    }
+    .recently_training {
+        margin: 2em 0 1em;
+        .tabs {
+            .tabItem {
+                a {
+                    color: #333;
+                    font-size: 1rem;
+                }
+                &.active {
+                    a {
+                        color: $primaryColor;
+                    }
+                }
+            }
+            .tabContent {
+                & > ul {
+                    display: flex;
+                    flex-flow: row wrap;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    align-content: flex-start;
+                    & > li {
+                        flex-grow: 0;
+                        flex-shrink: 1;
+                        flex-basis: 22%;
+                        margin: 0 1.5% 2em;
+                        border: none;
+                        @include screen('tablet') {
+                            flex-basis: 30%;
+                        }
+                        @include screen('mobile') {
+                            flex-basis: 45%;
+                            margin: 0 2.5% 2em;
+                            overflow: visible;
+                        }
+                        @include screen('xs_mobile') {
+                            flex-basis: 95%;
+                            margin: 0 2.5% 1em;
+                        }
+                        a {
+                            display: block;
+                            overflow: hidden;
+                            color: #333;
+                            padding-bottom: 1.5em;
+                            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+                            border-radius: 0.5em;
+                            position: relative;
+                            transition: all 0.3s $cubic;
+                            &:hover,
+                            &:focus {
+                                box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+                                h3 {
+                                    color: $primaryColor;
+                                }
+                                .img-container {
+                                    img {
+                                        transform: scale(1.1);
+                                    }
+                                }
+                            }
+                            .img-container {
+                                img {
+                                    object-fit: cover;
+                                    transition: all 0.3s $cubic;
+                                }
+                            }
+                            .status {
+                                position: absolute;
+                                text-align: center;
+                                top: 0.5em;
+                                left: 0.5em;
+                                padding: 0.25em 1em;
+                                color: #fff;
+                                font-size: 0.875rem;
+                                z-index: 2;
+                                border-radius: 0.25em;
+                                font-weight: bold;
+                                text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+                                background-color: rgba($primaryColor, 0.9);
+                                &.end {
+                                    background-color: rgba($color-red, 0.9);
+                                }
+                                &.full {
+                                    background-color: rgba($color-orange, 0.9);
+                                }
+                            }
+                        }
+                        .info {
+                            width: 90%;
+                            margin: 0 auto;
+                            h3 {
+                                margin: 0.5em 0;
+                                white-space: normal;
+                                @include text-line(2, 1.45em);
+                            }
+                            ul {
+                                li {
+                                    font-size: 0.813rem;
+                                    border: none;
+                                    margin: 0;
+                                    padding: 0;
+                                    color: #555;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.recommend_training {
+    margin-top: 1em;
+    clear: both;
+    .courseSlider {
+        padding: 0 2em;
+        .slick-prev,
+        .slick-next {
+            top: auto;
+            width: 60px !important;
+            height: 60px !important;
+            border-radius: 50%;
+            background: url('../images/slick/icon_arrow_left_inverse.png') center center no-repeat
+                RGBA(255, 255, 255, 1);
+            background-size: 30px 30px;
+            border: 1px solid rgba(255, 255, 255, 0.75);
+            top: 40% !important;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px,
+                rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+            left: 10px !important;
+            @include screen('xs_mobile') {
+                left: 0px !important;
+            }
+            &:hover,
+            &:focus {
+                border: 1px solid #fff;
+                box-shadow: none;
+                box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px,
+                    rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+            }
+        }
+        .slick-next {
+            background: url('../images/slick/icon_arrow_right_inverse.png') center center no-repeat
+                RGBA(255, 255, 255, 1);
+            background-size: 30px 30px;
+            left: auto !important;
+            right: 10px !important;
+            @include screen('xs_mobile') {
+                right: 0px !important;
+            }
+        }
+        .item {
+            margin: 0 1em 1em;
+            border: none;
+
+            a {
+                display: block;
+                overflow: hidden;
+                color: #333;
+                padding-bottom: 1.5em;
+                box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+                border-radius: 0.5em;
+                position: relative;
+                transition: all 0.3s $cubic;
+                &:hover,
+                &:focus {
+                    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+                    h3 {
+                        color: $primaryColor;
+                    }
+                    .img-container {
+                        img {
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+                .img-container {
+                    img {
+                        object-fit: cover;
+                        transition: all 0.3s $cubic;
+                    }
+                }
+                .status {
+                    position: absolute;
+                    text-align: center;
+                    top: 0.5em;
+                    left: 0.5em;
+                    padding: 0.25em 1em;
+                    color: #fff;
+                    font-size: 0.875rem;
+                    z-index: 2;
+                    border-radius: 0.25em;
+                    font-weight: bold;
+                    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+                    background-color: rgba($primaryColor, 0.9);
+                    &.end {
+                        background-color: rgba($color-red, 0.9);
+                    }
+                    &.full {
+                        background-color: rgba($color-orange, 0.9);
+                    }
+                }
+                .info {
+                    width: 90%;
+                    margin: 0 auto;
+                    h3 {
+                        margin: 0.5em 0;
+                        white-space: normal;
+                        @include text-line(2, 1.45em);
+                    }
+                    ul {
+                        @include li-reset;
+                        li {
+                            font-size: 0.813rem;
+                            border: none;
+                            margin: 0;
+                            padding: 0;
+                            color: #555;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.course_search {
+    background-color: darken($primaryColor, 10);
+    padding: 1em;
+    margin: 2em 0 1em;
+    .form_inline {
+        display: flex;
+        align-items: center;
+        h2 {
+            flex-grow: 0;
+            flex-shrink: 0;
+            flex-basis: auto;
+            margin: 0 1em;
+            color: #fff;
+            @include screen('tablet') {
+                flex-basis: 80%;
+                margin: 0 0.5em 0.25em;
+            }
+            @include screen('xs_mobile') {
+                flex-grow: 1;
+                text-align: center;
+            }
+        }
+        .form_grp {
+            flex-grow: 2;
+            flex-shrink: 1;
+            flex-basis: 20%;
+            margin: 0 0.5em;
+            @include screen('mobile') {
+                margin: 0 0.5em 0 0;
+            }
+            input[type='text'] {
+                width: 100%;
+            }
+            select {
+                width: 100%;
+            }
+            label {
+                display: none;
+            }
+            &:nth-child(2) {
+                flex-grow: 1;
+                flex-basis: 50%;
+                @include screen('mobile') {
+                    flex-basis: 100%;
+                }
+            }
+        }
+        .btn_grp {
+            margin: 0 0.5em;
+            @include screen('mobile') {
+                margin: 0;
+            }
+            button {
+                background: $color-orange;
+                color: #fff;
+                border: 1px solid $color-orange;
+                &:hover,
+                &:focus {
+                    box-shadow: none !important;
+                }
+                &:active {
+                    transform: translateY(3px);
+                }
+                i {
+                    color: #fff;
+                    font-size: 1.25em;
                 }
             }
         }

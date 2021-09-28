@@ -175,7 +175,29 @@ $(function () {
     setTimeout(function () {
         $carousel_publish.find('.start').removeClass('start');
     }, 0);
-
+    // training_slider
+    var $carousel_training = $('.training_slider').slick({
+        mobileFirst: true,
+        dots: false,
+        arrow: true,
+        infinite: true,
+        speed: 2000,
+        autoplaySpeed: 4000,
+        autoplay: true,
+        fade: true,
+        lazyLoaded: true,
+        lazyLoad: 'ondemand',
+        ease: 'ease',
+        pauseOnHover: false,
+    });
+    /* The first slide will not get the animation,
+    therefore I add and remove a class that will trigger the css animation */
+    $carousel_training.find('.slick-current').addClass('start');
+    /* I use a set-timeoutfunction to hinder optimization
+    of adding and removing classes */
+    setTimeout(function () {
+        $carousel_training.find('.start').removeClass('start');
+    }, 0);
     // 廣告輪播
     $('.cooperationSlider').slick({
         mobileFirst: true,
@@ -192,6 +214,54 @@ $(function () {
         responsive: [
             {
                 breakpoint: 992,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    arrows: true,
+                },
+            },
+            {
+                breakpoint: 545,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    arrows: true,
+                },
+            },
+            {
+                breakpoint: 200,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: true,
+                },
+            },
+        ],
+    });
+    // 推薦課程
+    $('.courseSlider').slick({
+        mobileFirst: true,
+        dots: false,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        autoplay: true,
+        arrow: true,
+        lazyLoaded: true,
+        lazyLoad: 'ondemand',
+        ease: 'ease',
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                    arrows: true,
+                },
+            },
+            {
+                breakpoint: 768,
                 settings: {
                     slidesToShow: 3,
                     slidesToScroll: 1,
