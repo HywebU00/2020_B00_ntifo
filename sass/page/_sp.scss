@@ -1461,7 +1461,7 @@
                             overflow: visible;
                         }
                         @include screen('xs_mobile') {
-                            flex-basis: 76%;
+                            flex-basis: 90%;
                             margin: 0 auto 1em;
                         }
                         a {
@@ -1848,7 +1848,7 @@
                     overflow: visible;
                 }
                 @include screen('xs_mobile') {
-                    flex-basis: 76%;
+                    flex-basis: 90%;
                     margin: 0 auto 1em;
                 }
                 .course_card {
@@ -1937,8 +1937,8 @@
                     }
                 }
                 @include screen('xs_mobile') {
-                    flex-basis: 76%;
-                    max-width: 76%;
+                    flex-basis: 90%;
+                    max-width: 90%;
                     margin: 0 auto 1em;
                 }
                 .status {

@@ -485,6 +485,9 @@ h2.title {
         @include screen('tablet') {
             flex-flow: row wrap;
         }
+        @include screen('xs_mobile') {
+            padding: 1em;
+        }
         .book_pic {
             flex-grow: 0;
             flex-shrink: 1;
@@ -494,6 +497,7 @@ h2.title {
             @include screen('tablet') {
                 flex-basis: 320px;
                 min-width: 320px;
+                margin-right: 1em;
             }
             @include screen('mobile') {
                 flex-basis: 100%;
@@ -547,6 +551,7 @@ h2.title {
             color: #333;
             @include screen('tablet') {
                 padding: 0 1em;
+                order: 2;
             }
             // @include screen('mobile') {
             //     padding: 0 1em;
@@ -603,7 +608,7 @@ h2.title {
                 }
             }
         }
-        .go_training {
+        .book_buy {
             flex-grow: 0;
             flex-shrink: 0;
             flex-basis: 250px;
@@ -611,10 +616,12 @@ h2.title {
             padding: 1em;
             min-width: 250px;
             @include screen('tablet') {
-                flex-grow: 1;
+                flex-grow: 0;
                 flex-shrink: 1;
-                flex-basis: 100%;
+                flex-basis: 250px;
                 display: flex;
+                flex-flow: row wrap;
+                order: 1;
             }
             @include screen('mobile') {
                 flex-basis: 100%;
@@ -623,15 +630,21 @@ h2.title {
                 align-items: flex-start;
                 flex-flow: row wrap;
             }
-            .signup_course {
-                flex-grow: 1;
+            .buy_block,
+            .ebook_block {
+                flex-grow: 0;
                 flex-shrink: 1;
-                flex-basis: 30%;
-                padding: 0 1em;
-                @include screen('xs_mobile') {
-                    flex-basis: 100%;
-                }
+                flex-basis: 100%;
             }
+            // .signup_course {
+            //     flex-grow: 1;
+            //     flex-shrink: 1;
+            //     flex-basis: 30%;
+            //     padding: 0 1em;
+            //     @include screen('xs_mobile') {
+            //         flex-basis: 100%;
+            //     }
+            // }
             h3 {
                 margin: 0 0 0.5em;
             }
@@ -969,6 +982,9 @@ h2.title {
     ul {
         @include li-reset;
         display: flex;
+        @include screen('xs_mobile') {
+            flex-flow: row wrap;
+        }
         li {
             flex-grow: 0;
             flex-shrink: 1;
@@ -977,6 +993,10 @@ h2.title {
             @include screen('mobile') {
                 font-size: 0.875rem;
                 flex-basis: 23%;
+            }
+            @include screen('xs_mobile') {
+                flex-basis: 48%;
+                margin: 0 1% 0.5em;
             }
             a {
                 display: block;
@@ -998,6 +1018,9 @@ h2.title {
 .book_content,
 .training_content {
     padding: 0 1em;
+    @include screen('xs_mobile') {
+        padding: 0;
+    }
     p {
         color: #666;
     }
