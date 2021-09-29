@@ -775,6 +775,7 @@ h2.title {
             display: flex;
             min-width: 300px;
             position: relative;
+            align-self: flex-start;
             @include screen('tablet') {
                 min-width: 200px;
                 flex-basis: 50%;
@@ -821,7 +822,7 @@ h2.title {
             }
             h3 {
                 font-size: 1.75rem;
-                margin: 0 0 2.5em;
+                margin: 0 0 0.5em;
                 line-height: 1.45em;
                 @include screen('tablet') {
                     margin: 0 0 1em;
@@ -842,7 +843,7 @@ h2.title {
                 }
                 li {
                     padding-bottom: 0.25em;
-                    margin-bottom: 0.25em;
+                    margin-bottom: 0.5em;
                     border-bottom: 1px dashed #eee;
                     font-size: 0.875rem;
                     .course_date {
@@ -855,6 +856,20 @@ h2.title {
                             &:after {
                                 display: none;
                             }
+                        }
+                    }
+                    .price {
+                        display: inline-block;
+
+                        font-weight: bold;
+
+                        margin-right: 0.5rem;
+                        font-style: normal;
+                        text-decoration: line-through;
+                        &.cut {
+                            font-size: 2.5em;
+                            color: $color-blue;
+                            text-decoration: none;
                         }
                     }
                     a {
