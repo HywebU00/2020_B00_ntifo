@@ -52,6 +52,17 @@
                             white-space: nowrap;
                         }
                     }
+                    .datepick {
+                        i {
+                            &:before {
+                                width: 1.25em;
+                                height: 1.25em;
+                                top: 0.2em;
+                                margin-top: 0;
+                                opacity: 0.75;
+                            }
+                        }
+                    }
                 }
             }
             .btn_grp {
@@ -583,6 +594,48 @@
     }
 }
 .lp {
+    position: relative;
+    padding-top: 3.5em;
+    .flex-form {
+        position: absolute;
+        width: 300px;
+        right: -0.75em;
+        top: -1em;
+        display: flex;
+        align-items: center;
+        label {
+            display: none;
+        }
+        .toggleLayout {
+            flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: auto;
+            display: flex;
+            justify-content: flex-end;
+            a {
+                border: 1px solid #ccc;
+                width: 2.4em;
+                height: 2.4em;
+                border-radius: 0.25em;
+                position: relative;
+                margin: 0 0.2em;
+                i {
+                    color: #888;
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                }
+                &:hover,
+                &:focus {
+                    border: 1px solid $aHover;
+                    i {
+                        color: $aHover;
+                    }
+                }
+            }
+        }
+    }
     table {
         td {
             a {

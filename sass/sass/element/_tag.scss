@@ -3,6 +3,7 @@ div.tag {
     @extend %clearfix;
     margin-bottom: 1em;
     position: relative;
+    font-size: 0.875rem;
     &:before {
         content: '';
         width: 16px;
