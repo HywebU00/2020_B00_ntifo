@@ -3088,6 +3088,7 @@
     flex-flow: row nowrap;
     @include screen('mobile') {
         flex-flow: row wrap;
+        box-shadow: none;
     }
     .pic {
         flex-grow: 0;
@@ -3115,6 +3116,9 @@
         flex-basis: 50%;
         @include screen('tablet') {
             padding: 2em;
+        }
+        @include screen('xs_mobile') {
+            padding: 2em 0em;
         }
     }
     .form_grid {
