@@ -540,6 +540,7 @@
                         background: #fff;
                         padding-right: 1em;
                         overflow: hidden;
+                        width: 100%;
                         &.right {
                             padding-left: 0.5em;
                             padding-right: 0;
@@ -618,6 +619,7 @@
                         padding-left: 0em;
                         padding-right: 0.5em;
                         margin-right: 0;
+                        margin-bottom: 0.5em;
                         a {
                             .pic {
                                 margin: 0 0.5em 0 0;
@@ -630,7 +632,7 @@
                         flex-shrink: 1;
                         flex-basis: 35%;
                         min-width: 320px;
-                        margin: 0 0.5em 0 0;
+                        margin: 0 0.5em 0.5em 0;
                         position: relative;
                         padding: 0;
                         @include screen('tablet') {

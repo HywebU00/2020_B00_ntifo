@@ -1,5 +1,14 @@
 // 自行加入的JS請寫在這裡
 $(function () {
+    //進階會員功能
+    $('.adv_info')
+        .find('a')
+        .off()
+        .click(function (e) {
+            $('.adv_signup').stop().slideToggle();
+            $(this).toggleClass('close');
+            e.preventDefault();
+        });
     // qa
     $('.lp_qa>ul>li')
         .find('.qa_content')
