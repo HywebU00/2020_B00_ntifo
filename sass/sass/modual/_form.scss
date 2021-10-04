@@ -1322,13 +1322,13 @@ input[type='checkbox']:checked {
 }
 
 input[type='radio']:checked {
-    box-shadow: #fff 0 0 0 3px inset, $form-focus 0 0 0 2px;
+    box-shadow: #fff 0 0 0 2px inset, #f90 0 0 0 1px;
 }
 
 input[type='radio']:focus {
     border-color: $form-focus;
     background-color: $form-focus;
-    box-shadow: #fff 0 0 0 3px inset, $form-focus 0 0 0 2px;
+    box-shadow: #fff 0 0 0 2px inset, #f90 0 0 0 1px;
 }
 
 input[type='checkbox']:focus {

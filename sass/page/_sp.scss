@@ -2391,14 +2391,25 @@
                         }
                     }
                 }
-                .upload_grp {
+                .my_photo {
                     flex-grow: 0;
                     flex-shrink: 1;
-                    flex-basis: 100%;
+                    flex-basis: 50px;
+                    align-items: center;
+                    img {
+                        max-width: 40px;
+                        max-height: 37px;
+                    }
+                }
+                .upload_grp {
+                    flex-grow: 1;
+                    flex-shrink: 1;
+                    flex-basis: 50%;
                     position: relative;
                     input[type='text'] {
                         border: 1px solid #ccc;
                         opacity: 1 !important;
+                        background: #fff;
                     }
                     .upload_btn {
                         top: 0em;
@@ -2943,6 +2954,7 @@
                     input[type='text'] {
                         border: 1px solid #ccc;
                         opacity: 1 !important;
+                        background-color: #fff;
                     }
                     .upload_btn {
                         top: 0em;
@@ -3190,4 +3202,81 @@ p.error {
     a {
         color: lighten($color-orange, 0);
     }
+}
+.sp_member {
+    display: flex;
+    flex-flow: row wrap;
+    .step {
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 100%;
+    }
+    .member_function {
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: 250px;
+        padding-right: 1em;
+        margin-right: 1em;
+        ul {
+            @include li-reset;
+            li {
+                margin: 0 0 1px;
+                &.active {
+                    a {
+                        color: #fff;
+                        background: darken($primaryColor, 0);
+                    }
+                }
+                a {
+                    min-height: 5em;
+                    display: block;
+                    background: #e5e5e5;
+                    color: #555;
+                    position: relative;
+                    display: flex;
+                    span {
+                        flex-grow: 0;
+                        flex-shrink: 1;
+                        flex-basis: 75%;
+                        font-size: 0.938rem;
+                        padding: 1em;
+                        font-weight: bold;
+                        align-self: stretch;
+                    }
+                    &:hover,
+                    &:focus {
+                        background: darken($primaryColor, 0);
+                    }
+                    i {
+                        font-size: 2em;
+                        width: 2em;
+                        flex-grow: 0;
+                        flex-shrink: 1;
+                        margin: 0 0 0 auto;
+                        padding: 0 0.5em;
+                        align-self: center;
+                    }
+                }
+            }
+        }
+    }
+    .member_content {
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 50%;
+        .for_ntifo {
+            background: #f1f1f1;
+            padding: 0.5em 1em;
+        }
+    }
+    .btn_grp {
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: 100%;
+    }
+}
+.box-shadow {
+    padding: 1em 2em 3em;
+    margin-bottom: 2em;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }

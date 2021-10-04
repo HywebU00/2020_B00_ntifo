@@ -151,92 +151,54 @@
                             <li>節點</li>
                         </ul>
                     </div>
-                    <h2 class="title">會員註冊</h2>
+                    <h2 class="title">會員專區</h2>
                     <!-- SP Start -->
+                    <hr>
                     <section class="sp_member">
-                        <div class="step">
+                        <!-- 左欄 -->
+                        <div class="member_function">
                             <ul>
-                                <li class="active">
-                                    <div class="num">1</div>
-                                    <span class="step_status">Step1</span><span>同意服務條款</span>
+                                <li class="active"><a href="#"><span>個人資料管理</span><i class="fas fa-user-alt"></i></a>
                                 </li>
-                                <li class="active now">
-                                    <div class="num">2</div>
-                                    <span class="step_status">Step1</span><span>填寫註冊欄位</span>
-                                </li>
-                                <li>
-                                    <div class="num">3</div>
-                                    <span class="step_status">Step1</span><span>驗證並完成註冊</span>
-                                </li>
+                                <li><a href="#"><span>我的訓練記錄</span><i class="fas fa-book-open"></i></a></li>
+                                <li><a href="#"><span>單位訓練記錄</span><i class="fas fa-chalkboard-teacher"></i></a></li>
+                                <li><a href="#"><span>學員訓練記錄及資料管理</span><i class="far fa-id-card"></i></a></li>
                             </ul>
                         </div>
-                        <div class="member_content">
-                            <h3>註冊會員資訊</h3>
-                            <p>請確實填寫您的個人資訊以完成會員註冊。＊號欄位為必填，建議您完整填寫以利後續報名相關程序。</p>
-                            <div class="form_grid">
+                        <!-- 右欄 -->
+                        <div class="member_content ">
+                            <h3 class="title">個人資料管理</h3>
+                            <div class="form_grid box-shadow">
+                                <div class="form_grp">
+                                    <label for="" class="form_title">會員身分<abbr class="necessary"
+                                            title="為必填(選)欄位,不能為空白。">*</abbr></label>
+                                    <div class="form_content">
+                                        <input type="text" value="農漁會會員" readonly>
+                                        <!--  (or 個人會員)｜南港區農會｜單位管理員 (or 一般學員) -->
+                                    </div>
+                                </div>
                                 <div class="form_grp">
                                     <label for="" class="form_title">身分證字號<abbr class="necessary"
                                             title="為必填(選)欄位,不能為空白。">*</abbr></label>
                                     <div class="form_content">
-                                        <div class="checked">
-                                            <input type="text" id="" value="" placeholder="請輸入身分證字號">
-                                            <i class="fas fa-check"></i>
-                                        </div>
-                                        <div class="wrong">
-                                            <input type="text" id="" value="" placeholder="請輸入身分證字號">
-                                            <i class="fas fa-times"></i>
-                                        </div>
-                                        <p class="info"><i class="fas fa-info-circle"></i>身分證字號將是學員會員登入帳號</p>
-                                        <p class="error"><i class="fas fa-exclamation-triangle"></i>若您忘記密碼，請使用<a
-                                                href="#">忘記密碼</a>來找回密碼。若您未曾註冊，請您透過<a href="#">客服信箱</a>聯繫確認</p>
-                                        <p class="error"><i class="fas fa-exclamation-triangle"></i>錯誤訊息如：帳號已存在</p>
-                                        <p class="correct"><i class="fas fa-exclamation-triangle"></i>正確訊息</p>
+                                        <input type="text" id="" value="A123456789" placeholder="請輸入身分證字號" readonly>
+                                        <p class="info"><i class="fas fa-info-circle"></i>身分證字號即是您會員登入帳號</p>
                                     </div>
                                 </div>
                                 <div class="form_grp">
                                     <label for="" class="form_title">電子郵箱<abbr class="necessary"
                                             title="為必填(選)欄位,不能為空白。">*</abbr></label>
                                     <div class="form_content">
-                                        <input type="text" id="" value="" placeholder="請輸入Email Address">
-                                        <p class="info"><i class="fas fa-info-circle"></i>未來聯繫會透過此email通知</p>
+                                        <input type="text" id="" value="liucc@hyweb.com.tw"
+                                            placeholder="請輸入Email Address">
+                                        <p class="info"><i class="fas fa-info-circle"></i>相關聯繫會透過此email通知</p>
                                     </div>
                                 </div>
                                 <div class="form_grp">
                                     <label for="" class="form_title">登入密碼<abbr class="necessary"
                                             title="為必填(選)欄位,不能為空白。">*</abbr></label>
                                     <div class="form_content">
-                                        <div class="checked">
-                                            <input type="password" id="" value="" placeholder="">
-                                            <i class="fas fa-check"></i>
-                                        </div>
-                                        <div class="wrong">
-                                            <input type="password" id="" value="" placeholder="">
-                                            <i class="fas fa-times"></i>
-                                        </div>
-                                        <div class="check_grp">
-                                            <label><input type="checkbox" value="">顯示密碼</label>
-                                        </div>
-                                        <p class="info"><i class="fas fa-info-circle"></i>至少一個英文大寫字元</p>
-                                        <p class="correct"><i class="fas fa-exclamation-triangle"></i>密碼長度 5~8 字元 </p>
-                                        <p class="error"><i class="fas fa-exclamation-triangle"></i>至少一個數字</p>
-                                    </div>
-                                </div>
-                                <div class="form_grp">
-                                    <label for="" class="form_title">密碼確認<abbr class="necessary"
-                                            title="為必填(選)欄位,不能為空白。">*</abbr></label>
-                                    <div class="form_content">
-                                        <div class="checked">
-                                            <input type="password" id="" value="" placeholder="">
-                                            <i class="fas fa-check"></i>
-                                        </div>
-                                        <div class="wrong">
-                                            <input type="password" id="" value="" placeholder="">
-                                            <i class="fas fa-times"></i>
-                                        </div>
-                                        <div class="check_grp">
-                                            <label><input type="checkbox" value="">顯示密碼</label>
-                                        </div>
-                                        <p class="error"><i class="fas fa-exclamation-triangle"></i>密碼不一致，請重新輸入</p>
+                                        <input type="password" id="" value="12345678" placeholder="">
                                     </div>
                                 </div>
                                 <div class="form_grp">
@@ -248,124 +210,190 @@
                                             <option value="">小姐</option>
                                             <option value="">女士</option>
                                         </select>
-                                        <input type="text" id="" value="" placeholder="請輸入姓名">
+                                        <input type="text" id="" value="Amanda" placeholder="請輸入姓名">
                                     </div>
                                 </div>
                                 <div class="form_grp">
                                     <label for="" class="form_title">行動電話<abbr class="necessary"
                                             title="為必填(選)欄位,不能為空白。">*</abbr></label>
                                     <div class="form_content">
-                                        <div class="checked">
-                                            <input type="text" id="" value="" placeholder="請輸入您的電話號碼">
-                                            <i class="fas fa-check"></i>
-                                        </div>
-                                        <div class="wrong">
-                                            <input type="text" id="" value="" placeholder="">
-                                            <i class="fas fa-times"></i>
-                                        </div>
+                                        <input type="text" id="" value="0912345678" placeholder="請輸入您的電話號碼">
                                         <p class="info"><i class="fas fa-info-circle"></i>請輸入數值，不要添加 - 等符號</p>
-                                        <p class="error"><i class="fas fa-exclamation-triangle"></i>格式錯誤，請重新輸入</p>
                                     </div>
                                 </div>
-                                <div class="adv_info">繼續選填欄位，或可之後在「會員專區> 個人資料」編修(未填寫完整者，可能無法使用報名等功能) <a href="#"
-                                        class="btn"><i class="fas fa-chevron-down"></i></a>
+                                <div class="form_grp">
+                                    <label for="" class="form_title">出生日期</label>
+                                    <div class="form_content">
+                                        <div class="datepick">
+                                            <input name="" type="text" value="" class="calendar" placeholder="年/月/日">
+                                            <i class="i_calendar"></i>
+                                        </div>
+                                    </div>
                                 </div>
-                                <!-- 進階欄位 -->
-                                <div class="adv_signup">
-                                    <div class="form_grp">
-                                        <label for="" class="form_title">出生日期</label>
-                                        <div class="form_content">
-                                            <div class="datepick">
-                                                <input name="" type="text" value="" class="calendar"
-                                                    placeholder="年/月/日">
-                                                <i class="i_calendar"></i>
-                                            </div>
+                                <div class="form_grp">
+                                    <label for="" class="form_title">聯絡電話</label>
+                                    <div class="form_content">
+                                        <div class="tel_grp">
+                                            <span class="county_code">
+                                                <input type="text" value="02">
+                                            </span>
+                                            <span class="tel">
+                                                <input type="text" value="23956966">
+                                            </span>
+                                            <span class="ext">
+                                                <input type="text" value="1224">
+                                            </span>
                                         </div>
                                     </div>
-                                    <div class="form_grp">
-                                        <label for="" class="form_title">聯絡電話</label>
-                                        <div class="form_content">
-                                            <div class="tel_grp">
-                                                <span class="county_code">
-                                                    <input type="text" value="">
-                                                </span>
-                                                <span class="tel">
-                                                    <input type="text" value="">
-                                                </span>
-                                                <span class="ext">
-                                                    <input type="text" value="">
-                                                </span>
-                                            </div>
+                                </div>
+                                <div class="form_grp">
+                                    <label for="" class="form_title">通訊地址</label>
+                                    <div class="form_content">
+                                        <div class="address_grp">
+                                            <span class="county">
+                                                <select name="" id="">
+                                                    <option value="新竹市">新竹市</option>
+                                                    <option value="基隆市">基隆市</option>
+                                                </select>
+                                            </span>
+                                            <span class="township">
+                                                <select name="" id="">
+                                                    <option value="竹北市">竹北市</option>
+                                                    <option value="寶山鄉">寶山鄉</option>
+                                                </select>
+                                            </span>
+                                            <span class="township">
+                                                <input type="text" value="300">
+                                            </span>
+                                            <span class="street">
+                                                <input type="text" value="台元一街八號五樓之6">
+                                            </span>
                                         </div>
                                     </div>
-                                    <div class="form_grp">
-                                        <label for="" class="form_title">通訊地址</label>
-                                        <div class="form_content">
-                                            <div class="address_grp">
-                                                <span class="county">
-                                                    <select name="" id="">
-                                                        <option value="台北市">台北市</option>
-                                                        <option value="基隆市">基隆市</option>
-                                                    </select>
-                                                </span>
-                                                <span class="township">
-                                                    <select name="" id="">
-                                                        <option value="中正區">中正區</option>
-                                                        <option value="中山區">中山區</option>
-                                                    </select>
-                                                </span>
-                                                <span class="street">
-                                                    <input type="text" value="">
-                                                </span>
-                                            </div>
+                                </div>
+                                <div class="form_grp">
+                                    <label for="" class="form_title">最高學歷</label>
+                                    <div class="form_content">
+                                        <select name="" id="">
+                                            <option value="">博士</option>
+                                            <option value="">研究所</option>
+                                            <option value="">大學</option>
+                                            <option value="">高中/高職</option>
+                                            <option value="">國中</option>
+                                            <option value="">國小</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form_grp">
+                                    <label class="form_title">葷素習慣</label>
+                                    <div class="form_content">
+                                        <div class="radio_grp">
+                                            <label>
+                                                <input type="radio" name="sampleRadio6" value="" checked="">葷</label>
+                                            <label>
+                                                <input type="radio" name="sampleRadio6" value="">素</label>
                                         </div>
                                     </div>
-                                    <div class="form_grp">
-                                        <label class="form_title">葷素習慣</label>
-                                        <div class="form_content">
-                                            <div class="radio_grp">
-                                                <label>
-                                                    <input type="radio" name="sampleRadio6" value=""
-                                                        checked="">葷</label>
-                                                <label>
-                                                    <input type="radio" name="sampleRadio6" value="">素</label>
-                                            </div>
-                                        </div>
+                                </div>
+                                <div class="form_grp">
+                                    <label for="" class="form_title">緊急聯絡電話</label>
+                                    <div class="form_content">
+                                        <input type="text" id="" value="02-12345564" placeholder="請輸入聯絡電話">
                                     </div>
+                                </div>
+                                <div class="form_grp">
+                                    <label for="" class="form_title">發票抬頭</label>
+                                    <div class="form_content">
+                                        <input type="text" id="" value="凌網科技股份有限公司" placeholder="請輸入發票抬頭">
+                                    </div>
+                                </div>
+                                <div class="form_grp">
+                                    <label for="" class="form_title">發票統編</label>
+                                    <div class="form_content">
+                                        <input type="text" id="" value="12345678" placeholder="請輸入發票抬頭">
+                                    </div>
+                                </div>
+                                <!-- 農漁會人員專屬欄位 -->
+                                <div class="for_ntifo">
+                                    <p class="info"><i class="fas fa-info-circle"></i>農漁會人員專屬欄位</p>
                                     <div class="form_grp">
-                                        <label for="" class="form_title">緊急聯絡人</label>
+                                        <label for="" class="form_title">服務部門<abbr class="necessary"
+                                                title="為必填(選)欄位,不能為空白。">*</abbr></label>
                                         <div class="form_content">
                                             <select name="" id="">
-                                                <option value="">先生</option>
-                                                <option value="">小姐</option>
-                                                <option value="">女士</option>
+                                                <option value="">信用部</option>
                                             </select>
-                                            <input type="text" id="" value="" placeholder="請輸入姓名">
                                         </div>
                                     </div>
                                     <div class="form_grp">
-                                        <label for="" class="form_title">緊急聯絡電話</label>
+                                        <label for="" class="form_title">職等<abbr class="necessary"
+                                                title="為必填(選)欄位,不能為空白。">*</abbr></label>
                                         <div class="form_content">
-                                            <input type="text" id="" value="" placeholder="請輸入聯絡電話">
+                                            <input type="text" id="" value="1" placeholder="">
+                                            <p class="info"><i class="fas fa-info-circle"></i>請輸入 0~12 代號，臨時人員請輸入 0 </p>
                                         </div>
                                     </div>
                                     <div class="form_grp">
-                                        <label for="" class="form_title">發票抬頭</label>
+                                        <label class="form_title">主辦業務<abbr class="necessary"
+                                                title="為必填(選)欄位,不能為空白。">*</abbr></label>
                                         <div class="form_content">
-                                            <input type="text" id="" value="" placeholder="請輸入發票抬頭">
+                                            <div class="check_grp ">
+                                                <label><input type="checkbox" name="" value="" checked="">催收</label>
+                                                <label><input type="checkbox" name="" value="">人事</label>
+                                                <label><input type="checkbox" name="" value="">授信</label>
+                                                <label><input type="checkbox" name="" value="">徵信</label>
+                                                <label><input type="checkbox" name="" value="">存款</label>
+                                                <label><input type="checkbox" name="" value="">企劃</label>
+                                                <label><input type="checkbox" name="" value="">櫃員</label>
+                                                <label><input type="checkbox" name="" value="">僱員</label>
+                                                <label><input type="checkbox" name="" value="">辦事員</label>
+                                                <label><input type="checkbox" name="" value="">代收稅款</label>
+                                                <label><input type="checkbox" name="" value="">行銷業務</label>
+                                                <label><input type="checkbox" name="" value="">助理會計</label>
+                                                <label><input type="checkbox" name="" value="">放款業務</label>
+                                                <label><input type="checkbox" name="" value="">供銷業務</label>
+                                                <label><input type="checkbox" name="" value="">資訊業務</label>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="form_grp">
-                                        <label for="" class="form_title">發票統編</label>
+                                        <label class="form_title">職稱</label>
                                         <div class="form_content">
-                                            <input type="text" id="" value="" placeholder="請輸入發票抬頭">
+                                            <div class="radio_grp">
+                                                <label><input type="radio" name="" value="" checked="">總幹事</label>
+                                                <label><input type="radio" name="" value="">秘書</label>
+                                                <label><input type="radio" name="" value="">主任</label>
+                                                <label><input type="radio" name="" value="">股長</label>
+                                                <label><input type="radio" name="" value="">股員</label>
+                                                <label><input type="radio" name="" value="">技工(工友)</label>
+                                                <label><input type="radio" name="" value="">臨時人員</label>
+                                                <label><input type="radio" name="" value="">其它</label>
+                                                <label><input type="radio" name="" value="">辦事員</label>
+                                                <label><input type="radio" name="" value="">僱員</label>
+                                            </div>
                                         </div>
+                                    </div>
+                                </div>
+                                <div class="form_grp">
+                                    <label for="" class="form_title">照片</label>
+                                    <div class="form_content">
+                                        <div class="my_photo">
+                                            <img src="images/myphoto.jpg" alt="">
+                                        </div>
+                                        <div class="upload_grp">
+                                            <input class="upload_file" type="text" readonly="">
+                                            <div class="upload_btn">
+                                                <span>上傳檔案</span>
+                                                <input type="file" class="check_file">
+                                            </div>
+                                        </div>
+                                        <p class="info"><i class="fas fa-info-circle"></i>限JPG, JPEG, PNG, GIF圖檔格式，大小 1M
+                                            以下。僅供存檔查證使用</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="btn_grp">
-                                <button type="button" class="btn btn_submit">送出並驗證</button>
-                                <button type="button" class="btn">取消重填</button>
+                                <button type="button" class="btn btn_submit">儲存變更</button>
                             </div>
                         </div>
                     </section>
