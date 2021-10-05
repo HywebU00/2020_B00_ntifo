@@ -138,6 +138,15 @@ $(function () {
             resizeSensor: true,
         });
     }
+    if ($('.member_function').length > 0) {
+        var stickyTD = new StickySidebar('.member_function', {
+            containerSelector: '.sp_member',
+            topSpacing: 93,
+            bottomSpacing: 0,
+            minWidth: 992,
+            resizeSensor: true,
+        });
+    }
     // 首頁輪播
     var $carousel = $('.mpSlider').slick({
         mobileFirst: true,

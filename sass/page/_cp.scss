@@ -22,6 +22,12 @@ h2.title {
         text-align: left;
         margin-left: 1em;
     }
+    & + hr {
+        margin: 0.2em 0;
+    }
+}
+h3.title {
+    margin: 0.25em 0 0.5em !important;
 }
 // .tt{ color: #222; }
 .cp {

@@ -2075,7 +2075,7 @@
 
 .sp_signup,
 .sp_member {
-    padding: 1em 3em;
+    padding: 1em;
     @include screen('xs_mobile') {
         padding: 1em 0;
     }
@@ -2098,9 +2098,9 @@
         font-weight: bold;
         time {
             display: inline-block;
-            margin-right: 0.25em;
+            margin-right: 0.1em;
             color: #555;
-            font-weight: normal;
+            // font-weight: normal;
             &:after {
                 content: '/';
                 margin: 0 0.25em;
@@ -3217,10 +3217,28 @@ p.error {
         flex-basis: 250px;
         padding-right: 1em;
         margin-right: 1em;
+        @include screen('tablet') {
+            flex-grow: 1;
+            flex-basis: 100%;
+            margin: 0 0 1em;
+            padding: 0;
+        }
+
         ul {
             @include li-reset;
+            @include screen('tablet') {
+                display: flex;
+                flex-flow: row wrap;
+                width: 100%;
+            }
             li {
                 margin: 0 0 1px;
+                @include screen('tablet') {
+                    flex-grow: 1;
+                    flex-shrink: 1;
+                    flex-basis: 49%;
+                    margin: 0 1px 2px;
+                }
                 &.active {
                     a {
                         color: #fff;
@@ -3234,17 +3252,25 @@ p.error {
                     color: #555;
                     position: relative;
                     display: flex;
+                    @include screen('mobile') {
+                        min-height: 3em;
+                    }
                     span {
-                        flex-grow: 0;
+                        flex-grow: 1;
                         flex-shrink: 1;
                         flex-basis: 75%;
                         font-size: 0.938rem;
                         padding: 1em;
                         font-weight: bold;
                         align-self: stretch;
+                        @include screen('mobile') {
+                            font-size: 0.875rem;
+                            padding: 1em 0.75em;
+                        }
                     }
                     &:hover,
                     &:focus {
+                        color: #fff;
                         background: darken($primaryColor, 0);
                     }
                     i {
@@ -3255,6 +3281,14 @@ p.error {
                         margin: 0 0 0 auto;
                         padding: 0 0.5em;
                         align-self: center;
+                        @include screen('tablet') {
+                            font-size: 1.5em;
+                            width: 1.5em;
+                            margin: 0 1em 0 auto;
+                        }
+                        @include screen('mobile') {
+                            display: none;
+                        }
                     }
                 }
             }
@@ -3264,9 +3298,131 @@ p.error {
         flex-grow: 1;
         flex-shrink: 1;
         flex-basis: 50%;
+        @include screen('mobile') {
+            flex-grow: 0;
+            display: block;
+            flex-basis: 100%;
+            width: 0;
+        }
+        .adv_function {
+            background: #f1f1f1;
+            padding: 1em;
+            .form_title {
+                align-self: center;
+            }
+            .form_content {
+                button,
+                .btn {
+                    flex-grow: 0;
+                    flex-shrink: 1;
+                    flex-basis: auto;
+                    @include screen('xs_mobile') {
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
         .for_ntifo {
             background: #f1f1f1;
             padding: 0.5em 1em;
+        }
+
+        table {
+            th,
+            td {
+                font-size: 0.938rem;
+            }
+            .date {
+                time {
+                    display: block;
+                }
+            }
+        }
+        .my_course {
+            table {
+                font-size: 0.813rem;
+                td {
+                    text-align: left;
+                    @include screen('mobile') {
+                        text-align: left;
+                    }
+                }
+                th,
+                td {
+                    border-left: none;
+                    border-right: none;
+                    font-size: 0.813rem;
+                }
+            }
+            .btn-view {
+                font-size: 0.813rem;
+                width: 100%;
+                background-color: lighten($color-blue, 10);
+                border: 1px solid lighten($color-blue, 10);
+                color: #fff;
+                &:hover,
+                &:focus {
+                    background-color: lighten($color-blue, 5);
+                    border: 1px solid lighten($color-blue, 5);
+                }
+            }
+            .scroltable-wrapper {
+                @include screen('xs_mobile') {
+                    max-width: 100%;
+                }
+            }
+            .courseTitle {
+                text-align: left;
+                display: block;
+                font-size: 0.938rem;
+                time {
+                    font-size: 0.938rem;
+                }
+            }
+            .date {
+                font-size: 0.875rem;
+                color: #666;
+                line-height: 1.125em;
+                text-align: left;
+                time {
+                    display: block;
+                    margin: 0.25em 0 0.5em;
+                }
+            }
+            time {
+                font-size: 0.813rem;
+            }
+            .day {
+                font-weight: bold;
+                color: #333;
+            }
+            .hour,
+            .day {
+                white-space: nowrap;
+            }
+            .hour {
+            }
+            .status {
+                text-align: center;
+                font-size: 0.813rem;
+            }
+            .graduation {
+                color: $color-blue;
+                font-size: 0.875rem;
+                display: block;
+                text-align: left;
+                &:hover,
+                &:focus {
+                    color: $color-green;
+                }
+            }
+            .course_tag {
+                min-width: 5em;
+                border: 1px solid #ddd;
+                padding: 0.25em;
+                font-size: 0.813rem;
+                text-align: center;
+            }
         }
     }
     .btn_grp {
