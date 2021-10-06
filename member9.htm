@@ -161,12 +161,12 @@
                             <ul>
                                 <li><a href="member6.htm"><span>個人資料管理</span><i class="fas fa-user-alt"></i></a>
                                 </li>
-                                <li class="active"><a href="member7.htm"><span>我的訓練記錄</span><i
-                                            class="fas fa-book-open"></i></a>
+                                <li><a href="member7.htm"><span>我的訓練記錄</span><i class="fas fa-book-open"></i></a>
                                 </li>
                                 <li><a href="member8.htm"><span>單位訓練記錄</span><i
                                             class="fas fa-chalkboard-teacher"></i></a></li>
-                                <li><a href="member9.htm"><span>學員訓練記錄及資料管理</span><i class="far fa-id-card"></i></a>
+                                <li class="active"><a href="member9.htm"><span>學員訓練記錄及資料管理</span><i
+                                            class="far fa-id-card"></i></a>
                                 </li>
                             </ul>
                             <h3><i class="fas fa-chevron-right"></i>講師專區</h3>
@@ -177,47 +177,38 @@
                         </div>
                         <!-- 右欄 -->
                         <div class="member_content ">
-                            <h3 class="title"><span><i class="fas fa-book-open"></i>我的訓練記錄</span></h3>
-                            <!-- 補發結業證書證明 -->
-                            <div class="btn_grp reissue_block">
-                                <button data-fancybox data-src="#reissue" type="button" class="btn btn-xs"><i
-                                        class="far fa-file-alt"></i>補發結業証書申請</button>
-                                <!-- 補發結業證書燈箱 預設隱藏 -->
-                                <div class="reissue_lightbox  " id="reissue" style="display:none;">
-                                    <h2>申請補發</h2>
-                                    <div class="content">
-                                        <h3>請下載附件申請單填寫、並郵寄回本會辦理</h3>
-                                        <ul>
-                                            <li>
-                                                <a href="#"><i class="far fa-file-alt"></i>結業證書補發申請表.doc</a>
-                                            </li>
-                                        </ul>
-                                        <div class="warning">
-                                            <h4>注意事項：</h4>
-                                            <ul>
-                                                <li> 如有疑問，請與本會聯絡，聯絡電話：02-28762676分機2236，傳真：02-28762145。 </li>
-                                            </ul>
-                                        </div>
-                                        <div class="btn_grp">
-                                            <button type="button" class="btn btn-submit">確認</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <h3 class="title"><span><i class="fas fa-chalkboard-teacher"></i>學員訓練紀錄及資料管理</span></h3>
                             <!-- 會員區塊搜尋 -->
                             <div class="adv_function">
                                 <div class="flex-form">
                                     <div class="form_grp">
-                                        <div class="form_title">課程日期時間篩選</div>
+                                        <div class="form_title">學員姓名</div>
                                         <div class="form_content">
-                                            <div class="datepick">
-                                                <input name="" type="text" value="" class="calendar" placeholder="開始日期">
-                                                <i class="i_calendar"></i>
-                                            </div>
-                                            <div class="datepick">
-                                                <input name="" type="text" value="" class="calendar" placeholder="結束日期">
-                                                <i class="i_calendar"></i>
-                                            </div>
+                                            <input type="text" value="" placeholder="請輸入學員姓名或身分證字號">
+                                        </div>
+                                    </div>
+                                    <div class="form_grp">
+                                        <div class="form_title">服務部門</div>
+                                        <div class="form_content">
+                                            <select name="" id="">
+                                                <option value="請選擇">請選擇</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form_grp">
+                                        <div class="form_title">職稱</div>
+                                        <div class="form_content">
+                                            <select name="" id="">
+                                                <option value="請選擇">請選擇</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form_grp">
+                                        <div class="form_title">職等</div>
+                                        <div class="form_content">
+                                            <select name="" id="">
+                                                <option value="請選擇">請選擇</option>
+                                            </select>
                                         </div>
                                     </div>
                                 </div>
@@ -230,77 +221,134 @@
                                 <table class="table_sprite">
                                     <thead>
                                         <tr>
-                                            <th>分類</th>
-                                            <th>課程代碼／課程名稱</th>
-                                            <th>課程日期</th>
-                                            <th>時數</th>
+                                            <th>部門</th>
+                                            <th>身分證字號／學員姓名</th>
+                                            <th>職稱</th>
                                             <th>狀態</th>
-                                            <th>訓練內容</th>
-                                            <th>結業證書</th>
+                                            <th>管理</th>
+                                            <th>課程清單</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
                                             <td>
-                                                <div class="course_tag">個人報名</div>
+                                                <div class="course_tag">信用部</div>
                                             </td>
+                                            <td>A123456789／陳大明</td>
+                                            <td>僱員</td>
+                                            <td>正常／已啟用一般學員會員</td>
+                                            <td><button type="button" class="btn btn-view">資料維護</button></td>
                                             <td>
-                                                <span
-                                                    class="courseTitle"><time>2021121401</time>110年農漁會活用微軟OFFICE研習班第二期</span>
-                                            </td>
-                                            <td>
-                                                <div class="date">
-                                                    <time>
-                                                        <div class="day">2021/9/13</div>
-                                                        <div class="hour">09:00 - 18:00</div>
-                                                    </time>
-                                                    <time>
-                                                        <div class="day">2021/9/14</div>
-                                                        <div class="hour">09:00 - 18:00</div>
-                                                    </time>
-                                                </div>
-                                            </td>
-                                            <td><time>
-                                                    <div class="hour">16</div>
-                                                </time>小時</td>
-                                            <td>
-                                                <div class="status">報名成功</div>
-                                            </td>
-                                            <td>
-                                                <button type="button" class="btn" readonly>尚未提供</button>
-                                            </td>
-                                            <td>尚未提供</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="course_tag">單位報名</div>
-                                            </td>
-                                            <td>
-                                                <span class="courseTitle"><time>2021121401</time>110年農漁會數位行銷研習班</span>
-                                            </td>
-                                            <td>
-                                                <div class="date">
-                                                    <time>
-                                                        <div class="day">2021/9/13</div>
-                                                        <div class="hour">09:00 - 18:00</div>
-                                                    </time>
-                                                    <time>
-                                                        <div class="day">2021/9/14</div>
-                                                        <div class="hour">09:00 - 18:00</div>
-                                                    </time>
-                                                </div>
-                                            </td>
-                                            <td><time>
-                                                    <div class="hour">16</div>
-                                                </time>小時</td>
-                                            <td>
-                                                <div class="status">已結束</div>
-                                            </td>
-                                            <td>
-                                                <button data-fancybox data-src="#myRecord" type="button"
-                                                    class="btn btn-view">檢視</button>
+                                                <button data-fancybox data-src="#myCourse" type="button"
+                                                    class="btn btn-view">檢視(4)</button>
                                                 <!-- 訓練內容 預設隱藏 -->
-                                                <div class="mycourse_lightbox  " id="myRecord" style="display:none;">
+                                                <div class="mycourse_lightbox" id="myCourse" style="display:none;">
+                                                    <h2>課程清單</h2>
+                                                    <h2 class="courseTitle">A123456789／陳大明</h2>
+                                                    <div class="content">
+                                                        <table>
+                                                            <tr>
+                                                                <th>課程代碼／課程名稱</th>
+                                                                <th>課程日期</th>
+                                                                <th>時數</th>
+                                                                <th>狀態</th>
+                                                                <th>結業證書</th>
+                                                                <th>訓練內容</th>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <span
+                                                                        class="courseTitle"><time>2021121401</time>110年農漁會活用微軟OFFICE研習班第二期</span>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="date">
+                                                                        <time>
+                                                                            <div class="day">2021/9/13</div>
+                                                                            <div class="hour">09:00 - 18:00</div>
+                                                                        </time>
+                                                                        <time>
+                                                                            <div class="day">2021/9/14</div>
+                                                                            <div class="hour">09:00 - 18:00</div>
+                                                                        </time>
+                                                                    </div>
+                                                                </td>
+                                                                <td><time>
+                                                                        <div class="hour">16</div>
+                                                                    </time>小時</td>
+                                                                <td>
+                                                                    <div class="status">報名成功</div>
+                                                                </td>
+                                                                <td> 尚未提供 </td>
+                                                                <td><button type="button" class="btn"
+                                                                        readonly>檢視</button></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <span
+                                                                        class="courseTitle"><time>2021121401</time>110年農漁會數位行銷研習班</span>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="date">
+                                                                        <time>
+                                                                            <div class="day">2021/9/13</div>
+                                                                            <div class="hour">09:00 - 18:00</div>
+                                                                        </time>
+                                                                        <time>
+                                                                            <div class="day">2021/9/14</div>
+                                                                            <div class="hour">09:00 - 18:00</div>
+                                                                        </time>
+                                                                    </div>
+                                                                </td>
+                                                                <td><time>
+                                                                        <div class="hour">16</div>
+                                                                    </time>小時</td>
+                                                                <td>
+                                                                    <div class="status">報名成功</div>
+                                                                </td>
+                                                                <td>
+                                                                    <a href="#"
+                                                                        class="graduation">(110)農訓訓字第062001001號</a>
+                                                                </td>
+                                                                <td><button data-fancybox data-src="#myRecord"
+                                                                        type="button" class="btn btn-view">檢視</button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <span
+                                                                        class="courseTitle"><time>2021121401</time>課程名稱課程名稱名稱課程名稱</span>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="date">
+                                                                        <time>
+                                                                            <div class="day">2021/9/13</div>
+                                                                            <div class="hour">09:00 - 18:00</div>
+                                                                        </time>
+                                                                        <time>
+                                                                            <div class="day">2021/9/14</div>
+                                                                            <div class="hour">09:00 - 18:00</div>
+                                                                        </time>
+                                                                    </div>
+                                                                </td>
+                                                                <td><time>
+                                                                        <div class="hour">16</div>
+                                                                    </time>小時</td>
+                                                                <td>
+                                                                    <div class="status">報名成功</div>
+                                                                </td>
+                                                                <td> 缺課時數達單堂課程1/3以上 </td>
+                                                                <td><button type="button"
+                                                                        class="btn btn-view">檢視</button></td>
+                                                            </tr>
+                                                        </table>
+                                                        <div class="btn_grp">
+                                                            <button type="button" class="btn btn-submit">確認</button>
+                                                            <button type="button" class="btn">列印</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- 訓練內容 預設隱藏 -->
+                                                <div class="mycourse_lightbox" id="myRecord" style="display:none;">
                                                     <h2>訓練內容</h2>
                                                     <h2 class="courseTitle">2021121207／110年農漁會數位行銷研習班</h2>
                                                     <div class="course_info">
@@ -380,105 +428,29 @@
                                                     </div>
                                                 </div>
                                             </td>
+                                        </tr>
+                                        <tr>
                                             <td>
-                                                <a href="#" class="graduation">(110)農訓訓字第062001001號</a>
+                                                <div class="course_tag">行銷部</div>
+                                            </td>
+                                            <td>A111111111／黃小玲</td>
+                                            <td>專員</td>
+                                            <td>正常／未啟用一般學員會員</td>
+                                            <td><button type="button" class="btn btn-view">資料維護</button></td>
+                                            <td>
+                                                <button type="button" class="btn btn-view">檢視(0)</button>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td>
-                                                <div class="course_tag">單位報名</div>
+                                                <div class="course_tag">行銷部</div>
                                             </td>
+                                            <td>A111111111／同單位學員</td>
+                                            <td>專員</td>
+                                            <td>正常／未啟用一般學員會員</td>
+                                            <td><button type="button" class="btn btn-view">資料維護</button></td>
                                             <td>
-                                                <span class="courseTitle"><time>2021121401</time>110年農漁會數位行銷研習班</span>
-                                            </td>
-                                            <td>
-                                                <div class="date">
-                                                    <time>
-                                                        <div class="day">2021/9/13</div>
-                                                        <div class="hour">09:00 - 18:00</div>
-                                                    </time>
-                                                    <time>
-                                                        <div class="day">2021/9/14</div>
-                                                        <div class="hour">09:00 - 18:00</div>
-                                                    </time>
-                                                </div>
-                                            </td>
-                                            <td><time>
-                                                    <div class="hour">16</div>
-                                                </time>小時</td>
-                                            <td>
-                                                <div class="status">已結束</div>
-                                            </td>
-                                            <td>
-                                                <button data-fancybox data-src="#myCourse" type="button"
-                                                    class="btn btn-view">檢視</button>
-                                            </td>
-                                            <td>
-                                                <a href="#" class="graduation">(110)農訓訓字第062001001號</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="course_tag">單位報名</div>
-                                            </td>
-                                            <td>
-                                                <span class="courseTitle"><time>2021121401</time>110年農漁會數位行銷研習班</span>
-                                            </td>
-                                            <td>
-                                                <div class="date">
-                                                    <time>
-                                                        <div class="day">2021/9/13</div>
-                                                        <div class="hour">09:00 - 18:00</div>
-                                                    </time>
-                                                    <time>
-                                                        <div class="day">2021/9/14</div>
-                                                        <div class="hour">09:00 - 18:00</div>
-                                                    </time>
-                                                </div>
-                                            </td>
-                                            <td><time>
-                                                    <div class="hour">16</div>
-                                                </time>小時</td>
-                                            <td>
-                                                <div class="status">已結束</div>
-                                            </td>
-                                            <td>
-                                                <button data-fancybox data-src="#myCourse" type="button"
-                                                    class="btn btn-view">檢視</button>
-                                            </td>
-                                            <td> 缺課時數達單堂課程1/3以上 </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="course_tag">委辦課程</div>
-                                            </td>
-                                            <td>
-                                                <span class="courseTitle"><time>2021121401</time>110年農漁會數位行銷研習班</span>
-                                            </td>
-                                            <td>
-                                                <div class="date">
-                                                    <time>
-                                                        <div class="day">2021/9/13</div>
-                                                        <div class="hour">09:00 - 18:00</div>
-                                                    </time>
-                                                    <time>
-                                                        <div class="day">2021/9/14</div>
-                                                        <div class="hour">09:00 - 18:00</div>
-                                                    </time>
-                                                </div>
-                                            </td>
-                                            <td><time>
-                                                    <div class="hour">16</div>
-                                                </time>小時</td>
-                                            <td>
-                                                <div class="status">已結束</div>
-                                            </td>
-                                            <td>
-                                                <button data-fancybox data-src="#myCourse" type="button"
-                                                    class="btn btn-view">檢視</button>
-                                            </td>
-                                            <td>
-                                                <a href="#" class="graduation">(110)農訓訓字第062001001號</a>
+                                                <button type="button" class="btn btn-view">檢視(0)</button>
                                             </td>
                                         </tr>
                                     </tbody>

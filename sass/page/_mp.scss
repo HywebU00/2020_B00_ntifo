@@ -843,8 +843,14 @@
             font-size: 1.5rem;
             line-height: 1.65em;
         }
+        p {
+            font-size: 0.875rem;
+        }
         ul {
             @include li-reset;
+            li {
+                font-size: 0.875rem;
+            }
             i {
                 margin-right: 0.5em;
                 opacity: 0.75;

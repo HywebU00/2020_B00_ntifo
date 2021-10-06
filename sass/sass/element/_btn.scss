@@ -166,15 +166,23 @@ $btn-radius: 0.2em;
 
 .disabled,
 [disabled] {
-    opacity: 0.5;
+    opacity: 0.75;
     cursor: not-allowed !important;
     text-shadow: none;
+    &:hover,
+    &:focus {
+        transform: none;
+    }
 }
 .readonly,
 [readonly] {
-    opacity: 0.5;
+    opacity: 0.75;
     cursor: not-allowed !important;
     text-shadow: none;
+    &:hover,
+    &:focus {
+        transform: none;
+    }
 }
 
 // 按鈕大小
