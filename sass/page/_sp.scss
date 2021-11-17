@@ -2741,6 +2741,7 @@
                     flex-basis: auto;
                     padding: 0 0.5em;
                     text-align: center;
+                    margin:0;
                     @include screen('xs_mobile') {
                         flex-basis: 100%;
                         padding: 0.5em 0;
