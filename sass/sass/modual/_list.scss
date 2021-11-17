@@ -680,12 +680,14 @@
                     font-size: 1.5em;
                     padding-right: 10em;
                     color: $color-word;
-
                     .img-container {
                         float: left;
                         @include aspect-ratio(4, 3);
                         width: 180px;
                         margin: 0 0.5em 1em 0;
+                        img{
+                            object-fit: cover;
+                        }
                     }
                     @include screen('mobile') {
                         padding-right: 1em;

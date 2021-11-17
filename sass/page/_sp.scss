@@ -3401,6 +3401,11 @@ p.error {
                 select {
                     margin: 0 !important;
                 }
+                .datepick{
+                    @include screen('xs_mobile') {
+                        margin-bottom:.5em;
+                    }
+                }
             }
         }
         .for_ntifo {
