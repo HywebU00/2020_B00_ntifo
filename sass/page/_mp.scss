@@ -1145,7 +1145,7 @@ a.more {
         }
     }
     .cooperationSlider {
-        margin: 0 5em 3em;
+        margin: 0 2em 3em;
         @include screen('xs_mobile') {
             margin: 0 1em;
         }
@@ -1419,7 +1419,7 @@ $fixedPanelColor: #4b3e2e;
     padding: 1em 0;
     max-width: $container-max;
     .courseSlider {
-        margin: 0 3em 1em;
+        margin: 0 1em 1em;
         @include screen('xs_mobile') {
             margin: 0 1em;
         }
