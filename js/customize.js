@@ -76,7 +76,7 @@ $(function () {
 
     // initialize paroller.js and set attributes for selected elements
     $('.link .bg_img').paroller({
-        factor: -0.1, // multiplier for scrolling speed and offset
+        factor: 0.075, // multiplier for scrolling speed and offset
 
         type: 'foreground', // background, foreground
         direction: 'vertical', // vertical, horizontal
@@ -89,13 +89,13 @@ $(function () {
         transition: 'transform 0.25s linear', // CSS transition
     });
     $('.magazine .left_bg').paroller({
-        factor: 0.3, // multiplier for scrolling speed and offset
+        factor: 0.2, // multiplier for scrolling speed and offset
         type: 'foreground', // background, foreground
         direction: 'vertical', // vertical, horizontal
         transition: 'transform 0.25s ease-out', // CSS transition
     });
     $('.magazine .right_bg').paroller({
-        factor: 0.5, // multiplier for scrolling speed and offset
+        factor: 0.1, // multiplier for scrolling speed and offset
         type: 'foreground', // background, foreground
         direction: 'vertical', // vertical, horizontal
         transition: 'transform 0.15s ease-out', // CSS transition
@@ -111,13 +111,14 @@ $(function () {
     new WOW().init();
     //sticky sidebar
     if ($('.link_img').length > 0) {
-        var stickySidebar = new StickySidebar('.link_img', {
+        var stickyLink = new StickySidebar('.link_img', {
             containerSelector: '.lp_link',
             topSpacing: 300,
             bottomSpacing: 0,
             minWidth: 545,
             resizeSensor: true,
         });
+        stickyLink.updateSticky();
     }
     //sticky sidebar
     if ($('.stickySidebar').length > 0) {
@@ -128,24 +129,27 @@ $(function () {
             minWidth: 768,
             resizeSensor: true,
         });
+        stickySidebar.updateSticky();
     }
     if ($('.td_logo').length > 0) {
         var stickyTD = new StickySidebar('.td_logo', {
             containerSelector: '.mag_grid',
             topSpacing: 93,
             bottomSpacing: 0,
-            minWidth: 992,
+            minWidth: 768,
             resizeSensor: true,
         });
+        stickyTD.updateSticky();
     }
     if ($('.member_function').length > 0) {
-        var stickyTD = new StickySidebar('.member_function', {
+        var stickyMember = new StickySidebar('.member_function', {
             containerSelector: '.sp_member',
             topSpacing: 93,
             bottomSpacing: 0,
             minWidth: 992,
             resizeSensor: true,
         });
+        stickyMember.updateSticky();
     }
     // 首頁輪播
     var $carousel = $('.mpSlider').slick({

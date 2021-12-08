@@ -411,7 +411,7 @@
         background: url(../images/mag_bg.png) no-repeat left center;
         background-size: contain;
         left: 0%;
-        bottom: 10%;
+        top: -70%;
         width: 40%;
         height: 60%;
         @include screen('tablet') {
@@ -423,7 +423,7 @@
         background: url(../images/mag_bg_right.png) no-repeat left center;
         background-size: contain;
         right: -15%;
-        top: 10%;
+        top: -20%;
         width: 40%;
         height: 60%;
         @include screen('tablet') {
@@ -434,6 +434,7 @@
         display: flex;
         justify-content: flex-end;
         @include gutter;
+        position: relative;
         @include screen('tablet') {
             flex-flow: row wrap;
         }
@@ -1408,6 +1409,212 @@ $fixedPanelColor: #4b3e2e;
             i {
                 margin-right: 0.25em;
                 color: #888;
+            }
+        }
+    }
+}
+//
+.recommend_training {
+    margin: 1em auto 2em;
+    padding: 1em 0;
+    max-width: $container-max;
+    .courseSlider {
+        margin: 0 3em 1em;
+        @include screen('xs_mobile') {
+            margin: 0 1em;
+        }
+    }
+}
+// 農訓智庫
+.thinktank {
+    .container {
+        padding: 1em 15px 2em;
+    }
+    .thinkContent {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        align-items: stretch;
+        padding: 1em 0;
+        max-width: 100%;
+        @include screen('xs_mobile') {
+            flex-flow: row wrap;
+        }
+        .newsList {
+            flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: auto;
+            max-width: 80%;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 25px;
+            background: #fff;
+            padding: 1em 2em 2em;
+            margin-right: auto;
+            flex: 1;
+            overflow: hidden;
+            @include screen('xs_mobile') {
+                flex-basis: 100%;
+                padding: 1em;
+                margin: 0 auto 1em;
+                min-width: 340px;
+                max-width: 85%;
+            }
+            ul {
+                padding: 0;
+                @include screen('mobile') {
+                    padding: 0;
+                }
+                li {
+                    margin: 0 0 1.3em 0;
+                    padding: 0;
+                    line-height: 1.6;
+                    border-bottom: 1px #ccc dashed;
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+                    padding-right: 1em;
+                    padding-left: 0.5em;
+                    @include screen('mobile') {
+                        flex-flow: row wrap;
+                        justify-content: flex-start;
+                        padding: 0;
+                    }
+                    time {
+                        margin-right: 1em;
+                        flex-grow: 0;
+                        flex-shrink: 1;
+                        flex-basis: 80px;
+                        color: #888;
+                        order: 1;
+                    }
+                    .dept {
+                        position: absolute;
+                        top: 0.75em;
+                        right: 0.5em;
+                        text-align: center;
+                        font-size: 0.813rem;
+                        padding: 0 0.5em;
+                        color: #333;
+                        width: 100px;
+                        background: #eee;
+                        @include text-overflow;
+                        @include screen('mobile') {
+                            position: relative;
+                            flex-grow: 0;
+                            flex-shrink: 1;
+                            flex-basis: auto;
+                            order: 2;
+                            top: 0.15em;
+                        }
+                    }
+                    a {
+                        display: block;
+                        flex-grow: 1;
+                        flex-shrink: 1;
+                        flex-basis: 30%;
+                        font-weight: bold;
+                        padding: 0.25em 0.5em;
+                        font-size: 1.25em;
+                        color: darken($primaryColor, 15);
+                        @include text-overflow;
+                        width: 100%;
+                        &:before {
+                            transition: 0.3s $cubic;
+                            position: absolute;
+                            content: '';
+                            left: 0.25em;
+                            top: 1em;
+                            width: 0;
+                            height: 0;
+                            border-style: solid;
+                            border-width: 3px 0 3px 4px;
+                            border-color: transparent transparent transparent #888;
+                            @include screen('mobile') {
+                                display: none;
+                            }
+                        }
+                        &:hover,
+                        &:focus {
+                            color: darken($primaryColor, 0);
+                            &:before {
+                                border-style: solid;
+                                border-width: 3px 0 3px 4px;
+                                border-color: transparent transparent transparent $primaryColor;
+                            }
+                        }
+                        @include screen('mobile') {
+                            flex-basis: 100%;
+                            order: 3;
+                            padding-left: 0.6em;
+                        }
+                    }
+                }
+            }
+        }
+        .investigate {
+            position: relative;
+            flex-grow: 0;
+            flex-shrink: 0;
+            flex-basis: 300px;
+            margin: 0 0 0 auto;
+            @include aspect-ratio(2, 3);
+            @include screen('xs_mobile') {
+                flex-basis: 100%;
+                padding: 1em;
+                margin: 0 auto 1em;
+                min-width: 340px;
+                max-width: 85%;
+            }
+            a {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                padding: 2em;
+                display: block;
+                z-index: 1;
+                top: 0;
+                left: 0;
+                &:after {
+                    position: absolute;
+                    content: '';
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    background: rgb(18, 100, 190);
+                    background: linear-gradient(
+                        0deg,
+                        rgba(18, 100, 190, 0) 0%,
+                        rgba(18, 100, 190, 0.7161239495798319) 27%,
+                        rgba(18, 100, 190, 0.9290091036414566) 56%,
+                        rgba(6, 79, 158, 1) 100%
+                    );
+                    z-index: 1;
+                }
+            }
+            h3,
+            p {
+                position: relative;
+                z-index: 2;
+                color: #fff;
+                color: #fff;
+                text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.85);
+                text-align: center;
+            }
+            h3 {
+                @include text-line(3, 1.45em);
+                border-bottom: 1px solid #fff;
+                font-size: 2em;
+            }
+            p {
+                @include text-line(4, 1.45em);
+            }
+            img {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                object-fit: cover;
             }
         }
     }

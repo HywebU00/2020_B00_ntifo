@@ -1546,7 +1546,7 @@
         margin-bottom: 0.5em;
     }
     .courseSlider {
-        padding: 0 2em;
+        padding: 0 2em 1em;
         .slick-prev,
         .slick-next {
             top: auto;
@@ -1560,7 +1560,7 @@
             top: 40% !important;
             box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px,
                 rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-            left: 10px !important;
+            left: 0px !important;
             @include screen('xs_mobile') {
                 left: 0px !important;
             }
@@ -1577,13 +1577,13 @@
                 RGBA(255, 255, 255, 1);
             background-size: 30px 30px;
             left: auto !important;
-            right: 10px !important;
+            right: 0px !important;
             @include screen('xs_mobile') {
                 right: 0px !important;
             }
         }
         .item {
-            margin: 0 1em 1em;
+            margin: 0 1em 2em;
             border: none;
 
             a {
@@ -2741,7 +2741,7 @@
                     flex-basis: auto;
                     padding: 0 0.5em;
                     text-align: center;
-                    margin:0;
+                    margin: 0;
                     @include screen('xs_mobile') {
                         flex-basis: 100%;
                         padding: 0.5em 0;
@@ -3401,9 +3401,9 @@ p.error {
                 select {
                     margin: 0 !important;
                 }
-                .datepick{
+                .datepick {
                     @include screen('xs_mobile') {
-                        margin-bottom:.5em;
+                        margin-bottom: 0.5em;
                     }
                 }
             }
